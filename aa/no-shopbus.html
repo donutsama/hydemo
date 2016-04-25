@@ -1,0 +1,325 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript"  src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+
+
+</head>
+<body style=" background:#ffff;">
+<!--top-->
+<div class="backhistory" style=" background:#f0f0f0; padding:10px 0;" >
+    <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    	
+    </a>
+    <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;">
+   		购物车
+    </a>
+	<span class="pagerighta" style=" width:25%; text-align:left; line-height:30px;font-size:0.9em;">
+    	<span class="bianji" style=" padding:5px 15px; border-radius:5px; ">编辑</span>
+    </span>
+</div>
+<!--购物车商品--><br>
+<!--积分商品-->
+<div class="shopbusbox" style="padding:10px 0;margin-top:0;border:none;">
+    <div class="green-bg">
+    	<!-- <p class="spfl">
+            <a class="pageleft" style=" width:10%; background:url(image/weixuanzhong.png) no-repeat; background-position: 5px 3px; text-align:center; line-height:30px; color:#000;">
+            </a>
+            <a class="pageleft" style=" width:20%; text-align:left; color:#666; font-size:1em; line-height:30px;">
+                积分商品
+            </a>
+            <a class="pageleft" style=" width:40%; text-align:right; color:#666; font-size:1em; line-height:30px;">
+               <span>已选</span><span class="jfsplength">50</span><span>件商品</span>&nbsp;
+            </a>
+            <a class="pageleft" style=" width:30%; text-align:left;  font-size:1em; line-height:30px;">
+               <span>
+                    <span>256612</span> 积分
+                </span>
+            </a>
+        </p> -->
+        <span>¥：现金商品</span>
+        <div class="much">
+            <span>已选择3件产品</span>
+            <span>应付 ¥ 123</span>
+        </div>
+    </div>
+
+    <div class="spcenter scbox" style=" margin-bottom:8px; background:#fff; margin-top:5px;">
+                <div class="sbleft" style=" width:10%;">
+                    <img class="gwcxpimgxz" style="" src="image/weixuanzhong.png">
+                </div>
+                <div class="sbleft gwcxpimg" style=" width:26%;text-align:center;">
+                    	<a><img style="border:solid 1px #cbcbcb;" src="image/img01.jpg" ></a>
+                </div>
+                <div class="sbright hhhw" style=" width:58%; position:relative;">
+                    <div class="sbrright sb_l">会考虑据了解玫琳凯会考虑据了解玫琳</div>
+                    <div class="sbrright sb_r">
+                        <span>x 10</span><br/>
+                       <span style=" color:#EA5514">¥ 10000</span>
+                    </div>
+
+                    <div style=" text-align:center; text-align:left;line-height:40px; position:absolute; left:3px; bottom:13px;">
+                           <a class="jian plus" onClick="jian()">-</a>
+                           <small class="sum jian j_plus" style=" border-left:none; border-right:none;">129</small> 
+                           <a class="jia jian plus" onClick="jia()">+</a>  
+                    </div>
+
+                    <div class="sc">
+                           <a href="javascript:;" style="color:#eb6100;font-size:0.85em;">收藏</a> 
+                           <a href="javascript:;" style="color:#646464;font-size:0.85em;">删除</a> 
+                    </div>
+               </div>
+     </div>
+
+
+    <div class="spcenter scbox" style=" margin-bottom:8px; background:#fff; margin-top:5px;">
+                <div class="sbleft" style=" width:10%;">
+                    <img class="gwcxpimgxz" style="" src="image/weixuanzhong.png">
+                </div>
+                <div class="sbleft gwcxpimg" style=" width:26%;text-align:center;">
+                        <a><img style="border:solid 1px #cbcbcb;" src="image/img01.jpg" ></a>
+                </div>
+                <div class="sbright hhhw" style=" width:58%; position:relative;">
+                    <div class="sbrright sb_l">会考虑据了解玫琳凯会考虑据了解玫琳</div>
+                    <div class="sbrright sb_r">
+                        <span>x 10</span><br/>
+                       <span style=" color:#EA5514">¥ 10000</span>
+                    </div>
+
+                    <div style=" text-align:center; text-align:left;line-height:40px; position:absolute; left:3px; bottom:13px;">
+                           <a class="jian plus" onClick="jian()">-</a>
+                           <small class="sum jian j_plus" style=" border-left:none; border-right:none;">139</small> 
+                           <a class="jia jian plus" onClick="jia()">+</a>  
+                    </div>
+
+                    <div class="sc">
+                           <a href="javascript:;" style="color:#eb6100;font-size:0.85em;">收藏</a> 
+                           <a href="javascript:;" style="color:#646464;font-size:0.85em;">删除</a> 
+                    </div>
+               </div>
+     </div>
+</div>
+<!--积分商品end-->
+<!--现金商品-->
+<div class="shopbusbox" style="border:none;margin-top:0;border-top:1px dashed #ccc; padding-top:20px;">
+
+    <div class="green-bg orange-bg">
+        <span>氪币商品</span>
+        <div class="much">
+            <span>已选择3件产品</span>
+            <span>应付氪币 123</span>
+        </div>
+    </div>
+
+
+    <div class="spcenter scbox" style=" margin-bottom:8px; background:#fff; margin-top:5px;">
+                <div class="sbleft" style=" width:10%;">
+                    <img class="gwcxpimgxz" style="" src="image/weixuanzhong.png">
+                </div>
+                <div class="sbleft gwcxpimg" style=" width:26%;text-align:center;">
+                        <a><img src="image/img01.jpg" ></a>
+                </div>
+                <div class="sbright hhhw" style=" width:58%; position:relative;">
+                    <div class="sbrright sb_l">会考虑据了解玫琳凯会考虑据了解玫琳</div>
+                    <div class="sbrright sb_r">
+                        <span>x 10</span><br/>
+                       <span style=" color:#EA5514">¥ 10000</span>
+                    </div>
+
+                    <div style=" text-align:center; text-align:left;line-height:40px; position:absolute; left:3px; bottom:13px;">
+                           <a class="jian plus" onClick="jian()">-</a>
+                           <small class="sum jian j_plus" style=" border-left:none; border-right:none;">149</small> 
+                           <a class="jia jian plus" onClick="jia()">+</a>  
+                    </div>
+
+                    <div class="sc">
+                           <a href="javascript:;" style="color:#eb6100;font-size:0.85em;">收藏</a> 
+                           <a href="javascript:;" style="color:#646464;font-size:0.85em;">删除</a> 
+                    </div>
+               </div>
+     </div>
+    <div class="spcenter scbox" style=" background:#fff; padding:1% 1%;">
+                <div class="sbleft" style=" width:10%;">
+                    <img class="gwcxpimgxz" style="" src="image/weixuanzhong.png">
+                </div>
+                <div class="sbleft gwcxpimg" id="fghj" style=" width:26%;text-align:center;">
+                        	<img style="border:solid 1px #cbcbcb;" src="image/img01.jpg" >
+                </div>
+                <div class="sbright hhhw" style=" width:58%; position:relative;">
+                    <div class="sbrright sb_l">会考虑据了解玫琳凯会考虑据了解玫琳</div>
+                    <div class="sbrright sb_r">
+                        <span>x 10</span><br/>
+                       <span style=" color:#EA5514">¥ 10000</span>
+                    </div>
+
+                    <div style=" text-align:center; text-align:left;line-height:40px; position:absolute; left:3px; bottom:13px;">
+                           <a class="jian plus" onClick="jian()">-</a>
+                           <small class="sum jian j_plus" style=" border-left:none; border-right:none;">159</small> 
+                           <a class="jia jian plus" onClick="jia()">+</a>  
+                    </div>
+
+                    <div class="sc">
+                           <a href="javascript:;" style="color:#eb6100;">收藏</a> 
+                           <a href="javascript:;" style="color:#646464;">删除</a> 
+                    </div>
+               </div>
+     </div>
+     
+</div>
+<script>
+$(function(){
+	$(".hhhw").height($("#fghj").width()-5)
+	})
+</script>
+<!--现金商品end-->
+<div class="wugouwu" style=" width:100%; overflow:hidden; padding-top:25%; display:none;">
+<img src="image/gouwuchecheche.png">
+</div>
+<!--编辑底部-->
+<div class="gwcb bianjidibu" style=" bottom:0px; display:none; background:#636363; border:none; font-size:0.9em;">
+    <div class="gwcl" style=" width:20%;line-height:25px;">
+        <img src="image/weixuanzhong.png" class="quanxuan"  style=" position:relative; top:7px;">&nbsp;<br/>全选
+    </div>
+    <div class="gwcr" style=" width:40%;line-height:25px;">
+        <a class="jiesuan" style="padding:11px 8px; color:#fff;display:block;float:left;">合计：</a>
+        <div class="money_p">
+           <span style="text-align:right;">¥ 178</span><br/>
+           <span>氪币 0.00</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="gwcr" style=" width:40%;">
+        <a class="jiesuan" style="padding:9px 10px; border-radius:5px; color:#fff; background:#7e7e7e;">去结算（10）</a>
+    </div>
+</div>
+<!--编辑底部end-->
+<!--完成底部-->
+<div class="gwcb wanchengdibu" style=" bottom:0px; background:#636363; border:none; font-size:0.9em;">
+	<div class="gwcl" style=" width:20%;line-height:25px;">
+    	<img src="image/weixuanzhong.png" class="quanxuan"  style=" position:relative; top:7px;">&nbsp;<br/>全选
+    </div>
+    <div class="gwcr" style=" width:40%;line-height:25px;">
+    	<a class="jiesuan" style="padding:11px 8px; color:#fff;display:block;float:left;">合计：</a>
+        <div class="money_p">
+           <span style="text-align:right;">¥ 178</span><br/>
+           <span>氪币 0.00</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="gwcr" style=" width:40%;">
+    	<a class="jiesuan" style="padding:9px 10px; border-radius:5px; color:#fff; background:#f80021;">去结算（10）</a>
+    </div>
+</div>
+<!--完成底部end-->
+<div style=" width:100%; height:60px;"></div>
+<script>
+$(function(){
+	$(".gwcb").css("width",$(".backhistory").width());
+	if($(".shopbusbox>.spcenter").length<1){
+		$(".shopbusbox").hide();
+		$(".wugouwu").show();
+	}
+});
+$(function(){
+	$(".gwcxpimgxz").css({marginTop:$(".gwcxpimg").width()/2,marginLeft:"5px"});
+
+});
+$(".bianji").click(function(){
+  if($(this).text()=="编辑"){
+     $(this).text("完成");
+     $(".wanchengdibu").hide();
+     $(".bianjidibu").show();
+     $('.sc').show();
+     // $(".spfl").hide();
+     $(".gwcxpimgxz").show();
+     $(".gwcxpimgxz").attr("src","image/weixuanzhong.png");
+ }else{
+    if($(this).text()=="完成"){
+        $(this).text("编辑");
+        $(".wanchengdibu").show();
+        $(".bianjidibu").hide();
+        $('.sc').hide();
+        // $(".spfl").show();
+        $(".gwcxpimgxz").attr("src","image/weixuanzhong.png");
+       }
+    }
+});
+$('.sc a:nth-child(2)').click(function(){
+    $(this).parents('.scbox').hide();
+});
+$(function(){
+	$(".quanxuan").click(function(){
+		if($(this).attr("src")=="image/weixuanzhong.png"){
+			$(this).attr("src","image/quanxuan.png");
+			$(".gwcxpimgxz").attr("src","image/quanxuan.png");
+		}else{
+			if($(this).attr("src")=="image/quanxuan.png"){
+			$(this).attr("src","image/weixuanzhong.png");
+			$(".gwcxpimgxz").attr("src","image/weixuanzhong.png");
+			}	
+		}
+	});
+});
+$(function(){
+	$(".gwcxpimgxz").click(function(){
+		if($(this).attr("src")=="image/weixuanzhong.png"){
+			$(this).attr("src","image/quanxuan.png");			
+		}else{
+			if($(this).attr("src")=="image/quanxuan.png"){
+			$(this).attr("src","image/weixuanzhong.png");
+			$(".quanxuan").attr("src","image/weixuanzhong.png");			
+			}
+		}
+	})
+})
+$("#shanchu").click(function(){
+	var la=$(".scbox").length;
+	$(".quanxuan").attr("src","image/weixuanzhong.png");
+	for(y=0;y<la;y++){
+		as(y);
+	}
+	if($(".shopbusbox>.spcenter").length<1){
+		$(".shopbusbox").hide();
+		$(".wugouwu").show();
+		$(".quanxuan").click(function(){
+			$(".quanxuan").attr("src","image/weixuanzhong.png");
+			con();
+		})
+	}
+})
+function con(){
+	if(confirm("你的购物车还没有商品，前去添加")==true){
+				window.location.href="http://www.lalianer.com/";
+				}
+			else{
+				con();
+				}
+}
+function as(){
+	var ll=$(".scbox").length;
+	for(i=0;i<ll;i++){
+		if($(".scbox").eq(i).find(".gwcxpimgxz").attr("src")=="image/quanxuan.png"){
+			$(".scbox").eq(i).remove();
+			}
+	}
+}
+$(function(){
+	$(".jian").click(function(){
+		var s= parseInt($(this).next(".sum").text());
+		if(s>1){
+			$(this).next(".sum").text(s-1);
+		}
+	});
+	$(".jia").click(function(){
+		var s= parseInt($(this).prev(".sum").text());
+		$(this).prev().text(s+1);
+		})
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+body,p,a,span,table,tr,th,td,ul,li,img,h3,h4,h5,hr,button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    font-family: "思源黑体 CN Regular";
+    color: #646464; 
+}
+
+body{
+   background: #fafafa; 
+   min-width: 1000px;
+}
+
+i,em{
+  font-style: normal;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input,select{
+  outline: none;
+}
+
+.clear{
+    clear: both;
+}
+
+form{
+  padding: 30px;
+  line-height: 40px;
+}
+
+form label span{
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}
+
+form label span.red{
+  color: red; 
+}
+
+form label span.width{
+  width: 130px;
+  text-align: left;
+  color: #646464;
+  display: none;
+}
+input.error {
+  border: 1px solid red;
+}
+input.highlight {
+  border: 1px solid green;
+}
+span.error_tip {
+  color: red;
+}
+

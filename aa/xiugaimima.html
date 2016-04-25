@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--top-->
+<div class="backhistory" style=" background:#f0f0f0; padding:10px 0;" >
+    <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class="pageleft xgmm" style=" width:45%; color:#646464; font-size:20px; line-height:30px;">
+   		修改密码
+    </a>
+    <span class="pagerighta" style=" width:30%;  color:#646464;text-align:center; line-height:30px;font-size:0.9em;">
+    	<span class="bianji">忘记密码</span>
+    </span>
+</div>
+<div style=" width:100%;font-size:0.9em; color:#646464;" class="zhmmdabox">
+<!--     <form class="zhmmbox" id="zhmmboxszmm">
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left; float:left; font-size:1em;">
+                 		原有密码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" type="text" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left; float:left; font-size:1em;">
+                 		设置密码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left;  float:left; font-size:1em;">
+                 		确认密码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style=" margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left;  float:left; font-size:1em;">
+                 		验证码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+    </form>
+ -->
+    <form class="zhmmbox">
+        <!--登录-->
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入旧密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入新密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请确认新密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:none;background:none;border-radius:15px;width:100%;">
+            <input class="dlsryhm" placeholder="请输入验证码" style=" width:50%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:1em;background:none;padding:0 10px; ">
+            <input type="submit" value="7825" style=" width:40%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:0.9em;display:inline-block;float:right; background:#595959;color:#fff;">
+            <div class="clear"></div>
+        </div>
+
+        <div id="dlzzmmtjyz"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:10px; margin-top:30px;">
+            确 认 修 改
+        </div>
+    </form>
+</div>
+<div class="wangjimima" style=" width:100%; display:none;  font-size:0.9em; color:#646464;">
+<!--     <form class="zhmmbox" id="zhmmboxszmm">
+    	<div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left; float:left; font-size:1em;">
+                 		输入手机号
+                </div>
+                <div style=" width:45%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+                <div style=" width:27%; height:33px; float:left;">
+                <input class="zhmmsrmm" value="发送验证码" type="button" style="  width:99%; height:28px;color:#fff;border-radius:4px; background:#ff2d5e; line-height:28px; font-size:0.9em;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left; float:left; font-size:1em;">
+                 		输入验证码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" type="text" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left;  float:left; font-size:1em;">
+                 		设置新密码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style=" margin-top:5px;">
+                <div style=" width:28%; height:35px; line-height:35px; text-align:left;  float:left; font-size:1em;">
+                 		确认新密码
+                </div>
+                <div style=" width:72%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:33px; font-size:0.9em;">
+                </div>
+        </div>
+        
+    </form> -->
+
+    <form class="zhmmbox" id="zhmmboxszmm">
+        <!--登录-->
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入手机号" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:none;background:none;border-radius:15px;width:100%;">
+            <input class="dlsryhm" placeholder="请输入验证码" style=" width:50%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:1em;background:none;padding:0 10px; ">
+            <input type="submit" value="发送验证码" style=" width:40%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:0.9em;display:inline-block;float:right; background:#595959;color:#fff;">
+            <div class="clear"></div>
+        </div>
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="确认密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div id="dlzzmmtjyz"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:10px; margin-top:30px;">
+            确 认 修 改
+        </div>
+    </form>
+</div>
+<!-- <div id="querenxiugai"  style=" width:90%; margin-left:5%; background:#ff3366; text-align:center; line-height:2.2em; color:#fff; border-radius:4px; margin-top:30px;">
+         	确认
+</div> -->
+<script>
+$(function(){
+	$(".bianji").click(function(){
+		if($(".zhmmdabox").css("display")=="block"){
+			$(".zhmmdabox").hide();
+			$(".wangjimima").show();
+			$(this).text("修改密码")
+			$(".xgmm").text("忘记密码")
+		}
+		else{
+			$(".zhmmdabox").show();
+			$(".wangjimima").hide();
+			$(this).text("忘记密码")
+			$(".xgmm").text("修改密码")
+			}		
+	})
+})
+</script>
+</body>
+</html>

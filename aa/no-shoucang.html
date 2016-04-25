@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/ydxLazyLoad.js"></script>
+<script type="text/javascript">
+        $(function(){
+			var hhh=$(".mainleft").width();
+			$(".mainleft").height(hhh);
+			var sw=$(".loading").parent(".mainleft").width();
+			$(".bannertext").height(hhh*0.9);
+			$(".loading").css({width:hhh,height:hhh})
+            $("[lazyLoadSrc]").YdxLazyLoad({
+                onShow: function () {
+                    $(this).parent().next().hide()
+                }
+            });
+        });
+</script>
+</head>
+<body>
+<div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href=                                     "javascript:history.back(-1)">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            我的收藏
+        </a>
+</div>
+<div style=" width:100%; background:#fff; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;font-size:0.9em;">市场价 <span>999</span> 元</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#646464;font-weight:600;">拉链儿价 <span style=" font-size:17px;color:#ff2d5e;">16666</span>元
+                    </span>
+                    <span style=" position:absolute; bottom:0;font-size:0.9em; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">送<span>16666</span>积分</span>
+                 </li>
+    		</div>
+</div>
+<div style=" width:100%; background:#fff; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;font-size:0.9em;">市场价 <span>999</span> 元</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#646464;font-weight:600;">拉链儿价 <span style=" font-size:17px;color:#ff2d5e;">16666</span>元
+                    </span>
+                    <span style=" position:absolute; bottom:0;font-size:0.9em; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">送<span>16666</span>积分</span>
+                 </li>
+    		</div>
+</div>
+
+</body>
+</html>

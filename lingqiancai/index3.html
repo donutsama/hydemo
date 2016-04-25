@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html manifest="/example/html5/demo_html.appcache">
+<meta charset="utf-8">
+<title>零钱彩</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width"> -->
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="css/index_style.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script defer src="js/index_js.js"></script>
+
+</head>
+
+<body ontouchstart="">
+  <div class="top_title">
+    <a href="">奖金购彩</a>
+    <a class="left" href=""><img src="image/left.png"></a>
+  </div>
+
+  <div class="vip-bg">
+     <form>
+         <p class="one"><span>可用金额：</span><i>2000.00元</i></p>
+         <div class="two">
+              <span>购彩金额：</span>
+              <div class="price">
+                <a class="highlight" href="javascript:;">0.10元</a>
+                <a href="javascript:;">0.20元</a>
+                <a href="javascript:;">0.50元</a>
+                <a href="javascript:;">1.00元</a>
+                <div class="clear"></div>
+              </div>
+         </div>
+         <div class="three">
+              <span>购彩张数：</span>
+              <div class="change_input">
+                  <a class="jian" href="javascript:;">-</a>
+                  <input type="text" value="22" onkeydown="onlyNum();">
+                  <a class="plus" href="javascript:;">+</a>
+                  <div class="clear"></div>
+              </div>
+         </div>
+         <div class="four"><i>¥</i><i class="total-price"></i></div>
+        
+     </form>
+    
+  </div>
+  <div class="last">
+       <button class="button anniu">立即购买</button>
+  </div>
+
+  <input class="input1" type="text" value="">
+  <input class="input2" type="text" value="">
+
+
+  <!-- 状态1 -->
+  <div class="fixed">
+      <div class="position">
+          <img class="img" src="image/pos-bg.png"> 
+          <a class="close" href="javascript:;"><img src="image/close.png"></a>
+          <div class="clear"></div>
+          <h5>奖金购彩成功</h5>
+          <a class="icon" href=""><img src="image/icon.png"></a>
+          <a class="name_pos" href="">某某某</a>
+          <p>您的福包已包好</p>
+          <a class="btn song" href="javascript:;">发送给好友</a>
+      </div>
+  </div>
+  <div class="all"></div>
+
+
+  <!-- 状态2 -->
+<!--   <div class="fixed">
+      <div class="position">
+          <img class="img" src="image/pos-bg.png"> 
+          <a class="close" href="javascript:;"><img src="image/close.png"></a>
+          <div class="clear"></div>
+          <h5></h5>
+          <a class="icon" href=""><img src="image/icon.png"></a>
+          <a class="name_pos" href="">某某某</a>
+          <p>住君中奖，福包多多</p>
+          <a class="btn" href="">拆红包</a>
+      </div>
+  </div>
+  <div class="all"></div> -->
+
+
+  <!-- 状态3 -->
+<!--   <div class="fixed">
+      <div class="position">
+          <img class="img" src="image/pos-bg.png"> 
+          <a class="close" href="javascript:;"><img src="image/close.png"></a>
+          <div class="clear"></div>
+          <h5></h5>
+          <a class="icon" href=""><img src="image/icon.png"></a>
+          <a class="name_pos" href="">某某某</a>
+          <p>手慢了，福包领完了</p>
+          <a class="btn underline" href="">查看领取情况</a>
+      </div>
+  </div>
+  <div class="all"></div> -->
+
+
+    <div class="all-bg">
+        <img src="image/all-bg.png">
+    </div>
+
+
+  <script type="text/javascript">
+     $("body").css("background-color","#fff");
+  </script>
+</body>
+</html>

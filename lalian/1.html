@@ -1,0 +1,98 @@
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<div class="fghkjl" style=" padding-left:28px; width:100px; height:380px; position:fixed; right:-40px; z-index:1000;">
+  <div style=" background:url(./indexrightr.jpg) no-repeat; width:60px; height:380px; text-align:center; color:#fff; padding-top:35px; line-height:16px;">
+        <div style=" cursor:pointer;">
+          <span onclick="javascript:window.location.href='{url:/ucenter/index}'" style=" font-size:12px;color:#fff;">111</span>
+            <span onclick="javascript:window.location.href='{url:/ucenter/index}'" style="color:#fff;">123会员</span>
+         
+        </div>
+        <div class="indexyue" style=" cursor:pointer;">
+            <span onclick="javascript:window.location.href='{url:/ucenter/account_log}'" style=" display:block; margin-top:30px;color:#fff;">余额</span>
+           
+            <span onclick="javascript:window.location.href='{url:/ucenter/account_log}'" style="color:#fff;">---</span>
+        </div>
+        <div style=" cursor:pointer;">
+            <span style=" display:block; margin-top:27px;color:#fff;" onclick="javascript:window.location.href='{url:/ucenter/index}'">会员期限</span>
+                    
+             <span style=" font-size:12px;color:#fff;" style=" display:block; margin-top:27px;color:#fff;" onclick="javascript:window.location.href='{url:/ucenter/index}'">---</span><br>
+        </div>
+        <div style=" cursor:pointer;">
+            <span onclick="window:location.href='http://qiao.baidu.com/v3/?module=default&controller=im&action=index&ucid=10206773&type=n&siteid=6571607'" style="display:block; margin-top:27px; margin-bottom:65px;color:#fff;">客服</span>
+        </div>
+        <div class="indexgouwuche" style=" cursor:pointer;">
+            <span onclick="window.location.href='{url:/simple/cart_}'" style=" display:block; width:20px; height:50px; margin:0 auto; text-align:center; line-height:14px;color:#fff;">购物车</span>
+        </div>
+        <div  style=" cursor:pointer;">            
+           
+            <span onclick="javascript:window.location.href='{url:/ucenter/account_log}'" class="indexgwctext" style=" display:block; width:20px; height:20px; border-radius:50px;background:#cc0066; margin:0 auto; text-align:center; line-height:20px;color:#fff;">0</span>
+        </div>
+        <div class="top">
+        </div>
+    </div>
+</div>
+<div class="indexjifenshow" style=" width:180px; background:#262626; position:fixed; right:-250px; border-radius:5px 0 0  5px; text-align:center; color:#fff; padding:10px 0;">
+<span style=" display:block; float:left; width:50%;color:#fff;">氪币:<span style=" color:#e63955;">0</span></span>
+<span style=" display:block; float:left; width:50%;color:#fff;">现金:<span style=" color:#e63955;">0</span></span>
+</div>
+<div class="indexgouwucheshow" style=" width:180px; min-height:120px; background:#262626; position:fixed; right:-250px; border-radius:5px 0 0  5px; color:#fff;">
+   
+    <div class="igwcsd" style=" width:180px; height:120px; background:url(./gouwuchecheche.png) no-repeat;"></div>
+</div>
+<style>
+
+.indexgouwucheshow span{ padding-left:5px; line-height:26px; cursor:pointer;}
+.top{
+  width: 100%;
+  height: 30px;
+  border:1px solid #000;
+  cursor: pointer;
+}
+</style>
+<script>
+
+$(document).ready(function(){  
+  $(".fghkjl").show();
+  $(".fghkjl").css("top",174);
+  $(".indexjifenshow").css("top",270);
+  $(".indexyue").hover(function(){
+    $(".indexjifenshow").animate({right:"60px"},500)
+  });
+  $(".indexyue").mouseleave(function(){
+    $(".indexjifenshow").animate({right:"-200px"},500)
+  })
+  $(".indexgouwuche").hover(function(){
+    $(".indexgouwucheshow").animate({right:"60px"},500)
+  });
+  $(".indexgouwuche").mouseleave(function(){
+    $(".indexgouwucheshow").animate({right:"-300px"},500)
+  });
+  $(".indexgouwucheshow").css("top",434);
+  if($(".indexgwctext").text()<1){
+    $(".indexgouwucheshow>div").hide();
+    $(".igwcsd").show();
+    
+  }
+  else{
+    $(".indexgouwucheshow>div").show();
+    
+    $(".igwcsd").hide();
+  }
+
+    
+})
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#rightsead a .shows").hover(function(){
+    $("#rightsead a  .hides").show(500);
+  });
+  $("#rightsead a .shows").mouseleave(function(){
+    $("#rightsead a  .hides").hide(500);
+  });
+  $(".top").click(function(){
+      $("html,body").animate({scrollTop:"0px"},1650);
+  });
+});
+</script>

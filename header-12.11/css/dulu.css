@@ -1,0 +1,365 @@
+@charset "utf-8";
+.reg {
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px #e2e2e2 solid;
+	background: #FFF;
+	margin-top: 10px;
+}
+.reg_tops {
+	padding: 15px 20px;
+	overflow: hidden;
+	border-bottom: 1px #e2e2e2 solid;
+	font-size: 14px;
+	line-height: 25px;
+	height: 25px;
+}
+.reg_tops a {
+	color: #0388cd;
+	text-decoration: none;
+}
+.reg_botts {
+	overflow: hidden;
+	padding: 20px 100px;
+}
+.reg_botts_le ul li {
+	padding: 6px 0;
+	color: #5e5e5e;
+}
+
+.reg_botts_le ul li span {
+	display: inline-block;
+	width: 85px;
+	text-align: right;
+}
+.text_s2 {
+	width: 238px;
+	height: 26px;
+	border: 1px #c6c6c6 solid;
+}
+.text_s3 {
+	width: 149px;
+	padding: 8px 0;
+	border: 1px #c6c6c6 solid;
+	outline: 0;
+	text-indent: 6px;
+}
+.btn_2 {
+	background: #d1cfd0;
+	padding: 8px 10px;
+	border: 1px #c6c6c6 solid;
+	border-left: 0;
+	outline: 0;
+	margin-left: 5px；
+}
+.reg_cors {
+	color: #5e5e5e;
+	text-decoration: none;
+}
+.reg_mars {
+	margin-left: 60px;
+}
+.lj_regs {
+	margin-left: 60px;
+	width: 250px;
+	height: 40px;
+	background: #e63955;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+}/* CSS Document */
+
+input.a-button{
+	width: 207px;
+	height: 45px;
+	margin-left: 82px;
+}
+
+.fr{
+	float: left;
+}
+
+
+.registered {
+	padding: 20px 0 0 10px;
+	height: 395px;	
+}
+
+.registered h4{
+	font-size: 16px;	
+	margin-bottom: 5px;
+}
+
+.item-left{
+	float: left;
+	margin-left: 85px;
+}
+
+.item-left a.wangji-m{
+	display: inline-block;
+	margin-left: 5px;
+	color: #005aa0;
+	text-decoration: underline;
+}
+
+form.item-l{
+	margin-top: 20px;
+}
+
+form.item-ll{
+	margin-top: 5px;
+}
+
+
+form.item-l label{
+	line-height: 55px; 
+}
+
+form.item-l span{
+	display: inline-block;
+	width: 75px;
+	text-align: left;
+}
+
+form.item-l input[type="text"]{
+	width: 236px;
+	height: 24px;
+	border:1px solid #ccc;
+}
+
+form.item-l input[type="password"]{
+	width: 236px;
+	height: 24px;
+	border: 1px solid #ccc;
+}
+
+form.item-l label img{
+	vertical-align: middle;
+	display: inline-block;
+	margin-top: -3px;
+}
+
+.item-right{
+	float: right;
+	width: 375px;
+	/*margin-left: 75px;*/
+	border-left: 1px solid #ccc;
+	padding-left: 55px;
+	height: 300px;
+}
+
+.item-right p.big-size1{
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.item-right a.xinzhu{
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: #8fc31f;
+	color: #fff;
+	display: inline-block;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.item-left input[type="checkbox"]{
+	margin: 0;
+	margin-top: -2px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+p.welcome{
+	width: 980px;
+	margin: 0 auto;
+	margin-top: 30px;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+p.welcome a{
+	font-size: 14px;
+	color: #8fc31f;
+}
+
+form.item-l  input.duan{
+	width:151px;
+	margin-right:5px;
+}
+
+form.item-l label.tong{
+	font-size: 10px;
+	line-height: 35px;
+}
+
+form.item-l label.tong a.xie{
+	font-size: 10px;
+	color: #8fc31f;
+}
+
+form.item-l label a.gary{
+	width: 78px;
+	height: 28px;
+	background: #d1cfd0;
+	line-height: 29px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #c6c6c6;
+	font-size: 12px;
+	color: #fff;
+	margin-left: 1px;
+}
+
+form.item-l label a.pink{
+	width: 78px;
+	height: 28px;
+	background: #8fc31f;
+	line-height: 29px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #8fc31f;
+	font-size: 12px;
+	color: #fff;
+	margin-left: 1px;
+}
+
+.item-right .weixin{
+	width: 325px;
+	height: 400px;
+	text-align:center;
+	margin-top: 15px;
+}
+
+.item-right .weixin img{
+	width: 260px;
+	height: 260px;
+}
+
+.item-right .weixin p{
+	font-size: 16px;
+	color: #8fc31f;
+	margin-top: 6px;
+}
+
+form.item-l input[type="text"].error {
+	border: 1px solid red;
+}
+
+form.item-l input[type="password"].error {
+	border: 1px solid red;
+}
+
+form.item-l span.tip {
+  color: #646464;
+  width: 130px;
+}
+
+form.item-l span.error_tip {
+  color: red;
+  width: 130px;
+  text-align: left;
+}
+
+form.item-l  input.highlight {
+
+}
+
+form.item-l span.sure {
+  background: url(../images/sucess.png) no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: left; 
+  vertical-align: middle;
+  margin-top: -2px; 
+}
+
+form.item-l span.tishi{
+	width: 130px;
+	margin-left: 3px;
+	color: #646464;
+	display: none;
+}
+
+form.item-l span.gary{
+	width: 130px;
+	margin-left: 3px;
+	color: red;
+}
+
+.logincont span.tishi{
+	width: 130px;
+	margin-left: 3px;
+	color: #646464;
+	display: none;
+}
+
+.logincont span.gary{
+	width: 130px;
+	margin-left: 3px;
+	color: red;
+}
+
+.logincont input[type="password"].error {
+	border: 1px solid red;
+}
+
+.find_password span.tishi{
+	width: 130px;
+	margin-left: 3px;
+	color: #646464;
+	display: none;
+}
+
+.find_password span.gary{
+	width: 130px;
+	margin-left: 3px;
+	color: red;
+}
+
+.find_password input[type="password"].error {
+	border: 1px solid red;
+}
+
+.button{
+	bottom: 1px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	background-color: #8fc31f;
+	color: #fff;
+	color: red;
+	/*文字不折行*/
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+input[type="button"]{
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: #8fc31f;
+	color: #fff;
+	border:none;
+	border-radius:3px;
+	margin:10px;
+	cursor:pointer;
+}
+input[type="submit"]{
+	background: url(../images/login.png) no-repeat;
+	width: 133px;
+	height: 42px;
+	border: none;
+	border-radius: 5px;
+	border-bottom-style: 0;
+}

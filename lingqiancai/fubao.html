@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html manifest="/example/html5/demo_html.appcache">
+<meta charset="utf-8">
+<title>零钱彩</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width"> -->
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/slick.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/slick-theme.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/index_style.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script defer src="js/slick.min.js"></script>
+<script defer src="js/tiao.js"></script>
+<script defer src="js/index_js.js"></script>
+
+</head>
+<body ontouchstart="">
+<!--     <div class="body_bg">
+        <img src="image/top-bg1.png">
+    </div> -->
+
+       <div class="slick-slides body_bg" id="slider1">
+            <ul class="slides">
+                <li>
+                    <a><img src="image/top-bg1.png"/></a>
+                </li>
+                <li>
+                    <a><img src="image/top-bg1.png"/></a>
+                </li>
+                <li>
+                    <a><img src="image/top-bg1.png"/></a>
+                </li>
+            </ul>
+            <div class="slides-pagination">
+
+            </div>
+      </div>
+
+    <div class="header">
+    </div>
+    <div class="content content1">
+        <img src="image/pic1.png">
+        <div class="content-item">
+            <img class="top-bg" src="image/pic3.png">
+            <img class="bottom-bg" src="image/pic2.png">
+        	<p>您已获得2注福包彩票</p>
+
+        	<ul>
+        		<li><a href="javascript:;">01</a></li>
+        		<li><a href="javascript:;">02</a></li>
+        		<li><a href="javascript:;">03</a></li>
+        		<li><a href="javascript:;">04</a></li>
+        		<li><a href="javascript:;">05</a></li>
+        		<li><a href="javascript:;">06</a></li>
+        		<li><a href="javascript:;">11</a></li>
+        		<div class="clear"></div>
+        	</ul>
+
+        	<ul>
+        		<li><a href="javascript:;">01</a></li>
+        		<li><a href="javascript:;">02</a></li>
+        		<li><a href="javascript:;">03</a></li>
+        		<li><a href="javascript:;">04</a></li>
+        		<li><a href="javascript:;">05</a></li>
+        		<li><a href="javascript:;">06</a></li>
+        		<li><a href="javascript:;">11</a></li>
+        		<div class="clear"></div>
+        	</ul>
+
+        </div>
+
+        <div class="change">
+        	<span>彩票已放入账户</span>
+        	<i>13810109206</i>
+        	<a href="">管理</a>
+        </div>
+
+        <div class="button">
+        	<a href="">查看兑奖</a>
+        	<a class="song" href="javascript:;">分享有礼</a>
+            <!-- <a class="anniu" href="javascript:;">分享有礼</a> -->
+        	<div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+        <p class="ps">*分享好友可获得更多福包彩票</p>
+
+    </div>
+<!--
+    <div class="fixed">
+        <div class="position">
+            <img class="img" src="image/pos-bg.png">
+            <a class="close" href="javascript:;"><img src="image/close.png"></a>
+            <div class="clear"></div>
+            <h5>奖金购彩成功</h5>
+            <a class="icon" href=""><img src="image/icon.png"></a>
+            <p>您的福包已包好</p>
+            <a class="btn" href="">发送给好友</a>
+        </div>
+    </div>
+    <div class="all"></div> -->
+
+    <div class="all-bg">
+        <img src="image/all-bg.png">
+    </div>
+
+    <script type="text/javascript">
+
+    function isInWeixin() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if (isInWeixin()) {
+
+        // 微信js签名算法见文档：
+        //http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html#.E6.AD.A5.E9.AA.A4.E4.B8.89.EF.BC.9A.E9.80.9A.E8.BF.87config.E6.8E.A5.E5.8F.A3.E6.B3.A8.E5.85.A5.E6.9D.83.E9.99.90.E9.AA.8C.E8.AF.81.E9.85.8D.E7.BD.AE
+        // 1.签名用的noncestr和timestamp必须与wx.config中的nonceStr和timestamp相同。
+        // 2.签名用的url必须是调用JS接口页面的完整URL。
+        // 3.出于安全考虑，开发者必须在服务器端实现签名的逻辑。
+        //通过config接口注入权限验证配置
+        wx.config({
+            debug : false,
+            appId : '${appid}', // 公众号的唯一标识, 后端提供
+            timestamp : '${timestamp}', // 生成签名的时间戳, 后端提供
+            nonceStr : '${noncestr}', // 生成签名的随机串, 后端提供
+            signature : '${signature}', // 签名, 后端提供
+            jsApiList : [
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline',
+            'onMenuShareQQ']
+        });
+
+        //微信执行方法
+        wx.ready(function() {
+
+            var shareTitle = ""; // 分享出去的标题
+            var link_url = ""; // 分享出去的链接
+            var img_url = ""; // 图标地址
+            var desc = ""; // 分享的描述信息
+            wx.onMenuShareAppMessage({ // 分享给微信好友
+                title: shareTitle, // 分享标题
+                link: link_url, // 分享链接
+                imgUrl: img_url, // 分享出去的小图标
+                desc: desc, // 分享描述
+                success: function () {
+                    // 分享成功后执行的方法
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareTimeline({ // 分享到朋友圈
+                title: shareTitle, // 分享标题
+                link: link_url,
+                imgUrl: img_url,
+                desc: desc, // 分享描述
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareQQ({ // 分享到QQ
+                title: shareTitle, // 分享标题
+                desc: desc, // 分享描述
+                link: link_url,
+                imgUrl: img_url,
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        });
+
+        //微信错误提示
+        wx.error(function(res) {
+
+        });
+
+    }
+    </script>
+</body>
+</html>

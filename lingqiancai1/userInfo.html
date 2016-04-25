@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html manifest="/example/html5/demo_html.appcache">
+<meta charset="utf-8">
+<title>零钱彩</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width"> -->
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/slick.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/slick-theme.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/index_style.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script defer src="js/slick.min.js"></script>
+<script defer src="js/tiao.js"></script>
+<script defer src="js/index_js.js"></script>
+<style type="text/css">
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color: #646464;
+		    font-size: 0.9em;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color: #646464;
+		    font-size: 0.9em;
+		}
+
+		input:-ms-input-placeholder,
+		textarea:-ms-input-placeholder {
+		    color: #646464;
+		    font-size: 0.9em;
+		}
+
+		input::-webkit-input-placeholder,
+		textarea::-webkit-input-placeholder {
+		    color: #646464;
+		    font-size: 0.9em;
+		}
+</style>
+</head>
+<body ontouchstart="">
+  <div class="header_top">
+    <a class="return" href=""><img src="image/icon10.png"></a>
+    <a href="">个人信息</a>
+  </div>
+  <form class="user">
+
+      <div class="info">
+          <span class="letter-spacing">昵&#12288;&#12288;称：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+
+      <div class="info">
+          <span class="letter-spacing">性&#12288;&#12288;别：</span>
+          <div class="right_info info_none">
+<!--              <a class="highlight" href="javascript:;">男</a> 
+             <a href="javascript:;">女</a> -->
+              <label><input type="radio" value="" name="name"><span>男</span></label>
+              <label><input type="radio" value="" name="name"><span>女</span></label>
+             <div class="clear"></div> 
+          </div>
+      </div>
+
+      <div class="info">
+          <span class="letter-spacing">生&#12288;&#12288;日：</span>
+          <div class="right_info">
+             <!-- <input type="date" placeholder="请选择生日">  -->
+             <input placeholder="请选择生日" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
+             <img src="image/icon12.png"> 
+          </div>
+
+      </div>
+      
+      <div class="info">
+          <span class="letter-spacing">省&#12288;&#12288;份：</span>
+          <div class="right_info">
+             <!-- <select><option selected>请选择省份</option></select>  -->
+             <select>
+                 <option selected>请选择省份</option>
+                 <option>北京</option>
+                 <option>河北</option>
+             </select>
+             <img src="image/icon12.png">  
+          </div>
+      </div>
+
+      <div class="info">
+          <span  class="letter-spacing">邮&#12288;&#12288;箱：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+
+      <div class="info">
+          <span>真实姓名：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+      
+      <div class="info">
+          <span>身份证号：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+
+      <div class="info">
+          <span>手机号码：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+
+      <div class="info">
+          <span>联系地址：</span>
+          <div class="right_info">
+             <input type="text">  
+          </div>
+      </div>
+
+      <button class="bao">保存资料</button>
+  </form>
+
+<script type="text/javascript">
+  $("body").css("background-color","#fff");
+</script>
+</body>
+</html>

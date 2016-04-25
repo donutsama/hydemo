@@ -1,0 +1,178 @@
+{set:$user_id = $this->user['user_id']}
+{query:name=member where=user_id eq $user_id item=$user}{/query}
+{query:name=merchant where=user_id eq $user_id item=$merchant}{/query}
+{if:$merchant}
+{set:$mer = 1}
+{else:}
+{query:name=mer_service where=user_id eq $user_id item=$service}{/query}
+{if:$service}
+{set:$mer_id = $service['mer_id']}
+{query:name=merchant where=id eq $mer_id item=$merchant}{/query}
+{/if}
+{/if}
+{js:artTemplate}
+<script type='text/javascript' src='{theme:javascript/artTemplate/area_select.js}'></script>
+
+<div class="bodyer">
+<div class="header_left">
+	 <div class="left fl" style="float:left; width:200px;">
+	 	<ul class="jbnav" style="text-align:center;">
+	 		<li><a href="{url:/ucenter/order}" target="_self">我的订单</a></li>
+	 		<li><a href="{url:/ucenter/account_log}" target="_self">我的钱包</a></li>
+	 		<li><a href="{url:/ucenter/redpacket}" target="_self">我的代金券</a></li>
+	 		<li><a href="{url:/ucenter/favorite}" target="_self">我的收藏</a></li>
+	 		<li><a href="{url:/ucenter/info}" target="_self">基本资料</a></li>
+	 		<li class="thist"><a href="{url:/ucenter/address}" target="_self">收货地址</a></li>
+	 		<li><a href="{url:/ucenter/security}" target="_self">安全中心</a></li>
+	 		{if:$merchant && $merchant['is_lock'] == 0 && $merchant['is_del'] == 0}
+	 		<li><a href="{url:/merchant/media_list}" target="_self">商户中心</a></li>
+	 		{/if}
+	 	</ul>
+
+	 	<ul class="javav" style="text-align:center;">
+	 		<li><a href="{url:/ucenter/order}" target="_self">我的订单</a></li>
+	 		<li><a href="{url:/ucenter/account_log}" target="_self">我的钱包</a></li>
+	 		<li><a href="{url:/ucenter/redpacket}" target="_self">我的代金券</a></li>
+	 		<li><a href="{url:/ucenter/favorite}" target="_self">我的收藏</a></li>
+	 		<li><a href="{url:/ucenter/info}" target="_self">基本资料</a></li>
+	 		<li class="thist"><a href="{url:/ucenter/address}" target="_self">收货地址</a></li>
+	 		<li><a href="{url:ucenter/security}" target="_self">安全中心</a></li>
+	 		{if:$merchant && $merchant['is_lock'] == 0 && $merchant['is_del'] == 0}
+	 		<li><a href="{url:merchant/media_list}" target="_self">商户中心</a></li>
+	 		{/if}
+	 	</ul>
+
+	  </div>
+
+  <div class="jbxx_rig fr">
+   <h3>收货地址</h3>
+   <div class="jb_xxs">
+   <div class="address shadd" style="overflow: auto;">
+ <div class='center3' >
+<table cellpadding="0" cellspacing="0" width="100%" id='tab'>
+	<tr>
+	  <td width="20%">收货人</td>
+	  <td>所在地区</td>
+	  <td>街道地址</td>
+	  <td>电话/手机</td>
+	  <td>邮编</td>
+	  <td>操作</td>
+    </tr>
+  {foreach:items=$this->address}
+	<tr {if:$key%2==1}class='even'{/if}>
+		<td>{$item['accept_name']}</td>
+		<td>{$this->areas[$item['province']]}{$this->areas[$item['city']]}{$this->areas[$item['area']]}</td>
+		<td>{$item['address']}</td>
+		<td>{$item['mobile']}</td>
+		<td>{$item['zip']}</td>
+
+		<td>{$item['accept_name']}</td>
+		<td>{$this->areas[$item['province']]}{$this->areas[$item['city']]}{$this->areas[$item['area']]}</td>
+		<td>{$item['address']}</td>
+		<td>{$item['mobile']}</td>
+		<td>{$item['zip']}</td>
+		<td>
+			<a class="blue" href='javascript:void(0)' onclick='form_back({echo:JSON::encode($item)})'>修改</a>|
+			<a class="blue" href="javascript:void(0)" onclick="delModel({link:'{url:/ucenter/address_del/id/$item[id]}'});">删除</a>|
+			{if:$item['default']==1}
+			<a class="red2" href="{url:/ucenter/address_default/id/$item[id]/default/0}">取消默认</a>
+			{else:}
+			<a class="blue" href="{url:/ucenter/address_default/id/$item[id]/default/1}">设为默认</a>
+			{/if}
+		</td>
+		
+
+	</tr>
+{/foreach}
+</table>
+</div>
+
+<div class="center4" style="height:250px;">
+  <p></p>	
+</div>
+   </div>
+   </div>
+	
+   <h3 id="h3add">新增收货人信息</h3>
+   <div class="jb_xxs">
+   <div class="address shadd">
+   <form action='{url:/ucenter/address_edit}' method='post' name='form'>
+   <input name='id' type='hidden' value='' />
+  <ul>
+   <li>　<span>*</span>收货人：<input type="text" class="tet_1" name='accept_name' pattern='required' alt='收货人不能为空' placeholder="请填写收货人"></li>
+
+   <li><span>*</span>所属地区：
+   <select class="tet_1 text_wis" name="province" child="city,area" onchange="areaChangeCallback(this);" style="width:123px;"><option>选择省份</option></select>
+   <select class="tet_1 text_wis" name="city" child="area" parent="province" onchange="areaChangeCallback(this);"><option>选择城市</option></select>
+   <select class="tet_1 text_wis" name="area" parent="city" pattern="required"><option>选择区域</option></select></li>
+
+   <li><span>*</span>街道地区：<input type="text" class="tet_1 text_dds" name='address' pattern='required' alt='街道地区不能为空' placeholder="请输入街道地区" style="width:235px;"></li>
+
+   <li><span>*</span>手机号码：<input type="text" class="tet_1 tetx1_ps" name='mobile' pattern='mobi' empty alt='手机号码格式不正确' placeholder="请输入手机号码"></li>
+
+   <li style="margin-left:5px;">座机号码：<input type="text" class="tet_1 tetx1_ps" name='telephone'  placeholder="请输入座机号码"></li>
+   
+   <li>　　邮编： <input name='zip' class="tet_1" pattern='^\d{6}$' empty alt='邮政编码格式不正确' type="text" placeholder="请输入邮编" style="width:113px;"></li>
+
+   <!-- <p>邮政编码,如250000。</p> -->
+
+  </ul>
+  </form>
+
+ </div>
+    
+   </div>
+  </div>
+</div>
+</div>
+
+<script type='text/javascript'>
+//DOM加载完毕
+$(function(){
+	//初始化地域联动
+	template.compile("areaTemplate",areaTemplate);
+
+	createAreaSelect('province',0,'');
+
+});
+
+/**
+ * 生成地域js联动下拉框
+ * @param name
+ * @param parent_id
+ * @param select_id
+ */
+function createAreaSelect(name,parent_id,select_id)
+{
+	//生成地区
+	$.getJSON("{url:/block/area_child}",{"aid":parent_id,"random":Math.random()},function(json)
+	{
+		$('[name="'+name+'"]').html(template.render('areaTemplate',{"select_id":select_id,"data":json}));
+	});
+}
+
+//修改地址
+function form_back(obj)
+{
+    //自动填充表单
+	var form = new Form('form');
+	form.init(obj);
+	$("#h3add").html('修改收货人信息');
+	createAreaSelect('province',0,obj.province);
+	createAreaSelect('city',obj.province,obj.city);
+	createAreaSelect('area',obj.city,obj.area);
+}
+
+//清空表单
+function form_empty()
+{
+	var formInstance = new Form('form');
+	$('form[name="form"] input[name]').each(function(){
+		formInstance.setValue(this.name,'');
+	});
+
+	createAreaSelect('province',0,'');
+	$('select[name="city"]').empty();
+	$('select[name="area"]').empty();
+}
+</script>

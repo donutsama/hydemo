@@ -1,0 +1,394 @@
+body,p,a,span,table,tr,th,td,ul,li,img,h3,h4,h5,hr,button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    font-family: "思源黑体 CN Regular";
+    color: #646464; 
+}
+
+body{
+   background: #fafafa; 
+   min-width: 1000px;
+}
+
+i,em{
+  font-style: normal;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input,select{
+  outline: none;
+}
+
+.clear{
+    clear: both;
+}
+
+#header .login{
+    height: 32px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+#header .margin{
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 32px;
+}
+
+#header .margin p{
+    float: left;
+    margin-left: 10px;
+}
+
+.margin p a.pink{
+    color: #ff2d5e;
+}
+
+#header .margin ul{
+    float: right;
+}
+
+#header .margin ul li{
+   float: left;
+   display: block;
+}
+
+#header .margin ul li a{
+   margin: 0 10px;
+   padding: 2px 0;
+}
+
+#header .margin ul li.li {
+  position: relative;
+}
+
+#header .margin ul li.li a{
+   background: url(../images/iphone.png) no-repeat ;
+   padding-left: 15px;
+}
+
+#header div.qrcode {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  background-color: #fff;
+  display: none;
+  left: -8px; 
+}
+
+#headerdiv.qrcode img {
+  width: 100%;
+}
+
+#header img.bg{
+    width: 100%;
+    height: 66px;
+}
+
+#header .head{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+#header .head img.logo{
+  float: left;
+}
+
+#header .head .nei{
+  float: left;
+  margin-left: 45px;
+  margin-top: -4px;
+}
+
+#header .head .nei ul li{
+  float: left;
+  display: block;
+  margin-right: 20px;
+}
+
+#header .head .select{
+  height: 36px;
+  background: #ff2d5e;
+  position: relative;
+  margin-top: 4px;
+}
+
+#header .head .select input{
+  width: 300px;
+  height: 30px;
+  outline: none;
+  border: 0;
+  background: #fff;
+  margin: 2px 0 0 2px;
+  padding-left: 8px;
+}
+
+#header .head .select a{
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  padding: 3px 16px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+#header .head .la{
+    float: right;
+    margin-top: 18px;
+    position: relative;
+}
+
+#header .head .la .down{
+    float: left;
+    vertical-align: center;
+}
+
+/*改*/
+#header .head .la a.name{
+    display: block;
+    float: left;
+    background: url(../images/icon.png) 10px 7px no-repeat;
+    padding:0 5px 0 32px;
+    margin-left: 20px;
+    border:1px solid #eaeaea;
+    line-height: 34px;
+    vertical-align: center;
+}
+
+#header .head .la a.highlight{
+    background: url(../images/icon.1.png) 10px 7px no-repeat;
+    color: #ff2d5e;
+}
+
+#header .head .la a.shop{
+  display: block;
+    float: left;
+    background: url(../images/icon1.1.png) 10px 9px no-repeat;
+    padding:0 5px 0 37px;
+    margin-left: 20px;
+    border:1px solid #eaeaea;
+   line-height: 34px;
+}
+
+#header .head .la a.highlight1{
+    background: url(../images/icon1.png) 10px 9px no-repeat;
+    color: #ff2d5e;
+}
+
+#header .head .la a.highlight1 span{
+    color: #ff2d5e;
+}
+
+#header .head .la a img{
+    margin-left: 5px;
+    vertical-align: center;
+}
+
+#header .head .la .my{
+    width: 107px;
+    height: 128px;
+    position: absolute;
+    background: #fafafa;
+    top: 35px;
+    left: 20px;
+    z-index: 999;
+    border: 1px solid #eaeaea;
+    border-top: none;
+    display: none;
+}
+
+#header .head .la .my a.down-cont{
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    padding-left: 5px;
+}
+
+#header .home{
+    /*background: #f0f0f0;*/
+    width: 1000px;
+    margin:0 auto;
+    height: 50px;
+    border-bottom: 2px solid #ff2d5e;
+}
+
+#header  .home ul.nav{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+#header ul.nav{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+#header ul.nav li{
+    float: left;
+    display: block;
+    width: 188px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+#header ul.nav li.li1{
+   width: 240px;
+   background: #ff2d5e;
+   position: relative;
+   margin-right: 3px;
+}
+
+#header ul.nav li.nav-item {
+  width: 188px;
+  border-top: 5px solid #fafafa;
+  border-bottom: 2px solid #ff2d5e;
+  height: 45px;
+}
+
+#header ul.nav li.li1 a{
+   color: #fff;
+}
+
+#header ul.nav li a{
+    font-size: 18px;
+    width: 100%;
+  display: inline-block;
+}
+
+#header ul.nav li.highlight{
+  border: 2px solid #ff2d5e;
+  width: 184px;
+  border-top-width: 5px; 
+  border-bottom: 2px solid #fafafa;
+  height: 45px;
+  /*margin-left: 3px;*/
+}
+
+#header ul.nav li.highlight a{
+   color: #ff2d5e;
+   /*line-height: 0;*/
+} 
+
+#header .position{
+  position: absolute;
+  width: 240px;
+  height: 302px;
+  background: #ff2d5e;
+  z-index: 9;
+  line-height: 16px;
+  top: 50px;
+  border-top: 1px solid #fff;
+  display: none;
+}
+
+#header .item{
+  width: 220px;
+  margin: 15px auto;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+#header .item img.img{
+  float: left;
+  margin-top: 4px;
+}
+
+#header .item .text{
+  float: left;
+  margin-left: 10px;
+}
+
+#header .item .text a.digital{
+  color: #fff;
+  font-size: 18px;
+}
+
+#header .item .text p{
+  margin-top: 5px;
+}
+ 
+#header .item .text p span{
+  color: #fff;
+  margin-right: 8px;
+}
+
+.footer{
+  margin-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer .link{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.footer .link ul{
+  width: 16%;
+  text-align: center;
+  float: left;
+}
+
+.footer .link ul li{
+  margin-bottom:15px; 
+}
+
+.footer .link ul li.bold{
+  margin-bottom:20px; 
+}
+
+.footer .link ul li.bold a{
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer .link .phone{
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+
+.phone img{
+  width: 46px;
+  height: 34px;
+}
+
+.phone a{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.phone p{
+  margin-bottom: 10px;
+}
+
+.foot{
+  height: 38px;
+  /*border-top: 12px solid #f0f0f0;*/
+  background:#ff2d5e;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 38px;
+}
+
+.foot p{
+  color: #fff;
+}

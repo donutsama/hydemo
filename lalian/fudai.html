@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+body{border:none; margin:0; padding:0; list-style:none;}
+.img{ display:none;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<input type="password" class="password">
+<span class="tishi">密码由个字符组成q1</span>
+<script>
+$(function(){
+	$(".password").focusout(function(){
+		var password = $(".password").val();  
+		var num = 0;  
+		var shuzi = 0 ;  
+		var zimu = 0 ;  
+		//对象.search方法判断字符串是否含有正则内容！=-1返回为true
+		if (password.search(/[0-9]/) != -1) {  
+			num += 1;  
+			shuzi =1;  
+		}  
+		if (password.search(/[A-Za-z]/) != -1) {  
+			num += 1;  
+			zimu = 1 ;  
+		}  
+		if (num >= 2 && (password.length >= 6 && password.length <= 16)) {  
+			$(".tishi").html("输入正确");  
+		}
+		else if(password.length < 6 || password.length > 16){  
+        	$(".tishi").html("密码由6-16个字符组成!");  
+    	}
+		else if(num == 1){  
+        	if(shuzi==1){  
+            $(".tishi").html("不能全为数字!");  
+        	}  
+        	if(zimu==1){  
+            $(".tishi").html("不能全为字母!");  
+        	}  
+    	}  
+	})
+})
+</script>
+</body>
+</html>

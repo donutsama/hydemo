@@ -1,0 +1,1424 @@
+body,a,p,h3,h4,h5,img,input,table,tr,th,td,ul,li,span,select,option,textarea,label,form{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul,li{
+	list-style-type: none;
+}
+
+input,select,option,textarea{
+	color: #000;
+	outline: none;
+}
+
+input[type="button"]{
+	cursor: pointer;
+}
+
+input{
+	outline: none;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+textarea{
+	vertical-align: top;
+}
+
+body{
+	/*background: url(../images/bg.png) no-repeat;*/
+	width: 100%;
+	height: auto;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.content .right{
+	float: left;
+	width: 960px;
+	margin: 25px 20px 0 110px;
+}
+
+.content .right .one{
+	width: 100%;
+}
+
+.content .right .one p{
+	float: left;
+	line-height: 30px;
+}
+
+.content .right p.button-right{
+	float: right;
+}
+
+.content .right a.button{
+	background: url(../images/button.png);
+	display: block;
+	width: 104px;
+	height: 37px;
+	text-align: center;
+	line-height: 37px;
+	color: #1C8EDC;
+	float: left;
+	margin-left: 10px;
+}
+
+.content .right span.block{
+	margin-top: 8px;
+	display: block;
+}
+
+.content .right span input.text{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+/*7-16*/
+
+/*over*/
+
+.content .right input.button1{
+	background: url(../images/button3.png);
+	width: 65px;
+	height: 28px;
+	color: #fff;
+	line-height: 28px;
+	display: inline-block;
+	text-align: center;
+	margin-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.content .right .two{
+	background: url(../images/two-bg.png) no-repeat;
+	width: 947px;
+	height: 368px;
+	margin-top: 20px;
+	padding: 0 15px;
+	/*overflow-y: scroll;*/ 
+}
+
+.content .right .three{
+	background: url(../images/three-bg.png) no-repeat;
+	width: 960px;
+	height: 368px;
+	margin-top: 35px; 
+	padding-top: 65px;	
+}
+
+.content .right .three1{
+	background: url(../images/three-bg-1.png) no-repeat;
+	width: 960px;
+	height: 310px;
+	margin-top: 35px; 
+	padding-top: 40px;	
+}
+
+.content .right .four{
+	background: none;
+	height: 490px;
+	margin-top: 0px;
+}
+
+.content .right .five{
+	background: url(../images/four-bg.png) no-repeat;
+	height: 600px;
+}
+
+.content .right .two ul{
+	float: right;
+	margin-right: 23px;
+	margin-top: 10px;
+}
+
+.content .right .two ul li{
+	float: left;
+	margin-left: 5px;
+}
+
+.content .right .two ul li input{
+	background: url(../images/button1.png) no-repeat;
+	width: 65px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	color: #fff;
+}
+
+.content .right .two ul input.li-1{
+	background: url(../images/button4.png) no-repeat;
+	width: 80px;
+}
+
+.content .right .two table{
+	text-align: center;
+	width: 95%;
+	margin: 0 auto;
+	border:1px solid #e3e3e3;
+	margin-top: 5px;
+	border-collapse:collapse;
+}
+
+.content .right .two table tr.tr1{
+	background: #f2f2f2;
+}
+
+.content .right .two table span.span{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin-left: 30px;
+	color: #000;
+}
+
+.content .right .two table tr td input.box{
+	vertical-align: middle;
+	margin-top: -3px;
+	margin-right: 3px;
+}
+
+*+html .content .right .two table tr td input.box{
+	margin-top: 0px;
+}
+
+.content .right .two table tr.tr2{
+	background: #fff;
+}
+
+.content .right .two table th{
+	height: 45px;
+	line-height: 45px;
+	background: url(../images/table-bg.png) repeat-x;
+	border:1px solid ;
+	font-size: 14px;
+}
+
+.content .right .two table td{
+	height: 35px;
+	line-height: 35px;
+	border:1px solid #e3e3e3 ;
+	color: #000;
+}
+
+.content .right .two table th.th{
+	width: 5%;
+}
+
+.content .right .two table th.th1{
+	width: 10%;
+}
+
+.content .right .two table th.th2{
+	width: 25%;
+}
+
+.content .right .two table th.th3{
+	width: 35%;
+}
+
+.content .right .two table td.green{
+	color: #00CC00;
+}
+
+.content .right .two table td.red{
+	color:#FF0000 ; 
+}
+
+.content .right .two table input[type="checkbox"]{
+	vertical-align: middle;
+}
+
+.content .right .two ul.ul{
+	margin-top: 15px;
+}
+
+.content .right .two ul.ul1{
+	margin-top: 15px;
+}
+
+.content .right .two ul li.li{
+	margin-left: 10px;
+	height: 31px;
+	text-align: center;
+	line-height: 31px;
+	float: left;
+}
+
+.content .right .two ul input.li1{
+	background: url(../images/first.png) no-repeat;
+	width: 86px;
+	padding-left: 15px;
+}
+
+.content .right .two ul input.li2{
+	background: url(../images/middle.png) no-repeat;
+	width: 55px;
+}
+
+.content .right .two ul input.li3{
+	background: url(../images/last.png) no-repeat;
+	width: 84px;
+	text-align: left;
+	padding-left: 15px;
+}
+
+.content .right .two .wirter{
+	padding-top: 30px; 
+	margin-left: 110px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.content .right .two .wirter1{
+	margin-left: 45px;
+	width: 1000px;
+}
+
+.content .right .two .wirter2{
+	margin-left: 220px;
+}
+
+.content .right .two .wirter3{
+	margin-left: 80px;
+	padding-top: 50px;
+}
+
+.content .right .two .wirter input[type="text"]{
+	margin-left: 15px;
+	width: 247px;
+	padding-left: 3px;
+}
+
+.content .right .two .wirter input.text1{
+	width: 477px;
+}
+
+.content .right .two .wirter select{
+	margin-left: 11px;
+	width: 250px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.content .right .two .wirter .select{
+	margin-bottom: 30px;
+}
+
+.content .right .two .wirter1 .select{
+	margin-bottom: 25px;
+}
+
+
+.content .right .two .wirter .select1{
+	margin-left: -24px;
+}
+
+.content .right .two .wirter .select2{
+	margin-left: 24px;
+}
+
+.content .right .two .wirter .select3{
+	margin-left: 28px;
+}
+
+.content .right .two .wirter .select-h{
+	margin-bottom: 40px;
+}
+
+.content .right .two .wirter .select-m{
+	margin-left: 64px;
+}
+
+.content .right .two .wirter .select-y{
+	margin-left: 459px;
+}
+
+.content .right .two .wirter .select-y input[type="button"]{
+	padding-left: -10px;
+}
+
+.content .right .two .wirter span.select{
+    display: block;	
+}
+
+.content .right .two .wirter .select span{
+	margin-right: 70px;
+}
+
+.content .right .two .wirter .select span.ten{
+	margin-right: 0px;
+}
+
+.content .right .two .wirter .select span input[type="button"]{
+	margin: 0 10px;
+	height: 25px;
+	width: 40px;
+	vertical-align: middle;
+}
+
+.content .right .two a.hot{
+	color:#FF0000;
+}
+
+.content .right .two .wirter textarea{
+	margin-left: 15px;
+	width: 480px;
+	height: 100px;  /*height: 130px;*/
+}
+
+.content .right .two .wirter textarea.textarea{
+	margin-left: 11px;
+}
+
+.content .right .two .wirter .select input[type="checkbox"]{
+	margin-left: 10px;
+	vertical-align: middle;
+	line-height: 30px;
+	margin-top: -2px;
+	margin-right: 5px; 	
+}
+
+.content .right .two .button-submit{
+	width: 260px;
+	margin: 0 auto;
+}
+
+.content .right .two input.submit{
+	background: url(../images/button5.png) no-repeat;
+	width: 111px;
+	height: 45px;
+	display:inline-block;
+	text-align: center;
+	line-height: 45px;
+	color: #1C8EDC;
+	margin: 0 8px;
+}
+
+
+/*  修改input里的placeholder颜色*/
+
+input:-webkit-input-placeholder {
+color: #666 !important; /* WebKit browsers /
+}
+input:-moz-placeholder {
+color: #D6D0CA !important; / Mozilla Firefox 4 to 18 /
+}
+input::-moz-placeholder {
+color: #D6D0CA !important; / Mozilla Firefox 19+ /
+}
+input:-ms-input-placeholder {
+color: #D6D0CA !important; / Internet Explorer 10+ */
+}
+
+
+.footer{
+	background:url(../images/footer-2.png) repeat-x;
+	width:100%;
+	height:23px;
+	padding-bottom: 30px;
+	text-align: center;
+	padding-top: 15px;
+	position:relative;
+}
+.footer_l{
+	position:absolute;
+	left:0;
+	top:0;
+	width:4px;
+	height:68px;
+	background:url(../images/footer-1.png) no-repeat;
+}
+.footer_r{
+	position:absolute;
+	right:0;
+	top:0;
+	width:4px;
+	height:68px;
+	background:url(../images/footer-3.png) no-repeat;
+}
+
+.footer ul{
+	width: 440px;
+	margin: 0 auto;
+}
+
+.footer ul li{
+	float: left;
+}
+
+.footer ul li a{
+	padding: 0 10px;
+}
+
+.footer p{
+	margin-top: 10px;
+}
+
+
+/*用户管理页面*/
+
+.content .two .list{
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px solid #547b9a;
+	margin: 0 20px;
+	padding: 0 10px;
+	padding-top: 12px;
+}
+
+.content .two .list p.checkbox{
+	float: left;
+	width: 41%;
+	padding-top: 3px;
+}
+
+.content .two .list p.checkbox input{
+	margin-right: 5px;
+	line-height: 14px;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+
+*+html .content .two .list p.checkbox input{
+	margin-top: -1px;
+}
+
+.content .two .list ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	float: right;
+	width: 16.5%;
+}
+
+.content .two .list span.ref {
+	display: block;
+	float: left;
+	width: 30%;
+	padding-top: 5px;
+}
+
+.content .right .two table.x th.th{
+	width: 5%;
+}
+
+.content .right .two table.x th.th1{
+	width: 10%;
+}
+
+.content .right .two table.x th.th2{
+	width: 15%;
+}
+
+.content .right .two table.x th.th3{
+	width: 20%;
+}
+.content .right .two table.x th.th4{
+	width: 30%;
+}
+
+.xul{
+	background: url(../images/icon1.png) no-repeat;
+	width: 198px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	margin-top: 20px;
+	margin-left: 17px;
+	font-size: 14px; 
+	color: #032a44;
+}
+
+.xul a{
+	color: #032a44;
+}
+
+.content .leftx{
+	width: 221px;
+	float: left;
+	border-right: 5px solid #175082;
+	height: 610px;
+	margin-top: 5px;
+}
+
+.content .leftx ul{
+    margin-left:80px;
+}
+
+.content .leftx ul li{ 
+	line-height:25px;
+}
+
+.content .leftx ul li a{
+	color:#FFF;
+}
+.content .leftx ul li.color a{
+	color:#0c76a3;
+}
+
+.content .leftx ul li a:hover{
+	color: #0c76a3;
+}
+
+.xul-1{
+	background: url(../images/icon1.png) no-repeat;
+	width: 198px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	margin-left: 17px;
+	font-size: 14px; color: #fff;
+}
+
+.xul-1 a:hover{
+	color: #032a44;
+}
+
+.ximg{ 
+	width:235px;
+    height:180px; 
+	background-color:#f0f0f0 ;
+	border:#c9c9c9 solid 2px; 
+	float:left;
+	margin-left:53px;
+}
+
+.ximg img.x01{ 
+	margin-left:9px;
+	margin-top:9px;
+}
+
+.ximg p{ 
+	font-size:18px;
+	width:235px; 
+	text-align:center; 
+	margin-top:10px;
+	color:#000;
+}
+
+.xtext{
+    width:565px;
+    float:left;
+    margin-left:35px;
+    height:298px;
+}
+
+.xtext h3{ 
+	color:#000; 
+	font-size:16px;
+    font-weight:normal;
+}
+
+.xtext p{ 
+	color:#000; 
+	line-height:25px;
+}
+
+.content .right .two .wirter-x{
+	padding-top: 20px; 
+	margin-left: 230px;
+	vertical-align: middle;
+}
+
+.wirter-x p.question{ 
+	font-size:14px;
+}
+
+.wirter-x p.option{
+	font-size:12px; 
+	float:left; 
+	margin-top:12px;
+}
+
+.wirter-x p.option1{ 
+	font-size:12px; 
+	float:left; 
+	margin-left:70px;
+	margin-top:12px;
+}
+
+.content .right .two .wirter-x1{
+	padding-top: 22px; 
+	margin-left: 230px;
+	vertical-align: middle;
+}
+
+.wirter-x1 p.question{ 
+	font-size:14px;
+	clear:both;
+}
+
+.wirter-x1 p.option{ 
+	font-size:12px;
+	float:left;
+	margin-top:12px;
+}
+
+.wirter-x1 p.option1{ 
+	font-size:12px; 
+	float:left;
+	margin-left:70px;
+	margin-top:12px;
+}
+
+.content .right .two .button-submitx{
+	padding-top: 30px;
+	width: 130px;
+	margin: 0 auto;
+}
+
+.content .right .two input.submitx{
+	background: url(../images/button5.png) no-repeat;
+	width: 111px;
+	height: 45px;
+	display:inline-block;
+	text-align: center;
+	line-height: 45px;
+	color: #1C8EDC;
+	margin: 0 8px;
+}
+
+
+/*素材库管理*/
+.content .right .two h4{
+	border-bottom: 1px solid #fff;
+	line-height: 25px;
+	padding-left: 10px;
+	font-size: 14px;
+}
+
+.content .right .two ul.tab{
+	float: left;
+	margin-left: 20px;
+	margin-top: 18px;
+}
+
+.content .right .two ul.tab1{
+	margin-top: 5px;
+}
+
+.content .right .two ul.tab li input{
+	background: url(../images/white.png);
+	width: 99px;
+	height: 44px;
+	font-size: 14px;
+	color: #000;
+}
+
+.content .right .two ul.tab li input.blue{
+	background: url(../images/blue.png);
+	color: #fff;
+}
+
+.content .right .two ul.tab li input:hover{
+	background: url(../images/blue.png);
+	color: #fff;
+}
+
+.content .right .two .material{
+	background: url(../images/bg1.png) no-repeat;
+	width: 900px;
+	height: 360px;
+	margin:0 auto;
+	margin-top: 8px;	
+	padding: 2px 13px;
+	position: relative;
+}
+
+.content .right .two .material input[type="text"]{
+	margin-left: 15px;
+	width: 180px;
+	padding-left: 3px;
+	margin-right: 20px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.content .right .two .material select{
+	margin-left: 11px;
+	width: 180px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.content .right .two .material span input[type="checkbox"]{
+	margin-left: 25px;
+	margin-right: 5px;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+
+.content .right .two .material table.width {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.content .right .two .material table td.bluee {
+	color: #4A9CCA;
+	text-decoration: underline;
+}
+
+.content .right .two .material ul.position{
+	position: absolute;
+	right: 10px;
+	top: -24px;
+}
+
+
+.content .right .two .material ul.position li.yes{
+	background: url(../images/yes.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	margin: 0;
+}
+
+.content .right .two .material ul.position li.no{
+	background: url(../images/no.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	margin: 0;
+}
+
+
+/*素材库管理-资料*/
+.content .right .two .material .pic{
+	width: 16%;
+	text-align: center;
+	margin-top: 25px;
+	position: relative;
+	float: left;
+}
+
+.content .right .two .material .pic input[type="checkbox"]{
+	position: absolute;
+	top: 42px;
+	right: 42px;
+}
+
+*+html .content .right .two .material .pic input[type="checkbox"]{
+	top: 39px;
+	right: 40px;
+}
+
+
+/*素材库管理-上传*/
+
+.content .right .two .move{
+	margin-left: 175px;
+}
+
+.content .right .two .move1 form{
+	margin: 18px 0;
+}
+
+.content .right .two .move1 form{
+	padding-top: 20px;
+}
+
+
+.content .right .two form{
+	padding-top: 10px;
+	padding-bottom: 15px;	
+}
+
+.content .right .two form.form{
+	margin-left: -7px;
+}
+
+.content .right .two form.move-h1{
+	margin-left: -24px;
+}
+
+.content .right .two form.move-h2{
+	margin-left: 24px;
+}
+
+.content .right .two form input.text2{
+	width: 380px;
+	height: 30px;
+	margin-left: 15px;
+}
+
+.content .right .two form input.text3{
+	width: 300px;
+	height: 30px;
+	margin-left: 15px;
+}
+
+.content .right .two form label{
+	margin-left: 12px;
+}
+
+.content .right .two form label.url{
+	margin-left: 1px;
+}
+
+.content .right .two form input[type="checkbox"]{
+	margin-left: 14px;
+	margin-right: 5px;
+	margin-top: -3px;
+}
+
+.content .right .two form textarea{
+	width: 420px;
+	height: 100px;
+	margin-left: 15px;
+	vertical-align: top;
+}
+
+.content .right .two form span{
+	color: #d40c0c;
+	margin-left: 2px;
+}
+
+.content .right .two form input[type="button"]{
+	margin-left: 10px;
+	width: 60px;
+	height: 30px;
+}
+
+
+/*素材库管理-二维码生成(文本)*/
+
+.content .right .two ul.tab a.radius1{
+	background: url(../images/button6.png) no-repeat;
+	width: 130px;
+	height: 35px;
+	display: block;
+	text-align: center;
+	line-height: 35px;
+	font-size: 14px;
+}
+
+.content .right .two ul.tab a.radius{
+	background: url(../images/button7.png) no-repeat;
+	width: 130px;
+	height: 35px;
+	display: block;
+	text-align: center;
+	line-height: 35px;
+	font-size: 14px;
+	color: #000;
+}
+
+.content .right .two .case{
+	background: #e9e7e6;
+	width: 97%;
+	height: 326px;
+	margin: 0 auto;
+	border-radius: 5px;
+	padding-top: 20px;
+}
+
+
+.content .right .two .case .opacity{
+	background: #c7c8cc;
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 10px;
+	height: 300px;
+}
+
+*+html .content .right .two .case .opacity{
+	height: 305px;
+}
+
+.content .right .two .case .left-content{
+	width: 55%;
+	text-align: center;
+	float: left;
+	padding-left:30px;
+	padding-top: 10px; 
+}
+
+.content .right .two .case  textarea{
+	width: 100%;
+	height: 180px;
+	border: 1px solid #e5e0e0;
+}
+
+.content .right .two .case .left-content input[type="button"]{
+	width: 150px;
+	background: #f0f0f0;
+	border: 1px solid #e5e0e0;
+	margin-top: 30px;
+}
+
+.content .right .two .case .set-panel{
+	width: 32%;
+	text-align: center;
+	float: right;
+	padding-top: 10px;
+	margin-right: 30px;
+}
+
+.content .right .two .case .set-panel ul.color{
+	float: none;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+.content .right .two .case .set-panel ul.color li{
+	line-height: 20px;
+	border-bottom: 5px solid #fff;
+	padding: 0 15px;
+	margin: 0;
+}
+
+.content .right .two .case .set-panel ul.color li.li-blue{
+    border-bottom: 5px solid #0099ff;
+}
+
+.content .right .two .case .set-panel ul.color a{
+	color: #000;
+}
+
+.content .right .two .case .set-panel form{
+	margin-top: 10px;
+	margin-bottom: 0; /*margin-bottom: 20px;*/
+	padding: 0;
+}
+
+.content .right .two .case .set-panel label{
+	margin: 0;
+	color: #000;
+}
+
+.content .right .two .case .set-panel input[type="radio"]{
+	margin-left: 10px;
+	margin-top: -1px;
+}
+
+.content .right .two .case .set-panel img{
+	margin-left: 10px;
+}
+
+.content .right .two .case .set-panel form input[type="button"]{
+	width: 40px;
+	height: 14px;
+	font-size: 10px;
+	line-height: 10px;
+	border:1px solid #666;
+}
+
+
+/*素材库管理-二维码生成(文件)*/
+
+.content .right .two .case .left-content p.green{
+	text-align: left;
+	color: #009933;
+	font-size: 14px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #666;
+}
+
+.content .right .two .case .left-content .floating{
+	width: 100%;
+	height: 23px;
+	margin-top: 15px;
+}
+
+.content .right .two .case .left-content ul.file{
+	float: left;
+	margin: 0;
+	margin-top: 0;
+}
+
+.content .right .two .case .left-content ul.file li{
+	width: 75px;
+	height: 23px;
+	margin-left: 0;
+	line-height: 23px;
+}
+
+.content .right .two .case .left-content ul.file li.li11{
+	background: url(../images/button8.png);
+}
+
+.content .right .two .case .left-content ul.file li a{
+	color: #666;
+}
+
+.content .right .two .case .left-content ul.file li.li11 a{
+	color: #fff;
+}
+
+.content .right .two .case .left-content p.max{
+	float: right;
+	color: #666;
+}
+
+.content .right .two .case .left-content p.max span{
+	color: #ff6600;
+}
+
+.content .right .two .case .left-content form{
+	height: 30px;
+	margin-top: 0;
+}
+
+.content .right .two .case .left-content input[type="text"]{
+	width: 80%;
+	height: 30px;
+}
+
+.content .right .two .case .left-content form input[type="button"]{
+	width: 18%;
+	height: 30px;
+	margin-top: 0;
+	margin-left: 2%;
+}
+
+.content .right .two .case .left-content textarea.small{
+	height: 90px;
+}
+
+
+/*素材库管理-二维码生成(网址)*/
+
+.content .right .two .case .left-content input.full{
+	width: 100%;
+}
+
+.content .right .two .case .left-content p.add{
+	text-align: left;
+	color: #009933;
+	font-size: 14px;
+	margin-top: 40px;
+}
+
+.content .right .two .case .left-content p.add span{
+	color: #666;
+	margin-left: 12px;
+	font-size: 12px;
+}
+
+
+/*素材回收站-还原*/
+
+.content .right .two .wirter .go{
+	margin-left: 12px;
+}
+
+*+html .content .right .two .wirter .go{
+	margin-left: 12px;
+}
+
+/*修改密码*/
+
+.content .right .two .move2{
+	width: 65%;
+	height: 75%;
+	margin: 0 auto;
+	background: #f2f2f2;
+	padding-left: 250px;
+	padding-top: 40px;
+	border-radius:5px;
+}
+
+*+html .content .right .two .move2{
+	padding-top: 60px;
+    height: 70%;
+}
+
+.content .right .two .move2 input.text3{
+	width: 260px;
+	height: 30px;
+}
+
+.content .right .six{
+	padding-top: 32px;
+}
+
+.content .right .two .move2 form.this{
+	margin-left: -12px;
+}
+
+.content .right .two .move2 form label{
+	color: #000;
+}
+
+.content .right .two .move2 form input{
+	margin-left: 15px;
+	border:1px solid #ccc;
+}
+
+.content .right .two .move2 input[type="button"]{
+	background: url(../images/button5.png);
+	width: 112px;
+	height: 45px;
+	text-align: center;
+	left: 45px;
+	margin-top: 30px;
+	margin-left: 130px;
+}
+
+/*日志管理*/
+
+.content .right .two input.common{
+	background: url(../images/blue.png);
+	width: 99px;
+	height: 44px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 20px;	
+	margin-left: 42px; 
+}
+
+.content .right .two .beige{
+	background: #f2f2f2;
+	width: 90%;
+	margin: 0 auto;
+	height: 295px;
+	padding-top: 30px;
+}
+
+.content .right .two .beige table{
+	margin-top: 0;
+	width: 90%;
+}
+
+
+/*统计分析*/
+
+.content .right .five ul{
+	margin-top: 35px;
+}
+
+.content .right .five ul li input{
+	font-weight: bold;
+}
+
+.content .right .two .qh{
+	width: 95%;
+	margin: 0 auto;
+	height: 500px;
+	padding-top: 5px;
+	margin-top: 5px;
+}
+
+.content .right .two .qh .tab-2{
+	display: none;	
+}
+
+.content .right .two .qh .tab-3{
+	display: none;	
+}
+
+.content .right .two .qh .tab-4{
+	display: none;	
+	text-align: center;
+}
+
+.content .right .two .qh .tab-4 p{
+	color: #000;
+}
+
+.content .right .two table tr.gary th{
+	background: #d7d7d7;
+	color: #000;
+	border-color:#e4e4e4;
+}
+
+
+/*7-17 积分管理*/
+.tblock-a1{ margin-right:70px;}
+.tblock-a2{ margin-right:15px;}
+.t-two-bg{
+	width:947px;
+	height:340px;
+	background:#f2f2f2;
+	margin:15px 15px;
+	margin-left: 0;
+	position:absolute;		
+}
+
+.t-two-input{
+	width:443px;
+	display:block;
+	color:#000;
+	margin:120px 0px 40px 200px;
+	position:absolute;
+	left: 54px;
+}
+
+.t-two-text{height: 30px; line-height:30px; vertical-align:middle; margin-left:40px; width:260px; border:1px solid #999;}
+.t-button3{
+	background:url(../images/button5.png);
+	width:112px;
+	height:45px;
+	line-height:40px;
+	position:absolute;
+	left: 381px;
+	top: 200px;
+}
+
+.t-one p{ font-size:16px;}
+.t-one{ line-height:40px;}
+.t-block{ width:70%; margin:0 auto;  display: block;}
+.t-two-p{ height:10px;}
+.content .right .t-two{ background:url(../images/two-bg-2.png) no-repeat;  height:292px; }
+.content .right .two .wirter .t-select{ margin-bottom:0px;}
+.content .right .two .wirter .t-select-01{ margin-bottom:15px;}
+.content .right .two table.t-x{
+	text-align: center;
+	width: 480px;
+	margin-left:11px;
+	border:1px solid #e3e3e3;
+	margin-left: 75px;
+	border-collapse:collapse;
+	vertical-align: top;
+}
+
+.content .right .two table.t-x tr1{width:480px;}
+.tblock-a3{ margin-right:70px;}
+.t-sousuo{ background:url(../images/button3.png) no-repeat; width:65px; height:28px; line-height:23px; color:#FFF;}
+.tblock-caozuo{margin-left:40px; padding-top:12px; margin-bottom: 10px;}
+.content .right .t-two-1{ background:url(../images/two-bg-2.png) no-repeat; background-size:977px 270px; }
+.content .right .t-two-2{ background:url(../images/two-bg-2.png) no-repeat; background-size:977px 390px; height:390px; }
+.content .right .t-two-3{ background:url(../images/two-bg-2.png) no-repeat; background-size:977px 450px; height:450px; }
+.content .right .t-two-4{ background:url(../images/two-bg-2.png) no-repeat; background-size:977px 368px; height:368px; }
+
+
+/*  展项管理-js  */
+.two #box{
+	background: url(../images/pic1.png) no-repeat;
+	width: 430px;
+	height: 243px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	display: none;
+}
+
+.two #box p.tip{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.two #box p.delete{
+	color: #419bc9;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 45px;
+}
+
+.content .right .two ul input.li-1{
+	background: url(../images/button9.png) no-repeat;
+	width: 100px;
+}
+
+.two #box ul{
+	float: none;
+	width: 280px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.two #box ul li{
+	margin: 0;
+	padding: 0;
+}
+
+.two #box ul input{
+	background: url(../images/button10.png) no-repeat;
+	width: 120px;
+	height: 40px;
+	color: #000;
+	text-align: center;
+	margin:0 10px;
+}
+
+.two #box .close{
+	top: 15px;
+	right:15px;
+	position: absolute;
+	cursor: pointer;
+}
+
+/* 推送内容添加*/
+.h-two-bg{
+	width:947px;
+	height:460px;
+	background:#f2f2f2;
+	margin:5px 15px;
+	margin-left: 0;
+}
+
+*+html .h-two-bg{
+	margin-top: 15px;
+}
+
+.content .right .two .h-two-bg .select{
+	margin-bottom: 20px;
+}
+
+*+html .content .right .two .h-two-bg .select{
+	margin-bottom: 14px;
+}
+
+.h-two-bg .hr{
+	width: 800px;
+	margin-left: -45px;
+	border-top: 1px solid #666;
+	margin-bottom: 20px;
+}
+
+.h-two-bg span{
+	color: #000;
+}
+
+.h-two-bg span input[type="text"]{
+	border:1px solid #d3d1d1;
+}
+
+.h-two-bg span select{
+	border:1px solid #d3d1d1;
+}
+
+.content .right .two .h-two-bg span.move-r{
+	margin-left: 59px;
+}
+
+.content .right .two .h-two-bg span.move-r1{
+	margin-left: 64px;
+	margin-bottom: 0;
+}
+
+.content .right .two .h-two-bg span textarea{
+	border:1px solid #d3d1d1;
+	height: 80px;
+}
+
+.content .right .two .h-two-bg .wirter span input.long{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	background: #dddbdb;
+	border:1px solid #cdcaca;
+}
+.fh{ width:20px; height:18px; margin-left:900px; margin-top:-20px;}
+.fh img{ width:20px; height:18px; border:none;}
+.fh a{border:none;}
+.content .right .two .fh.p{ color:#000'}

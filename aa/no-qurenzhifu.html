@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/input chajian.js"></script>
+
+
+</head>
+<body>
+<!--top-->
+<div class="backhistory" style="color:#fff;" >
+	<a class=" pageleft" href="javascript:history.back(-1)"><img src="image/historyback.png" width="13"></a>
+	<span class="pagerighta">订单支付</span>
+
+</div>
+<div class="wuerenzhifubox">
+    <span style="width:30%; text-align:center; color:#999">订单编号</span>
+    <span style="width:70%;">2015hlknjmmnj;ljj;lkj;lkj</span>
+    <span style="width:30%; text-align:center; color:#999">订单编号</span>
+    <span style="width:70%;">￥4514 (含运费)</span>
+    <span style="width:30%; text-align:center; color:#999">积分支付</span>
+    <span style="width:70%;">4514 (含运费)</span>
+    <span style="width:30%; text-align:center; color:#999">现金支付</span>
+    <span style="width:70%; color:#ff3366;">4514</span>
+</div>
+<div class="wuerenzhifubox" id="wuerenzhifubox">
+    <span style="width:15%; text-align:center; color:#999"><img src="image/quanxuan.png" width="20"></span>
+    <span style="width:85%; color:#999">账户可支付余额<b style="color:#ff3366;">4215</b>元</span>
+</div>
+<div class="wuerenzhifubox" id="wuerenzhifuboxa">
+    <span class="qrzfzffsqyeren" id="qrzfzffsqyeren" style="width:15%; text-align:center;"><img src="image/quanxuan.png" width="20"></span>
+    <span style="width:35%;"><img src="image/zhifubao.png" width="60%"></span>
+    <span  class="qrzfzffsqyeren" style="width:15%; text-align:center;"><img src="image/weixuanzhong.png" width="20"></span>
+    <span style="width:35%;"><img src="image/weixinzhifu.png" width="60%"></span>
+</div>
+<script>
+$("#wuerenzhifubox").click(function(){
+	if($(this).find("img").attr("src")=="image/quanxuan.png"){
+		$(this).find("img").attr("src","image/weixuanzhong.png");
+	}
+	else{
+		$(this).find("img").attr("src","image/quanxuan.png");
+		}
+	})
+$(".qrzfzffsqyeren").click(function(){
+	$(".qrzfzffsqyeren > img").attr("src","image/weixuanzhong.png");
+	$(this).find("img").attr("src","image/quanxuan.png");
+	if($("#qrzfzffsqyeren > img").attr("src")=="image/quanxuan.png"){
+		$(".winxinzhifu").eq(0).show();
+		$(".winxinzhifu").eq(1).hide();
+		}
+		else{
+			$(".winxinzhifu").eq(0).hide();
+			$(".winxinzhifu").eq(1).show();
+			}
+	})
+</script>
+<div class="winxinzhifu" style=" width:80%; margin-left:10%; background:#ff3366; text-align:center; line-height:2.2em; color:#fff; border-radius:4px; margin-top:20px;">
+         	支付宝支付
+</div>
+<div class="winxinzhifu" style=" width:80%; display:none; margin-left:10%; background:#9999ff; text-align:center; line-height:2.2em; color:#fff; border-radius:4px; margin-top:20px;">
+         	微信支付
+</div>
+<!--<div class="jifenzfmm">
+	
+
+</div>
+<div class="jfzfmmtext">
+    	<div style=" width:100%; text-align:right;">
+        <img src="image/shanchu.png" width="20" id="dianji">
+        </div>
+        <div style=" width:100%; padding:10px 0; color:#696969; text-align:center;">
+        输入支付密码
+        </div>
+        <form class="jfzfmminput" style=" width:100%; padding:40px 0;">
+        <input type="password" id="password" style=" width:100%; font-size:20px; letter-spacing:10px; text-align:center;">
+        <div style=" width:100%; text-align:center; padding:15px 0;">
+        		<input type="reset" value="确认密码" style=" width:5em; border:solid 1px #D2D200;  padding:6px 10px; border-radius:4px; background:#E1E100; font-size:0.9em; color:#696969;">
+        </div>
+        </form>
+</div>-->
+<script>
+$("#dianji").click(function(){
+	$(".jifenzfmm , .jfzfmmtext").hide();
+	})
+$("jfzfmmtext").keyup(function(){
+  $("jfzfmmtext").css("background-color","#D6D6FF");
+});
+</script>
+</body>
+</html>

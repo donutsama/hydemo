@@ -1,0 +1,375 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<script type="text/javascript"  src="js/scroll.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+</head>
+<body>
+    <!--收货地址-->
+<!--地址当前页end-->
+<div style=" width:100%; overflow:hidden;" id="addren" class="shdzboxa" >
+    <div class="backhistory"  style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" href="javascript:history.back(-1)" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;">
+            收货地址
+        </a>
+    </div>
+
+	<div class="shdzboxbox">
+            <div class="shdzbox">
+                <div class="shdzbr" style=" width:85%;font-size:0.8em;border-right:1px solid #ececec;padding-left:5px;">
+                    <div class="xuzedizhihide" style=" position:relative;top:6px; left:2%; width:10%;">
+                    	<img src="image/quanxuan.png">
+                    </div>
+                    <div class="xuzedizhi" style=" color:#000; font-size:1.0em; float:left; width:88%;">
+                    	&nbsp;周阳宾 13810207932<br>
+                        <span class="tianjiadizi">&nbsp;<span class="moren morena">默认</span>北京市通州区果园大街北京市通州区北京市通州区果园大街</span>
+                   </div>
+                </div>
+                <div style=" position:relative; left:3%;top:25px; background:#fff; width:10%;">
+                    	<img class="shdzxg" src="image/xiugai_p.png" style="width:28px;height:28px;" >
+                </div>
+            </div>
+            <div class="shdzbox">
+                <div class="shdzbr" style=" width:85%;font-size:0.8em;border-right:1px solid #ececec;padding-left:5px;">
+                    <div class="xuzedizhihide" style=" position:relative;top:6px; left:2%; width:10%;">
+                    	<img src="image/quanxuan.png">
+                    </div>
+                    <div class="xuzedizhi" style=" color:#000; font-size:1.0em; float:left; width:88%;">
+                    	&nbsp;周阳宾 13810207932<br>
+                        <span class="tianjiadizi">&nbsp;<span class="moren morena">默认</span>北京市通州区果园大街北京市通州区北京市通州区果园</span>
+                   </div>
+                </div>
+                <div style=" position:relative; left:3%;top:25px; background:#fff; width:10%;">
+                    	<img class="shdzxg" src="image/xiugai_p.png" style="width:28px;height:28px;">
+                </div>
+            </div>
+            <div class="shdzbox">
+                <div class="shdzbr" style=" width:85%;font-size:0.8em;border-right:1px solid #ececec;padding-left:5px;">
+                    <div class="xuzedizhihide" style=" position:relative;top:6px; left:2%; width:10%;">
+                    	<img src="image/quanxuan.png">
+                    </div>
+                    <div class="xuzedizhi" style=" color:#000; font-size:1.0em; float:left; width:88%;">
+                    	&nbsp;周阳宾 13810207932<br>
+                        <span class="tianjiadizi">&nbsp;<span class="moren morena">默认</span>北京市通州区果园大街北京市通州区北京市通州区果园大街北京市通州区</span>
+                   </div>
+                </div>
+                <div style=" position:relative; left:3%;top:25px; background:#fff; width:10%;">
+                    	<img class="shdzxg" src="image/xiugai_p.png" style="width:28px;height:28px;">
+                </div>
+            </div>
+     </div>
+     <div style="width:100%; height:40px;"></div>
+    <div class="shdztj" style="width:90%; margin:0px 5%; position:fixed; bottom:15px; line-height:40px; background:#eb6100; text-align:center; font-size:1em; color:#fff;">
+        +&nbsp;新建地址
+	</div>
+</div>
+
+<!--地址当前页end-->
+<script>
+$(function(){
+	$(".xuzedizhi").find(".morena").hide();
+	$(".xuzedizhi").prev().hide();
+		$(".xuzedizhi").click(function(){
+			if($(this).prev().css("display")=="none"){
+					$(".xuzedizhihide").hide();
+					$(this).prev().show();
+					$(".xuzedizhi").find(".morena").hide();
+			}
+			for(i=0;i<$(".xuzedizhi").length;i++){
+			if($(".xuzedizhi").eq(i).prev().css("display")=="block"){
+				$(".xuzedizhi").eq(i).find(".morena").show();
+				}
+			}
+		})
+	$(window).load(function(){
+		$(".xuzedizhi").prev().eq(2).show();
+		for(i=0;i<$(".xuzedizhi").length;i++){
+			if($(".xuzedizhi").eq(i).prev().css("display")=="block"){
+				$(".xuzedizhi").eq(i).find(".morena").show();
+				}
+		}
+	})
+})
+function dizhihide(){
+	$(".box").show();
+	$(".shdzboxa").hide();
+	}
+function dizhi(){
+	$(".box").hide();
+	$(".shdzboxa").show();
+	}
+$(function(){
+	$(".shdzxg").click(function(){
+		$(".shdzboxa").hide();
+		$(".dizhi").show();
+		})
+	});
+$(function(){
+	$(".pageleft").click(function(){
+		$(".shdzboxa").show();
+		$(".dizhi").hide();
+    $(".dizhia").hide();
+		})
+	});
+</script>
+
+<!--编辑地址-->
+
+<div class="dizhi" id="dizhi" style="display:none;">
+  <div class="backhistory" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft"  id="pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;">
+          编辑收货地址
+        </a>
+  </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       收货人&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" style=" width:90%; height:32px; background:none;border:none">
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       手机号码&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  onKeyUp="value=this.value.replace(/\D+/g,'')" style=" width:90%; height:32px; background:none;border:none">
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       省份&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       市&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">           
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       区/县&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">            
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       详细地址&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <!-- <input type="text" id="zfxxdz"  style=" width:90%; height:26px; border-bottom:solid 1px #e4e4e4;"> -->
+                        <textarea style=" width:90%; height:40px; background:none;resize:none;margin-top:6px;"></textarea>
+            </div>
+   </div>
+
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:100%; display:block; line-height:1.8em; color:#696969;">
+                     <input type="radio"> 默认地址 <i style="font-size:0.7em;margin-left:5px;">注:每次下单时会使用该地址。</i>
+            </div>
+
+   </div>
+    <div class="baochundizhi" style=" width:80%; margin:10px 10%; padding:10px 0; background:#cbcbcb; color:#b0b0b0; border-radius:4px; text-align:center;">
+    保 存 并 使 用
+  </div>
+</div>
+<!--编辑地址end-->
+<!--添加地址-->
+
+<div class="dizhia" id="dizhi" style="display:none;">
+	<div class="backhistory" style=" background:#f0f0f0; padding:10px 0;" >
+            <a class=" pageleft"  id="pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+    		</a>
+    		<a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;">
+   				新建收货地址
+    		</a>
+	</div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       收货人&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" style=" width:90%; height:32px; background:none;border:none">
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       手机号码&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  onKeyUp="value=this.value.replace(/\D+/g,'')" style=" width:90%; height:32px; background:none;border:none">
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       省份&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       市&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">           
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       区/县&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">            
+                        <select class="select">
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                        </select>
+            </div>
+   </div>
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       详细地址&nbsp;:&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <!-- <input type="text" id="zfxxdz"  style=" width:90%; height:26px; border-bottom:solid 1px #e4e4e4;"> -->
+                        <textarea style=" width:90%; height:40px; background:none;resize:none;margin-top:6px;"></textarea>
+            </div>
+   </div>
+
+   <div class="zfbxitem box-shadow" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:100%; display:block; line-height:1.8em; color:#696969;">
+                     <input type="radio"> 默认地址 <i style="font-size:0.7em;margin-left:5px;">注:每次下单时会使用该地址。</i>
+            </div>
+
+   </div>
+    <div class="baochundizhi" style=" width:80%; margin:10px 10%; padding:10px 0; background:#cbcbcb; color:#b0b0b0; border-radius:4px; text-align:center;">
+		保 存 并 使 用
+	</div>
+</div>
+<!--添加地址end-->
+<script>
+$(function(){
+	$("#pageleft").click(function(){
+		$(".dizhia").hide();
+		})
+	});
+$(function(){
+	$(".shdztj").click(function(){
+		$(".shdzboxa").hide();
+		$(".dizhia").show();
+		});
+		});
+</script>
+<!--收货地址end-->
+<div class="jifenzfmm" style=" display:none;"></div>
+<div class="jfzfmmtext" style="display:none; padding:0; border:none; margin:0 auto;">
+        <div style=" width:100%; padding:5px 0; padding:5% 5%; color:#696969;border-bottom:solid 1px #999;">
+        &nbsp;&nbsp;请输入支付密码
+        </div>
+        <div style=" width:100%; padding:15px 0;text-align:center; font-size:14px; color:#8fc31f;">
+        	<span style="font: 400 20px/20px arial,sans-serif;">238 </span>积分
+        </div>
+        <form class="jfzfmminput" style=" width:100%;">
+        <input type="password" id="password" style=" width:93.5%; font-size:1.2em; letter-spacing:10px; text-indent:10px;">
+        <div style=" width:100%; text-align:center; padding:15px 0;">
+        		<input type="reset" value="取消" id="dianji" style=" width:4em;  padding:6px 5px; border-radius:4px;background:#e8e8e8; font-size:0.9em; color:#696969;">&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="reset" value="确认" onClick="javascript:window.location.href='qurenzhifu.html'"
+                 style=" width:4em;  padding:6px 5px; border-radius:4px; background:#8fc31f; font-size:0.9em; color:#fff;">
+        </div>
+        </form>
+</div>
+<script>
+<!--发票-->
+$(function(){
+	$(".jifenzfmm").width($(".box").width());
+	$(".jfzfmmtext").width($(".box").width()*0.8);
+	$(".jfzfmmtext").css("marginLeft",-($(".box").width()*0.4))
+	$("#querenzhifu,#parent2").width($("#top").width())
+	$(".fapiaoshow").click(function(){
+		$("#top,#parent1,#zhifudabox,#querenzhifu,#addren").hide();
+		$(".fapiao").show();
+		})
+});
+$(function(){
+	$("#fapiaohide,#fpbuttonb").click(function(){
+		    $("#parent2,#addren").hide(); 
+			$("#top,#parent1,#querenzhifu,#zhifudabox").show();
+		})
+	})
+function df(){
+		d=1;
+		return d;
+		}
+$("#querenzhifu").click(function(){
+    var d=df();
+	if(d>0){
+		$(".jifenzfmm , .jfzfmmtext").show();
+		$(window).scrollTop(0);
+	}
+	else{
+	}
+})
+$("#dianji,.jifenzfmm").click(function(){
+	$(".jifenzfmm , .jfzfmmtext").hide();
+	$("#parent1").show();
+	})
+$(function(){
+	$(".qianbaozhifu").click(function(){
+		if($(this).attr("src")=="image/weixuanzhong.png"){
+			$(this).attr("src","image/quanxuan.png");
+			}else{
+				$(this).attr("src","image/weixuanzhong.png");
+				}
+		})
+	})
+//地址与购买也切换
+$(function(){
+		$("#addrenhide").click(function(){
+			$(".box").show();
+			$("#addren").hide();
+		});
+		});
+</script>    
+</body>
+</html>

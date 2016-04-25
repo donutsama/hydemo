@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html manifest="/example/html5/demo_html.appcache">
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript"  src="js/scroll.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="backhistory" id="top" style=" background:#ff2d5e; padding:10px 0;" >
+    <a class=" pageleft" style=" width:20%; background:url(image/historybackb.png) no-repeat; background-position:center; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class=" pageleft" style=" width:60%; color:#fff; font-size:20px; line-height:30px;">
+   		国贸省钱周
+    </a>
+    <a class=" pageleft" style=" width:20%; background:url(image/fenxiang.png) no-repeat; background-position:center;">
+    </a>
+</div>
+
+<div class="gmsqzmain" style=" width:100%;">
+	    <li  style=" position:relative;">
+        	<div class="mainleft img" style=" width:100%;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054705377.jpg"  width="90%" style=" margin:5% 0 0 5%;">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <span class="indexbannerpo" style=" background:#fe416d;">剩余<span>12</span>件</span>
+            <div class="bannertext" style=" position:relative;">
+        		<p class="bannertp">
+        			<span class="bannertpl subs" style=" width:100%;color:#666;">牛尾饭30元代金券 可选购应单牛尾饭30元代金券 可选购应单</span>
+        		</p><br>
+        		
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:80%;">
+                        <span style=" background:#fff;border-radius:0 4px 4px 0; color:#ff2d5e; line-height:1.5em;">
+                            <span> ￥</span><span style=" font-size:1.3em;">200000</span><span>元</span>
+                        </span>
+                        <span style=" background:#fff;border-radius:4px; border:solid 1px #ff2d5e;font-size:0.9em; padding:1px 1px; color:#ff2d5e; line-height:1.5em;">
+                        买一送一
+                        </span>
+            		</span>
+        		</p>
+        		<span class="bannertpr indexbjjkj" style=" background:#ff2d5e; line-height:20px; height:20px;">立即抢购</span>
+    		</div>
+        </li>
+</div>
+<div class="gmsqzmain" style=" width:100%;">
+	    <li  style=" position:relative;">
+        	<div class="mainleft img" style=" width:100%;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054705377.jpg"  width="90%" style=" margin:5% 0 0 5%;">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <span class="indexbannerpo" style=" background:#fe416d;">剩余<span>12</span>件</span>
+            <div class="bannertext" style=" position:relative;">
+        		<p class="bannertp">
+        			<span class="bannertpl subs" style=" width:100%;color:#666;">牛尾饭30元代金券 可选购应单牛尾饭30元代金券 可选购应单</span>
+        		</p><br>
+        		
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:80%;">
+                        <span style=" background:#fff;border-radius:0 4px 4px 0; color:#ff2d5e; line-height:1.5em;">
+                            <span> ￥</span><span style=" font-size:1.3em;">200000</span><span>元</span>
+                        </span>
+                        <span style=" background:#fff;border-radius:4px; border:solid 1px #ff2d5e;font-size:0.9em; padding:1px 1px; color:#ff2d5e; line-height:1.5em;">
+                        买一送一
+                        </span>
+            		</span>
+        		</p>
+        		<span class="bannertpr indexbjjkj" style=" background:#ff2d5e; line-height:20px; height:20px;">立即抢购</span>
+    		</div>
+        </li>
+</div>
+<script type="text/javascript" src="js/ydxLazyLoad.js"></script>
+<script type="text/javascript">
+        $(function(){
+			var hhh=$(".mainleft").width();
+			$(".mainleft").height(hhh*408/964);
+			var sw=$(".loading").parent(".mainleft").width();
+			$(".loading").css({width:sw,height:hhh*408/964})
+            $("[lazyLoadSrc]").YdxLazyLoad({
+                onShow: function () {
+                    $(this).parent().next().hide()
+                }
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{skin:css/dulu.css}"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/dulu.css"/>
+        <link rel="stylesheet" type="text/css" href="css/ihha.css">
+        <link rel="stylesheet" href="css/ucenter.css"/>
+
+{set:$user_id = $this->user['user_id']}
+{query:name=member where=user_id eq $user_id item=$user}{/query}
+{query:name=merchant where=user_id eq $user_id item=$merchant}{/query}
+{if:$merchant}
+{set:$mer = 1}
+{else:}
+{query:name=mer_service where=user_id eq $user_id item=$service}{/query}
+{if:$service}
+{set:$mer_id = $service['mer_id']}
+{query:name=merchant where=id eq $mer_id item=$merchant}{/query}
+{/if}
+{/if}
+{set:$favoriteSum = 0}
+<div class="bodyer">
+    <div class="header_left">
+          <div class="left fl" style=" float:left; width:200px;">
+                <ul class="jbnav" style=" text-align:center;">
+                    <li><a href="{url:/ucenter/order}" target="_self">我的订单</a></li>
+                    <li><a href="{url:/ucenter/account_log}" target="_self">我的钱包</a></li>
+                    <li><a href="{url:/ucenter/redpacket}" target="_self">我的代金券</a></li>
+                    <li class="thist"><a href="{url:/ucenter/favorite}" target="_self">我的收藏</a></li>
+                    <li><a href="{url:/ucenter/info}" target="_self">基本资料</a></li>
+                    <li><a href="{url:/ucenter/address}" target="_self">收货地址</a></li>
+                    <li><a href="{url:/ucenter/security}" target="_self">安全中心</a></li>
+                    {if:$merchant && $merchant['is_lock'] == 0 && $merchant['is_del'] == 0}
+                    <li><a href="{url:/merchant/media_list}" target="_self">商户中心</a></li>
+                    {/if}
+                </ul>
+        </div>
+     
+       <div style=" width:960px; float:left; overflow:hidden;">           
+             <div class="myshoucangaa" style=" margin-top:10px;">
+             	<div style=" font-size:18px;">我的收藏</div>
+            </div>
+
+             <div class="myshouchangbox">
+			         {set:$favoriteObj = null;$favoriteList = $this->get_favorite($favoriteObj)}
+                        {foreach:items=$favoriteList}
+                        {set:$type=1}
+						{set:$id1=$item[id]}
+						{set:$id=$item['data']['id'];}
+						{set:$name=$item['data']['name'];}
+						{set:$price=$item['data']['sell_price'];}
+                   
+{foreach:items=Api::run('getGoodsPhotoRelationList',array('#id#',$id),array("#type#",2),1) key=$k}
+{if:$k == 0}
+ <div>
+{$id1}
+                       <li><img src="{webroot:$item['img']}" width="100%" /></li>
+					  
+                       <li>{echo:mb_substr($name,0,25,"utf-8")}</li>
+                       <p>
+                        <span style=" text-align:left;">
+                            ￥<b>{$price}</b>
+                        </span>
+                        <span style=" text-align:rigjt;">
+						<span>
+                                <a href="javascript:joinCart_list({$id});">
+								<img src="{skin:images/shoucangche.gif}" /></a>
+								</span>
+
+                                <span><a href="javascript:delModel({link:'{url:/ucenter/favorite_del/id/$id1}',msg:'是否取消收藏？'});"
+								><img src="{skin:images/shoucangxing.png}"/>
+								</a></span>
+                        </span>
+                       </p>
+                   </div>   
+                   {/if}
+				   {/foreach}
+				    {/foreach}
+          </div>
+		
+         <div style=" width:45%; height:auto; float:right; margin-right:200px; margin-bottom:30px; margin-top:10px;" class="tuikuanfooter">
+				 
+		</div>
+
+        {$favoriteObj->getPageBar()}
+        </div>
+    </div>
+</div>
+
+<!--选择货品添加购物车模板 开始-->
+<!-- <script type='text/html' id='selectProductTemplate'>
+<table width="100%">
+    <col />
+    <col width="80px" />
+    <col width="60px" />
+    <%for(var item in productData){%>
+    <%item = productData[item]%>
+    <tr>
+        <td align="left">
+            <%for(var spectName in item['specData']){%>
+            <%var spectValue = item['specData'][spectName]%>
+                <%=spectName%>：<%=spectValue%> &nbsp&nbsp
+            <%}%>
+        </td>
+        <td align="center"><span class="bold red2">￥<%=item['sell_price']%></span></td>
+        <td align="right"><label class="btn_gray_s"><input type="button" onclick="joinCart_ajax('<%=item['id']%>','product');" value="购买"></label></td>
+    </tr>
+    <%}%>
+    <tr>
+        <td colspan='3' align="left"><a href="{url:/site/products/id/<%=item['goods_id']%>}">查看更多</a></td>
+    </tr>
+</table>
+</script> -->
+<!--选择货品添加购物车模板 结束-->
+
+<script type='text/javascript'>
+//修改备注信息
+function edit_summary(idVal)
+{
+    var summary = $("#summary_val_"+idVal).val();
+    if($.trim(summary))
+    {
+        $.getJSON('{url:/ucenter/edit_summary}',{id:idVal,summary:summary},function(content){
+            if(content.isError == false)
+            {
+                $('#summary_show_'+idVal).html(summary);
+                $("#summary_box_"+idVal).hide();$("#summary_button_box_"+idVal).show();
+                $('#summary_val_'+idVal).val('');
+            }
+            else
+            {
+                alert(content.message);
+            }
+        });
+    }
+    else
+    {
+        alert('请填写备注信息');
+    }
+}
+
+//统计总数
+$('#favoriteSum').html('{$favoriteSum}');
+
+//[ajax]加入购物车
+function joinCart_ajax(id,type)
+{
+    $.getJSON('{url:/simple/joinCart}',{goods_id:id,type:type},function(content){
+        if(content.isError == false)
+        {
+            var count = parseInt($('[name="mycart_count"]').html()) + 1;
+            $('[name="mycart_count"]').html(count);
+            $('.msgbox').hide();
+            alert(content.message);
+        }
+        else
+        {
+            alert(content.message);
+        }
+    });
+}
+
+//列表页加入购物车统一接口
+function joinCart_list(id)
+{
+    $.getJSON('{url:/simple/getProducts}',{"id":id},function(content){
+        if(!content)
+        {
+            joinCart_ajax(id,'goods');
+        }
+        else
+        {
+            var selectProductTemplate = template.render('selectProductTemplate',{'productData':content});
+            $('#product_box_'+id).html(selectProductTemplate);
+            $('#product_box_'+id).parent().show();
+        }
+    });
+}
+</script>

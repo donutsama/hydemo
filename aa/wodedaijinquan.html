@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/input chajian.js"></script>
+</head>
+<body>
+<div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href=                                     "javascript:history.back(-1)">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            我的代金券
+        </a>
+</div>
+<div style=" width:100%;color:#646464;" class="zhmmdabox">
+    <form class="zhmmbox" id="zhmmboxszmm" style="margin: 0;padding: 5px 5%;height: 77px;background: #fafafa;">
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:25%; height:35px; line-height:35px; text-align:right; text-align:center; float:left; font-size:1em;">
+                 		兑换编码
+                </div>
+                <div style=" width:75%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入抵金券编码" type="text" style="width:99%; height:36px; font-size:0.9em;background: none;margin-left: 3px;">
+                </div>
+        </div>
+        <div class="zhaohuimima" style="border-bottom:solid 1px #f0f0f0; margin-top:5px;">
+                <div style=" width:25%; height:35px; line-height:35px; text-align:right; text-align:center; float:left; font-size:1em;">
+                 		兑换密码
+                </div>
+                <div style=" width:75%; height:35px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入抵金券密码" style="width:99%; height:36px; font-size:0.9em;background: none;margin-left: 3px;">
+                </div>
+        </div>
+        <div id="querenxiugai"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:4px; margin:20px 0;">
+         	兑换
+        </div>
+    </form>
+</div>
+<div class="jifenbox" style="background: none;border-bottom: none;border-top: none;">
+	<div class="jfboxtop" style="font-size:1em;border-bottom:1px solid #efefef;">兑换明细</div>
+    <div class="all" style="width:100%;">
+            <div class="jifentop" style=" margin:0; font-size:1em;background:none;border-bottom:none;border-top:none;">
+                 <li style="width:28%;"><a style=" border:none;">卡号</a></li>
+                 <li style="width:44%;"><a style=" border:none;">面值</a></li>
+                 <li style="width:28%;"><a style=" border:none;">状态</a></li>
+            </div>
+
+            <div class="bb" style=" width:100%; overflow:hidden;">
+
+                <table class="jifenmingxi" style="background:none;border-bottom: 1px solid #efefef;">
+                    <tr>
+                        <th style=" width:28%; line-height:2.2em;">
+                            <span>asdj12869d</span>
+                        </th>
+                        <th style=" width:44%;line-height:2.2em;">100积分</th>
+                        <th style=" width:28%;line-height:2.2em;">
+                            <span>已使用</span>
+                        </th>
+                    </tr>
+                </table>
+
+                <table class="jifenmingxi" style="background:none;border-bottom: 1px solid #efefef;">
+                    <tr>
+                        <th style=" width:28%; line-height:2.2em;">
+                            <span>asdj12869d</span>
+                        </th>
+                        <th style=" width:44%;line-height:2.2em;">100积分</th>
+                        <th style=" width:28%;line-height:2.2em;">
+                            <span>已使用</span>
+                        </th>
+                    </tr>
+                </table>
+
+                <table class="jifenmingxi" style="background:none;border-bottom: 1px solid #efefef;">
+                    <tr>
+                        <th style=" width:28%; line-height:2.2em;">
+                            <span>asdj12869d</span>
+                        </th>
+                        <th style=" width:44%;line-height:2.2em;">100积分</th>
+                        <th style=" width:28%;line-height:2.2em;">
+                            <span>已使用</span>
+                        </th>
+                    </tr>
+                </table>
+
+            </div>
+    </div>
+</div>
+
+<div class="djqwu" style=" width:100%; overflow:hidden; padding-top:10%;">
+	<img src="image/wodedijinquanmoren.png" style="width:50%; margin:0 auto;display:block;">
+</div>
+<script>
+$(function(){
+	$(".djqwu").hide();
+   if ($(".all").is(':visible')) {
+      $(".djqwu").hide(); 
+   }else{
+      $(".djqwu").show();
+   }
+});
+</script>
+</body>
+</html>

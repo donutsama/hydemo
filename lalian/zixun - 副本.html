@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>分类列表</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-in.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.stickyNavbar.js"></script><!-- 1202 -->
+    <script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script1.js"></script>
+    <script type="text/javascript" src="js/script-sc.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="login">
+           <div class="margin">
+              <p class="hello">您好！欢迎光临极氪网<a class="pink" href="#">[请登录]</a>，新用户？<a class="pink" href="#">免费注册</a></p>
+              <ul>
+                 <li class="li">
+                    <a href="#">微信商城</a>
+                    <div class="qrcode">
+                      <img src="images/weixin.jpg" />
+                    </div>
+                 </li>
+                 <li  class="li1"><a href="#">联系客服</a></li>
+                 <div class="clear"></div>
+              </ul>
+              <div class="clear"></div>
+           </div>
+        </div>
+        <img class="bg" src="images/bg.png">
+        <div class="head">
+           <img class="logo" src="images/logo.png">
+           <div class="nei">
+               <!-- <ul>
+                   <li><a href="#">北新枣枣枣</a></li>
+                   <li><a href="#">北新仓香枣</a></li>
+                   <li><a href="#">北新仓枣</a></li>
+                   <li><a href="#">北新仓枣</a></li>
+                   <li><a href="#">北新仓</a></li>
+                   <li><a href="#">北新枣新新枣</a></li>
+
+                   <div class="clear"></div>
+               </ul> -->
+               <div class="select">
+                   <input type="text" placeholder="搜索">
+                   <a href="#"><img src="images/select.png"></a>
+               </div>
+           </div>
+           <div class="la">
+               <div class="down">
+                  <a class="name" href="#">我的极氪<img src="images/icon2.png"></a>
+                  <div class="my">
+                    <a class="down-cont" href="">我的订单</a>
+                    <a class="down-cont" href="">我的积分</a>
+                    <a class="down-cont" href="">我的收藏</a>
+                    <a class="down-cont" href="">我的钱包</a>
+                    <a class="down-cont" href="">安全退出</a>
+                  </div> 
+               </div>
+               <a class="shop" href="#">购物车(<span>0</span>)</a>
+               <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+       </div>
+    </div>
+   <div class="content" style="padding-bottom:0px;">
+       <div class="home">
+         <ul class="nav">
+           <li class="li1">
+           <a href="#">所有商品分类&nbsp;<img src="images/icon10.png"></a>
+           <div class="position">
+                  <div class="item">
+                      <img class="img" src="images/icon4.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能家居</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon5.png">
+                      <div class="text">
+                          <a class="digital" href="#" >智能数码</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                   <div class="item">
+                      <img class="img" src="images/icon6.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能健康</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon6.1.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能穿戴</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div> 
+                   <div class="item">
+                      <img class="img" src="images/icon6.2.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能服务</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div> 
+                  <a class="more-l" href="">MORE...</a>
+   
+               </div>
+           </li>
+           <li class="highlight nav-item default-active"><a href="index.html">首页</a></li>
+           <li class="nav-item"><a href="Integral.html">积分专区</a></li>
+           <li class="nav-item"><a href="activity.html">活动专区</a></li>
+           <li class="nav-item"><a href="#">会员特权</a></li>
+           <div class="clear"></div>
+         </ul>
+       </div>
+    <div class="border_t">
+      <div class="container">
+        <div class="information">
+          <div class="filter">
+            <ul class="filtering filtering_a">
+              <li><a class="highlight" href="javascript:;">全部</a></li>
+              <li><a href="javascript:;">G资讯</a></li>
+              <li><a href="javascript:;">黑科技G</a></li>
+              <li><a href="javascript:;">吐槽</a></li>
+              <li><a href="javascript:;">评论</a></li>
+              <li><a href="javascript:;">访谈</a></li>
+              <li><a href="javascript:;">试用</a></li> 
+              <li>|<span class="new">热门文章</span></li>
+              <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+          </div><!-- filter结束 -->
+          <div class="infor-cont">
+
+            <div class="infor-item" style="display:block;">
+              <div class="pic picc">
+                <img class="big" src="images/lbbanner.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg1.png"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/furniture7.png">
+                         <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">1视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                        <img src="images/img3.png">
+                        <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                        <img src="images/pic96.jpg">
+                        <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                        <img src="images/pic10.png">
+                        <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/pic13.png">
+                         <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">2视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/pic13.png">
+                         <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/pic13.png">
+                         <span>G资讯</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="hei">黑科技G</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">3视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="hei">黑科技G</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="hei">黑科技G</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png" style="display:block;"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="ju">吐槽</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">4视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="ju">吐槽</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="ju">吐槽</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png" style="display:block;"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="lan">评论</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">5视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="lan">评论</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="lan">评论</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png" style="display:block;"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span  class="fen">访谈</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">6视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="fen">访谈</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span  class="fen">访谈</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="">1</a></li>
+                     <li><a href="">2</a></li>
+                     <li><a href="">3</a></li>
+                     <li><a href="">4</a></li>
+                     <li><a href="">5</a></li>
+                     <li><a href="">...</a></li>
+                     <li><a href="">292</a></li>
+                     <li><a href="">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            <div class="infor-item">
+              <div class="pic picc">
+                <img class="big" src="images/img-bg.png" style="display:block;"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <img class="big" src="images/bg2.jpg"> 
+                <div class="ul1 ul2">
+                   <ul>
+
+                   </ul>
+                </div>
+              </div>
+                <div class="num2">
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="zi">试用</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5" href="" title="ss">7视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span class="zi">试用</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                    <div class="hd-item">
+                      <a class="yuan" href="">
+                         <img src="images/img3.png">
+                         <span  class="zi">试用</span>
+                      </a>
+                      <div class="hd-title">
+                        <span style="float:left;">来源：<i style="color:#8fc31f;" >G氪购</i></span>
+                        <span style="float:right;">发布日期：<i>2016</i>年<i>10</i>月<i>16</i>日</span>
+                        <div class="clear"></div>
+   
+                      </div>
+                      <a class="h5">视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计视频分离式屏幕设计</a>
+                      <p title="bb">说道这款产品与其他同产品在外说道这款产品与其他同产品在外说道这款产品与其他同产品在外</p>
+                      <div class="hd-title">
+                        <div class="love-share">
+                           <a class="love-l" href="javascript:;">2</a>
+                           <a class="love-r" href="javascript:;">2</a>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="clear"></div>
+                </div>
+
+                <div class="num-page">
+                   <ul>
+                     <li><a href="javascript:;">1</a></li>
+                     <li><a href="javascript:;">2</a></li>
+                     <li><a href="javascript:;">3</a></li>
+                     <li><a href="javascript:;">4</a></li>
+                     <li><a href="javascript:;">5</a></li>
+                     <li><a href="javascript:;">...</a></li>
+                     <li><a href="javascript:;">292</a></li>
+                     <li><a href="javascript:;">下一页</a></li>
+                     <div class="clear"></div>
+                   </ul>
+                </div>
+            </div> <!--  infor-item-over -->
+
+            </div><!-- infor-cont结束 -->
+          </div><!-- information结束 -->
+      </div>
+    </div>
+   </div> 
+   <div class="footer">
+      <div class="link">
+        <ul>
+          <li class="bold"><a href="javascript:;">会员帮助</a></li>
+          <li><a href="javascript:;">购物流程</a></li>
+          <li><a href="javascript:;">积分使用</a></li>
+          <li><a href="javascript:;">会员特权</a></li>
+          <li><a href="javascript:;">修炼秘籍</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">服务保障</a></li>
+          <li><a href="javascript:;">正品保证</a></li>
+          <li><a href="javascript:;">售后服务</a></li>
+          <li><a href="javascript:;">支付方式</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">商务合作</a></li>
+          <li><a href="javascript:;">媒体合作</a></li>
+          <li><a href="javascript:;">广商合作</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">关于拉链儿</a></li>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">媒体报道</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">移动拉链儿</a></li>
+          <li><a href="">移动Web</a></li>
+          <li><a href="">微信商城</a></li>
+        </ul>
+        <div class="phone">
+          <img src="images/phone.png">
+          <a href="tel:400">400-8118-330</a>
+          <a href="mailto:service@lalianer.com">service@lalianer.com</a>
+          <p>全国统一客服电话（免费长途）</p>
+          <p>周一到周五 9:00-18:00</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="foot">
+         <p>拉链（北京）科技有限公司 京ICP备15015524号 - 1 COPYright©2014-2015 lalianer.com</p>
+      </div>
+   </div>
+</body>
+</html>

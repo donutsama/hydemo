@@ -1,0 +1,564 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body style="background:#efefef;">
+<!--top-->
+<div class="box">
+    <div class="backhistory" id="top" style=" background:#a2a2a2; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+            返回
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#fff; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            商品支付
+        </a>
+    </div>
+    <div id="zhifudabox">
+            <div class="zhifubox" id="zftopa" style=" width:87%;">
+                    <span class="zfboxl" style=" width:20%; text-align:center; padding:0;">送至：</span>
+                    <span class="zfboxr" style=" width:80%; padding:0; font-size:0.8em; line-height:20px;">
+                        <a style=" color:#F36;">【默认</a>
+                        <span>】恐惧感花好几百个可乐加冰</span>
+                    </span>
+                    <span style=" width:80%; padding:10px 0; padding-left:20%; display:block; text-align:left; line-height:1.2em; line-height:12px; overflow:hidden; font-size:0.8em; color:#666; ">
+                           <span>周阳宾</span><span>13810207932</span>   
+                    </span>
+            </div>
+            <div class="zhifubox" onClick="dizhi()" id="zftopb" style=" width:13%; line-height:50px; text-align:center">
+                <img src="image/historybacka.png">
+            </div>
+            <div class="zhifuboxitem" id="parent1">
+                    <form>
+                          <!--现金商品-->
+                            <div class="spcenter scbox" style=" margin-bottom:8px; background:#fff; margin-top:0">
+                                <!--<div class="sbleft" style=" width:10%;">
+                                    <img class="gwcxpimgxz" style=" margin-top:50px;" src="image/weixuanzhong.png">
+                                </div>-->
+                                <div class="sbleft gwcxpimg" style=" width:30%;">
+                                        <a>
+                                            <img src="image/img01.jpg" >
+                                        </a>
+                                </div>
+                                <div class="sbright" style=" width:65%;">
+                                    <div class="sbrright" style=" line-height:20px;">时间llllll划局规划局酷狗恐惧感看见胡过好几个划</div>
+                                    <div class="sbrright" style=" line-height:25px;color:#999;">价格: <span style=" color:#e63955;">5646</span>&nbsp;&nbsp;<span style=" color:#e63955;">5646</span></div>
+                                    <div class="sbrright" style=" line-height:25px;color:#999;">赠送 <span style=" color:#e63955;">5461564</span></div>
+                               </div>
+                               <div style=" width:90%; border-top:solid 1px #e8e8e8; margin-left:5%; padding:4px 0; line-height:16px; font-size:0.8em;color:#999;">
+                                                    注意：买一送一活动已展开，抢大力购买。                           
+                               </div>
+                            </div>
+                          <!--现金商品end-->
+                          <!--积分商品-->
+                            <div class="spcenter scbox" style=" margin-bottom:8px; background:#fff; margin-top:0">
+                                <!--<div class="sbleft" style=" width:10%;">
+                                    <img class="gwcxpimgxz" style=" margin-top:50px;" src="image/weixuanzhong.png">
+                                </div>-->
+                                <div class="sbleft gwcxpimg" style=" width:30%;">
+                                        <a>
+                                            <img src="image/img01.jpg" >
+                                        </a>
+                                </div>
+                                <div class="sbright" style=" width:65%;">
+                                    <div class="sbrright" style=" line-height:20px;">时间llllll划局规划局酷狗恐惧感看见胡过好几个划</div>
+                                    <div class="sbrright" style=" line-height:25px;color:#999;">价格: <span style=" color:#e63955;">5646</span>&nbsp;&nbsp;<span style=" color:#e63955;">5646</span></div>
+                                    <div class="sbrright" style=" line-height:25px;color:#999;">赠送 <span style=" color:#e63955;">5461564</span></div>
+                               </div>
+                            </div>
+                         <!--积分商品end-->
+                 </form>
+            </div>
+            <div class="backhistory"  id="" style=" background:#fff; color:#666; padding:5px 0;font-size:1em; height:60px;" >
+                <a class="pageleft" style=" width:30%; text-align:left; height:30px; line-height:30px;">
+                    &nbsp;&nbsp;配送方式：
+                </a>
+                <a class="pageleft" style=" width:70%; line-height:30px;">
+                    <span  style=" display:block; font-size:0.8em; float:left; width:85%;text-align:right;">
+                        快递:￥<span>45</span>
+                    </span>
+                    <span style=" display:block; float:left; width:15%;">
+                        <img src="image/historybacka.png" style=" position:relative; top:5px;">
+                    </span>
+                </a>
+                <div style=" width:90%; margin-left:5%; height:1px; background:#e8e8e8;"></div>
+                <a class="pageleft fapiaoshow" style=" width:30%;text-align:left; height:30px; line-height:30px;">
+                    &nbsp;&nbsp;发票信息：
+                </a>
+                <a class="pageleft fapiaoshow" style=" width:70%; font-size:0.8em; line-height:30px;">
+                    <span  style=" display:block; float:left; width:85%;text-align:right;">无发票</span>
+                    <span style=" display:block; float:left; width:15%;">
+                        <img src="image/historybacka.png" style=" position:relative; top:5px;">
+                    </span>
+                </a>
+            </div>
+            <div class="zhifushoping" id="yunfei" style=" background:#fff;color:#999;font-size:0.8em; margin-top:5px;">
+                <div class="zhifudoingbus" style="color:#000; width:30%;">
+                    结算 :
+                </div>
+                <div class="zhifuenjoyshop" style="width:60%; text-align:right;">
+                     数量×2
+                </div>
+                <div style=" width:90%; margin-left:5%; height:1px; background:#e8e8e8;"></div>
+                <div class="zhifudoingbus" style=" color:#666; width:30%;text-align:right;">
+                    商品总价
+                </div>
+                <div class="zhifuenjoyshop" style="width:60%; color:#F93; text-align:right;">
+                    <span>10000</span>元
+                </div>
+                <div class="zhifudoingbus" style=" color:#666; width:30%;text-align:right;">
+                    运费
+                </div>
+                <div class="zhifuenjoyshop" style="width:60%; text-align:right;">
+                     <span>10000</span>元
+                </div>
+                <div style=" width:90%; margin-left:5%; height:1px; background:#e8e8e8;"></div>
+                <div class="zhifudoingbus" style=" color:#666; width:30%;text-align:right;">
+                    共计:
+                </div>
+                <div class="zhifuenjoyshop" style="width:60%;color:#666; text-align:right;">
+                     <span>253</span>元
+                </div>     
+                
+            </div>
+            <div class="zhifushoping" id="yunfei" style=" background:#fff;color:#999;font-size:0.8em; margin-top:5px;">
+            
+                <div class="zhifudoingbus" style="color:#000; width:30%; text-align:right;">
+                   积分支付
+                </div>
+                <div class="zhifuenjoyshop" style="width:30%;color:#a2a2a2; text-align:right;">
+                     余额<span>(1456465)</span>
+                </div>
+                <div class="zhifuenjoyshop" style="width:30%; text-align:right;">
+                     <span>545546</span>积分
+                </div>
+                
+                <div class="zhifudoingbus" style="color:#000; width:30%; text-align:right;">
+                <div class="zhifudoingbus" style="color:#000; width:40%; text-align:right;">
+                   <img class=" qianbaozhifu" src="image/weixuanzhong.png" width="18" style=" position:relative; top:5px;">
+                </div>
+                   钱包支付
+                </div>
+                <div class="zhifuenjoyshop" style="width:30%;color:#a2a2a2; text-align:right;">
+                     余额<span>(1456465)</span>
+                </div>
+                <div class="zhifuenjoyshop" style="width:30%; text-align:right;">
+                     <span>545546</span> 元
+                </div>
+                <div class="zhifudoingbus" style="color:#000; width:30%; text-align:right;">
+                   现金支付
+                </div>
+                <div class="zhifuenjoyshop" style="width:60%; text-align:right;">
+                    <span>10000</span>元
+                </div>
+            </div>
+            <div style=" width:100%;padding:10px 0; line-height:26px; text-align:center; background:#fff; color:#F09; margin-top:5px;">
+                订单 <span>45646</span> 元<br>
+                现金支付总计 <span>45646</span> 元
+            </div>
+            <div style=" width:100%; height:45px;"></div>
+    </div>
+    
+                
+    <div class="zhifushoping" id="querenzhifu" style=" position:fixed; bottom:0;">
+                    <a href="#">确认支付</a>
+    </div>
+</div>
+<!--发票-->
+<div class="fapiao" id="parent2">
+     <div class="backhistory" onClick="clk(event)" style=" background:#a2a2a2; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-position:10px; text-align:center; line-height:30px; color:#000;">
+            返回
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#fff; font-size:20px; line-height:30px;">
+            发票信息
+        </a>
+     </div>
+     <div class="zhifubox" style=" width:20%; float:left; padding:5px 0; text-align:center">
+       		<img class="mouren" src="image/weixuanzhong.png" width="20">
+     </div>
+     
+     <div class="zhifubox" style=" width:80%;">
+                <span class="zfboxr" style=" width:80%; padding:0; font-size:0.8em; padding:5px 0; line-height:20px;">
+                	<a style=" color:#F36;">【默认】 </a>
+                    <span>无发票</span>
+                </span>
+     </div>
+	 <div style=" width:100%; display:block; background:#e8e8e8; line-height:2em; color:#696969; padding-left:5%;">
+                        发票抬头
+     </div>
+     <div class="zhifubox" style=" width:20%; float:left; text-align:center; padding:5px 0;">
+       		<img class="fpttimg" src="image/weixuanzhong.png" width="20">
+     </div>
+     <div class="zhifubox" style=" width:80%; font-size:0.8em; line-height:24px; padding:5px 0;">
+             个人 
+     </div>
+     <div class="zhifubox" style=" width:20%; float:left; font-size:0.8em; text-align:center; padding:5px 0;">
+       		<img  class="fpttimg" src="image/weixuanzhong.png" width="20">
+     </div>
+     <div class="zhifubox" style=" width:80%; font-size:0.8em; line-height:24px; padding:5px 0;">
+            <div id="fapiaogongsi" style=" width:20%;float:left;">
+                      公司
+            </div>
+            <div style=" width:70%; line-height:1.2em;float:left; font-size:0.8em;">
+                  <input id="fpgstext"  style=" width:99%; height:22px; border:solid 1px #a3a3a3; border-radius:4px;">
+            </div> 
+     </div>
+    
+    
+	 <div style=" width:100%; display:block; background:#e8e8e8; line-height:2em; color:#696969; padding-left:5%;">
+                        发票明细
+     </div>
+     <div class="zhifubox" style=" width:20%; float:left; text-align:center; padding:5px 0;">
+       		<img class="fpmximg"  src="image/weixuanzhong.png" width="20">
+     </div>
+     <div class="zhifubox" style=" width:80%; font-size:0.8em; line-height:24px; padding:5px 0;">
+            食品  
+     </div>
+     <div class="zhifubox" style=" width:20%; float:left; text-align:center; padding:5px 0;">
+       		<img class="fpmximg" src="image/weixuanzhong.png" width="20">
+     </div>
+     <div class="zhifubox"  style=" width:80%; font-size:0.8em; line-height:24px; padding:5px 0;">
+            办公用品  
+     </div>
+     
+     <div class="zhifubox" style=" width:20%; float:left; font-size:0.8em; text-align:center; padding:5px 0;">
+       		<img  class="fpmximg"src="image/weixuanzhong.png" width="20">
+     </div>
+     <div class="zhifubox" style=" width:80%; font-size:0.8em; line-height:24px; padding:5px 0;">
+            <div id="fapiaogongsi" style=" width:20%;float:left;">
+                     自定义
+            </div>
+            <div style=" width:70%; line-height:1.2em;float:left; font-size:0.8em;">
+                  <input id="fpgstext"  style=" width:99%; height:22px; border:solid 1px #a3a3a3; border-radius:4px;">
+            </div> 
+     </div>
+     <script>
+	 $(function(){
+		 $(".mouren").click(function(){
+			 if($(this).attr("src")=="image/weixuanzhong.png"){
+				$(this).attr("src","image/quanxuan.png")
+			  }else{
+				  $(this).attr("src","image/weixuanzhong.png");
+				  }
+			 });
+		$(".fpttimg").click(function(){
+			 if($(this).attr("src")=="image/weixuanzhong.png"){
+				 $(".fpttimg").attr("src","image/weixuanzhong.png");
+				$(this).attr("src","image/quanxuan.png")
+			  }else{
+				  $(".fpttimg").attr("src","image/weixuanzhong.png");
+				$(this).attr("src","image/weixuanzhong.png")
+				  }
+		})
+	    $(".fpmximg").click(function(){
+			 if($(this).attr("src")=="image/weixuanzhong.png"){
+				 $(".fpmximg").attr("src","image/weixuanzhong.png");
+				$(this).attr("src","image/quanxuan.png")
+			  }else{
+				  $(".fpttimg").attr("src","image/weixuanzhong.png");
+				$(this).attr("src","image/weixuanzhong.png")
+				  }
+		})
+		 })
+	 </script>
+    <div id="fpbuttonb" class="fpbutton" style=" width:80%; margin:50px 10%; padding:10px 0; background:#ff3366; color:#fff; border-radius:4px; text-align:center;">
+		确认
+	</div>
+</div>
+<!--收货地址-->
+<!--地址当前页end-->
+<div style=" width:100%; overflow:hidden; display:none;" id="addren" class="shdzboxa" >
+    <div class="backhistory"  style=" background:#a2a2a2; padding:10px 0;" >
+        <a class=" pageleft" id="addrenhide" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+            返回
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#fff; font-size:20px; line-height:30px;">
+            地址选择
+        </a>
+    </div>
+	<div class="shdzboxbox">
+            <div class="shdzbox">
+                <div class="shdzbl"><img src="image/morendizhi.png"></div>
+                <div class="shdzbr">
+                    <div style=" color:#000; font-size:1.0em;">周阳宾 13810207932</div>
+                    <div style=" width:100%;">
+                        <span style=" width:80%; float:left;">北京市通州区果园大街北京市通州区</span>
+                        <span style=" width:15%; float:left;">
+                        <img class="shdzxg" src="image/xiugai.png" width="20">
+                        </span>
+                    </div>
+                </div>
+                <a>默认地址</a>
+            </div>
+            <div class="shdzbox">
+                <div class="shdzbl"><img src="image/morendizhi.png"></div>
+                <div class="shdzbr">
+                    <div style=" color:#000; font-size:1.0em;">周阳宾 13810207932</div>
+                    <div style=" width:100%;">
+                        <span class="tianjiadizi" style=" width:80%; float:left;">北京市通州区果园大街北京市通州区</span>
+                        <span style=" width:15%; float:left;">
+                        <img class="shdzxg" src="image/xiugai.png" width="20">
+                        </span>
+                    </div>
+                    <a>设为默认</a>
+                </div>
+            </div>
+            <div class="shdzbox">
+                <div class="shdzbl"><img src="image/morendizhi.png"></div>
+                <div class="shdzbr">
+                    <div style=" color:#000; font-size:1.0em;">周阳宾 13810207932</div>
+                    <div style=" width:100%;">
+                        <span class="tianjiadizi" style=" width:80%; float:left;">北京市通州区果园大街北京市通州区</span>
+                        <span style=" width:15%; float:left;">
+                        <img class="shdzxg" src="image/xiugai.png" width="20">
+                        </span>
+                    </div>
+                </div>
+                <a>设为默认</a>
+            </div>
+     </div>
+    <div class="shdztj" style="width:90%; margin:0px 5%; padding:10px 0; overflow:hidden; text-align:center; border:solid 1px #efefef; font-size:1.5em; color:#a2a2a2;">
+        <img src="image/H5_03.png"><br>
+        点击添加地址
+	</div>
+</div>
+<!--地址当前页end-->
+<script>
+function dizhihide(){
+	$(".box").show();
+	$(".shdzboxa").hide();
+	}
+function dizhi(){
+	$(".box").hide();
+	$(".shdzboxa").show();
+	}
+$(function(){
+	$(".shdzxg").click(function(){
+		$(".shdzboxa").hide();
+		$(".dizhi").show();
+		})
+	});
+$(function(){
+	$(".pageleft").click(function(){
+		$(".shdzboxa").show();
+		$(".dizhi").hide();
+		})
+	});
+</script>
+
+<!--地址-->
+
+<div class="dizhi" id="dizhi" style=" display:none;">
+	<div class="backhistory"  style=" background:#a2a2a2; padding:10px 0;" >
+            <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+    	返回
+    </a>
+    <a class=" pageleft" style=" width:50%; color:#fff; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+   		购物车
+    </a>
+	</div>
+  
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       收货人&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       手机号码&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       省份&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       市&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       区县&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       详细地址&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" id="zfxxdz"  style=" width:90%; height:26px; border-bottom:solid 1px #e4e4e4;">
+            </div>
+   </div>
+   <div class="querenxiugai" style=" width:80%; margin:10px 10%; padding:10px 0; background:#ff3366; color:#fff; border-radius:4px; text-align:center;">
+		确认修改
+	</div>
+    <div class="shanchudizhi" style=" width:80%; margin:10px 10%; padding:10px 0; background:#a2a2a2; color:#fff; border-radius:4px; text-align:center;">
+		删除地址
+	</div>
+</div>
+<!--地址end-->
+<!--地址输入框-->
+<div class="dizhia" id="dizhi" style="display:none;">
+	<div class="backhistory" style=" background:#a2a2a2; padding:10px 0;" >
+            <a class=" pageleft"  id="pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;">
+    		返回
+    		</a>
+    		<a class=" pageleft" style=" width:50%; color:#fff; font-size:20px; line-height:30px;">
+   				购物车
+    		</a>
+	</div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       收货人&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       手机号码&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       省份&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       市&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       区县&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text"  style=" width:90%; height:26px; border:solid 1px #a3a3a3;">
+            </div>
+   </div>
+   <div class="zfbxitem" style=" border-bottom:solid 1px #efefef; margin:0;">
+            <div id="fapiaogongsi" style=" width:30%; text-align:right; display:block; line-height:1.8em; color:#696969; float:left;">
+                       详细地址&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style=" width:70%; display:block; line-height:1.2em; color:#696969; float:left;">
+                        <input type="text" id="zfxxdz"  style=" width:90%; height:26px; border-bottom:solid 1px #e4e4e4;">
+            </div>
+   </div>
+    <div class="baochundizhi" style=" width:80%; margin:10px 10%; padding:10px 0; background:#ff3366; color:#fff; border-radius:4px; text-align:center;">
+		保存地址
+	</div>
+</div>
+<!--地址输入框end-->
+<script>
+$(function(){
+	$("#pageleft").click(function(){
+		$(".dizhia").hide();
+		})
+	});
+$(function(){
+	$(".shdztj").click(function(){
+		$(".shdzboxa").hide();
+		$(".dizhia").show();
+		});
+		});
+</script>
+<!--收货地址end-->
+<div class="jifenzfmm" style=" display:none;"></div>
+<div class="jfzfmmtext" style="display:none;">
+    	<div style=" width:100%; text-align:right;">
+        <img src="image/shanchu.png" width="20" id="dianji">
+        </div>
+        <div style=" width:100%; padding:10px 0; color:#696969; text-align:center;">
+        输入支付密码
+        </div>
+        <form class="jfzfmminput" style=" width:100%; padding:40px 0;">
+        <input type="password" id="password" style=" width:100%; font-size:20px; letter-spacing:10px; text-align:center;">
+        <div style=" width:100%; text-align:center; padding:15px 0;">
+        		<input type="reset" value="确认密码" onClick="javascript:window.location.href='qurenzhifu.html'"
+                 style=" width:5em; border:solid 1px #D2D200;  padding:6px 10px; border-radius:4px; background:#E1E100; font-size:0.9em; color:#696969;">
+        </div>
+        </form>
+</div>
+<script>
+<!--发票-->
+$(function(){
+	$("#querenzhifu,#parent2").width($("#top").width())
+	$(".fapiaoshow").click(function(){
+		$("#top,#parent1,#zhifudabox,#querenzhifu").hide();
+		$(".fapiao").show();
+		})
+});
+function clk(event) {
+    $("#parent2,#parent1").hide(); 
+	$("#top,#parent1,#querenzhifu,#zhifudabox").show();
+}
+function df(){
+		d=1;
+		return d;
+		}
+$("#querenzhifu").click(function(){
+    var d=df();
+	if(d>0){
+		$(".jifenzfmm , .jfzfmmtext").show();
+		alert("积分支付，需要积分支付密码");
+	}
+	else{
+		alert("非积分支付，不需要积分支付密码")
+	}
+})
+$("#dianji,.jifenzfmm").click(function(){
+	$(".jifenzfmm , .jfzfmmtext").hide();
+	$("#parent1").show();
+	})
+$(function(){
+	$(".qianbaozhifu").click(function(){
+		if($(this).attr("src")=="image/weixuanzhong.png"){
+			$(this).attr("src","image/quanxuan.png");
+			}else{
+				$(this).attr("src","image/weixuanzhong.png");
+				}
+		})
+	})
+//地址与购买也切换
+$(function(){
+		$("#addrenhide").click(function(){
+			$(".box").show();
+			$("#addren").hide();
+		});
+		});
+</script>
+ </body>
+ </html>                                                                                                                                  

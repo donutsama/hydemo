@@ -1,0 +1,303 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/input chajian.js"></script>
+<script type="text/javascript" src="js/LocalResizeIMG.js"></script>
+<script type="text/javascript" src="js/mobileBUGFix.mini.js"></script>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+    div.upload-container {
+        width: 100%;
+        float: none;
+    }
+    div.upload-container div {
+        overflow: visible;
+        width: 70%;
+    }
+    .img-item {
+        position: relative;
+    }
+    .img-item a.close {
+        display: inline-block;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        background: url(image/x.png) right 0px no-repeat;
+        width: 35px;
+        height: 35px;
+        /*border:1px solid #000;*/
+    }
+    a.uploadbtn {
+        float: right;
+        margin-right: 10px;
+        text-align: center;
+        color: #646464;
+        cursor:pointer;
+        font-size: 0.9em;
+    }
+</style>
+<body>
+<div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+    <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+   		评价
+    </a>
+</div>
+<div class="ddlbbxitema">
+                   <div style=" width:100%; border-bottom:solid 1px #cbcbcb;color:#909090; line-height:2.2em; font-size:0.9em;">
+                         <div style=" width:70%; float:left; text-indent:10px;" onClick="javascript:window.location.href='dingdanxiangqing.html'">
+                                    订单编号：<span>2154541587464651</span>
+                         </div>
+                         <div style=" width:30%; color:#646464;  float:left;">
+                                          状态：等待款
+                         </div>
+                     </div>
+
+                     <div class="pos" style="position:relative; margin:4% 0;">
+                          <span class="ddlbbxitl">
+                                 <img src="image/img01.jpg" width="70%" style=" border:solid 1px #cbcbcb;margin:0% 7%;">
+                          </span>
+                          <span  class="ddlbbxitr">yghkuihkjuihkljuhj了就好看了急急急急急急你你你你急急急急</span>
+                          <span  class="ddlbbxitr" style="position:absolute; bottom:0; right:0;padding-bottom: 0;">
+                            <span style=" width:50%; display:block; color:#696969; float:left;">
+                                              <i style="font-size: 0.8em;display: inline-block;vertical-align: middle;margin-top: -1px;">¥</i><strong style="font-size: 1.1em;">188888</strong>
+                            </span>
+                            <span style=" width:50%; display:block; text-align:right; float:left;">
+                                              数量 ×<span>2</span>
+                            </span>
+                          </span>
+                      </div>
+</div>
+<div class="ddpjcenter" style=" margin-top:10px;">
+        <span class="haoping">
+        	<img src="image/xuanzhong_01.png">好评
+        </span>
+        <span class="zhonging">
+        	<img src="image/xuanzhong_02.png">中评
+        </span>
+        <span class="chaping">
+          	<img src="image/xuanzhong_02.png">差评
+        </span>
+        <div style=" width:95%; margin-left:5%; height:1px ; background:#e4e4e4;"></div>
+</div>
+
+<div class="yhpjxx" style=" margin-top:0;">
+                        <li class="lia">
+                        <span style="width:40%;">描述相符</span>
+                        <span style="width:50%;">
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                          </span>
+                        </li>
+                        <li class="lib">
+                        	<span style="width:40%;">服务态度</span>
+                          <span style="width:50%;">
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                          </span>
+                        </li>
+                        <li class="lic">
+                        <span style="width:40%;">发货速度</span>
+                          <span style="width:50%;">
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                          </span>
+                        </li>
+                        <li class="lid">
+                        <span style="width:40%;">物流速度</span>
+                          <span style="width:50%;">
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                             <a class="yhpjxxa"></a>
+                          </span>
+                        </li>
+</div>
+<div class="yhpjtext" style=" width:100%;">
+                <textarea id="t1" style=" margin-left:5%; width:90%; min-height:45px; background:url(image/xiugaia.png) 5px 3px no-repeat; text-indent:30px;color:#646464; font-size:0.9em; border:solid 1px #f0f0f0;padding:3px;resize:none;" maxlength="40" >
+                </textarea>
+                <p style="font-size:0.9em;color:#646464;margin-left:5%;">提示：<i class="num">还可以输入</i><strong style="display: inline-block;width: 25px;text-align: center;">40</strong>字</p>
+
+<div class="upload-container">
+    <div class="preview-container"></div>
+    <input type="file" id="uploadphoto" name="uploadfile" value="请点击上传图片"   style="display:none;" />
+    <a href="javascript:void(0);" class="uploadbtn"><img style="width:28px;" src="image/sc.png"><br/>上传图片</a>
+</div>
+</div>
+<!-- 上传图片 -->
+<div class="hidden template">
+    <div class="img-item" style="width:100px;margin:0 5px;">
+        <img />
+        <a href="javascript:;" class="close"></a>
+    </div>
+</div>
+<div style=" width:100%; height:60px;"></div>
+<script type="text/javascript">
+$(function(){
+    $(".img-item a.close").click(function(){
+        var parent = $(this).parent(".img-item");
+        parent.remove();
+    });
+    // 图片只能上传五张
+    $(".uploadbtn").click(function(){
+        var num = $(".img-item").length;
+        if (num > 5) {
+            alert("最多上传5个");
+            $(".img-item").eq(4).nextAll().remove();
+        } else {
+            $("#uploadphoto").click();
+        }
+    });
+    $("#uploadphoto").localResizeIMG({
+       width: 400,
+       quality: 1,
+       success: function (result) {
+ 		  var submitData={
+ 				base64_string:result.clearBase64,
+ 			};
+            var previewImg = $("div.template div.img-item").clone(true);
+            previewImg.find("img").attr("src", result.base64);
+            $("div.preview-container").append(previewImg);
+ 	// 	$.ajax({
+ 	// 	   type: "POST",
+ 	// 	   url: "upload.php",
+ 	// 	   data: submitData,
+ 	// 	   dataType:"json",
+ 	// 	   success: function(data){
+ 	// 		 if (0 == data.status) {
+ 	// 			alert(data.content);
+ 	// 			return false;
+ 	// 		 }else{
+ 	// 			alert(data.content);
+ 	// 			var attstr= '<img src="'+data.url+'">';
+ 	// 			$(".imglist").append(attstr);
+ 	// 			return false;
+ 	// 		 }
+ 	// 	   },
+ 	// 		complete :function(XMLHttpRequest, textStatus){
+ 	// 		},
+ 	// 		error:function(XMLHttpRequest, textStatus, errorThrown){ //上传失败
+ 	// 		   alert(XMLHttpRequest.status);
+ 	// 		   alert(XMLHttpRequest.readyState);
+ 	// 		   alert(textStatus);
+ 	// 		}
+ 	// 	});
+       }
+   });
+})
+$(function(){
+//点击textarea默认文字消
+// document.getElementById("t1").value="发表评价"
+$("#t1").focus(function(){
+	  $(this).attr("value",null);
+	  $(this).css({background:"#fff",textIndent:"5px"})
+ });
+
+$("#t1").blur(function(){
+    var num = $(this).val();
+    if ( num.length == 0){
+      $(this).css({background:"url(image/xiugaia.png) 5px 3px no-repeat"})
+    }else{
+      $(this).attr("value",num);
+      $(this).css({background:"#fff",textIndent:"5px"})
+    }
+ });
+	for(i=0;i<$(".yhpjxx>li").length;i++){
+		$(".yhpjxx>li").eq(i).find("a").click(function(){
+			if($(this).index()<4){
+				$(this).siblings().addClass("yhpjxxa");
+				$(this).addClass("yhpjxxb")
+				$(this).removeClass("yhpjxxb");
+				$(this).nextAll().removeClass("yhpjxxb")
+				$(this).prevAll().addClass("yhpjxxb");
+			}
+			if($(this).index()==4){
+				$(this).prev().prevAll().addClass("yhpjxxb");
+				}
+		});
+	};
+$(".ddpjcenter").find("span").click(function(){
+		$(".ddpjcenter").find("img").attr("src","image/xuanzhong_02.png");
+		for(i=0;i<$(".yhpjxx>li").length;i++){
+			if($(this).attr("class")=="haoping"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+					$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+			}
+			if($(this).attr("class")=="zhonging"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+				$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+				$(".yhpjxx>li").eq(i).find("a").eq(1).prevAll().addClass("yhpjxxb");
+				}
+			if($(this).attr("class")=="chaping"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+				$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+				$(".yhpjxx>li").eq(i).find("a").eq(2).prevAll().addClass("yhpjxxb");
+				}
+		}
+});
+$("#asdf").find("img").click(function(){
+	var src=$(this).attr("src");
+	if(src=="image/xuanzhong_02.png"){
+		$(this).attr("src","image/xuanzhong_01.png");
+		}
+	else{
+		$(this).attr("src","image/xuanzhong_02.png");
+		}
+	})
+})
+</script>
+<div class="backhistory" style=" background:#303030; padding:10px 0;" >
+<!--     <a class="pageleft" id="asdf" style=" width:75%; text-align:left; text-indent:50%; line-height:30px; color:#000;">
+    	<img src="image/xuanzhong_02.png" style="position:relative; top:3px;"> 匿名
+    </a> -->
+    <a class=" pageleft" style=" width:50%; color:#696969; font-size:20px; font-size:0.9em; line-height:30px;color:#fff;float:right;text-align: right;">
+   		<span class="tjpj" style=" padding:8px 20px; background:#8fc31f;margin-right:10px; border-radius:5px;">提交评价</span>
+    </a>
+</div>
+<script>
+$(function(){
+	var n=0;
+	var t=0;
+	$(".tjpj").click(function(){
+			var xingshu = 100-$(".yhpjxx").find(".yhpjxxb").length*2.5;
+			n=parseInt(n)+parseInt(xingshu);
+			t=t+1;
+			alert(n/t);
+    });
+
+    $("#t1").bind('input propertychange', function(){
+        var num = $(this).val().length;
+        if (num > 40) {
+            $("i.num").text("已经超出");
+            var text = num - 40;
+            $(this).parents(".yhpjtext").find("strong").text(text);
+        }else {
+            $("i.num").text("还能输入");
+            var text = 40 - num;
+            $(this).parents(".yhpjtext").find("strong").text(text);
+        }
+    });
+});
+</script>
+</body>
+</html>

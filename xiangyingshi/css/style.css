@@ -1,0 +1,206 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  border: 0;
+  color: #646464;
+}
+input,textarea,select{
+  outline: none;
+}
+i,em{
+  font-style: normal;
+}
+ul,li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.clear{
+  clear: both;
+}
+.header{
+  width: 100%;
+  height: 40px;
+  line-height: 40px; 
+  background: #121212;
+}
+.nav>a{
+  float: left;
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.nav>ul{
+  float: right;
+}
+.nav>ul li{
+  display: block;
+  float: left;
+}
+.nav>ul li {
+  display: block;
+  float: left;
+   border-left:1px solid #4e4e4e;
+}
+.nav>ul li a{
+  color: #e6e6e6;
+  padding: 0 15px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.nav>ul li:nth-child(6) a{
+  background-color: #1d92cf;
+}
+.content .one{
+  background: url(../images/home-bg7.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 180px 0 250px 0;
+}
+.one .one-name{
+  width: 1200px;
+  margin: 0 auto;
+}
+.one-name .one-title{
+  width: 450px;
+}
+.one .one-name h4{
+  color: #fff;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+.one .one-name p{
+  color: #e6e6e6;
+  font-size: 1.6rem;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.one .one-name a{
+  display: block;
+  color: #fff;
+}
+.one .one-name a.button{
+  background: #FF6908;
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1.2rem;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  margin-bottom: 30px;
+}
+.one .one-name a.button:hover{
+  background: #e05800;
+}
+.one .one-name a.bg{
+  line-height: 25px;
+}
+.two{
+  width: 870px;
+  margin: 0 auto;
+}
+.two{
+  width: 870px;
+  margin: 0 auto;
+  padding: 55px 0;
+}
+.two h2{
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.two p{
+  line-height: 30px;
+  font-size: 1.2rem
+}
+.hr{
+  border-top: 1px dashed #cacaca;
+  height: 1px;
+  padding: 20px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.three{
+  width: 1200px;
+  margin: 0 auto;
+}
+.three .three-item{
+  width: 30%;
+  float: left;
+  text-align: center;
+  padding: 0 1.5%;
+}
+.three .three-item:hover{
+  background: #fafafa;
+  cursor: pointer; 
+}
+.three-item a.three-name{
+  display: block;
+}
+.three-item a.three-name img{
+  width: 90%;
+}
+.three-item a.three-name h6{
+  font-size: #e7e7e7;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.three-item a.three-name h2{
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.three-item p{
+  line-height: 22px;
+  text-align: left;
+  font-size: 1.2rem
+}
+.three-item a.blue{
+  color: #1d92cf;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  display: inline-block;
+}
+.hr_top{
+  margin-top: 45px;
+  padding: 0;
+}
+.two_item{
+  text-align: center;
+}
+.four .three-item{
+  width: 22%;
+  float: left;
+  text-align: center;
+  padding: 0 1.5%;
+}
+.four .three-item:hover{
+  background: none; 
+}
+.four .three-item a.three-name h3{
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.four .three-item p{
+  text-align: center;
+}
+.four .three-item a.three-name img{
+  width: 85%;
+}
+
+/*.a p{
+}
+.a p img{
+  display: block;
+}*/

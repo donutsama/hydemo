@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>购物车</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/jiathis_counter.css">
+    <link rel="stylesheet" type="text/css" href="css/share.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.stickyNavbar.js"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="login">
+           <div class="margin">
+              <p class="hello">您好！欢迎光临拉链儿网商城<a class="pink" href="#">[请登录]</a>，新用户？<a class="pink" href="#">[免费注册]</a></p>
+              <ul>
+                 <li class="li">
+                    <a href="#">商品微商</a>|
+                    <div class="qrcode">
+                      <img src="images/weixin.jpg" />
+                    </div>
+                 </li>
+                 <li><a href="#">商联系客服</a></li>
+                 <div class="clear"></div>
+              </ul>
+              <div class="clear"></div>
+           </div>
+        </div>
+        <img class="bg" src="images/bg.png">
+        <div class="head">
+           <img class="logo" src="images/logo.png">
+           <div class="nei">
+               <ul>
+                   <li><a href="#">北新仓香枣</a></li>
+                   <li><a href="#">麦可滋</a></li>
+                   <li><a href="#">五粮液</a></li>
+                   <li><a href="#">牛尾饭</a></li>
+                   <li><a href="#">小恒水饺</a></li>
+                   <li><a href="#">重庆小面</a></li>
+                   <div class="clear"></div>
+               </ul>
+               <div class="select">
+                   <input type="text" placeholder="北新仓香枣">
+                   <a href="#">搜&nbsp;&nbsp;索</a>
+               </div>
+           </div>
+           <div class="la">
+               <div class="down">
+                  <a class="name" href="#">我的拉链儿<img src="images/icon2.png"></a>
+                  <div class="my">
+                    <a class="down-cont" href="">我的订单</a>
+                    <a class="down-cont" href="">我的积分</a>
+                    <a class="down-cont" href="">我的收藏</a>
+                    <a class="down-cont" href="">我的钱包</a>
+                  </div> 
+               </div>
+               <a class="shop" href="#">购物车(<span>0</span>)</a>
+               <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+       </div>
+    </div>
+   <div class="content">
+       <div class="home">
+         <ul class="nav">
+           <li class="li1">
+           <a href="#">所有商品分类&nbsp;<img src="images/icon10.png"></a>
+            <div class="position">
+                  <div class="item">
+                      <img class="img" src="images/icon4.png">
+                      <div class="text">
+                          <a class="digital" href="#">数码电器</a>
+                          <p><span>手机</span><span>相机</span><span>电脑</span><span>电视</span></p>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon5.png">
+                      <div class="text">
+                          <a class="digital" href="#">生活超市</a>
+                          <p><span>茶叶</span><span>白酒</span><span>特产</span><span>保健</span><span>葡萄酒</span></p>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                   <div class="item">
+                      <img class="img" src="images/icon6.png">
+                      <div class="text">
+                          <a class="digital" href="#">吃喝玩乐</a>
+                          <p><span>饼干</span><span>饮品</span><span>电影</span><span>酒吧</span><span>聚餐</span></p>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon7.png">
+                      <div class="text">
+                          <a class="digital" href="#">家具</a>
+                          <p><span>三件套叶</span><span>毛巾</span><span>净水器</span><span>浴室用品</span></p>
+                      </div>
+                      <div class="clear"></div>
+                  </div>    
+               </div>
+           </li>
+           <li class="nav-item"><a href="index.html">首页</a></li>
+           <li class="nav-item"><a href="Integral.html">积分专区</a></li>
+           <li class="nav-item"><a href="activity.html">活动专区</a></li>
+           <li class="nav-item"><a href="#">会员特权</a></li>
+           <div class="clear"></div>
+         </ul>
+       </div>
+       <div class="table-bg">
+          <table class="table table-title" cellspacing="0">
+          <tr class="table-header">
+            <th style="text-align: left;padding-left: 20px;width:115px;"><input type="checkbox">全选</th>
+            <th>商品信息</th>
+            <th>单价（元）</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th style="width:80px;">付款方式</th>
+            <th>赠送积分</th>
+            <th style="width:80px;">操作</th>
+          </tr>
+          </table>
+        </div>
+       <div class="container">
+
+       
+        <table class="table cash-table" cellspacing="0">
+          <tr class="table-header">
+            <th><input type="checkbox"><span>现金商品</span></th>
+          </tr>
+          <tr class="table-row">
+            <td class="position-td"><input type="checkbox"></td>
+            <td style="text-align: right;"><img src="images/washing.png"></td>
+            <td>干湿一体拖把</td>
+            <td>8.00</td>
+            <td class="number">
+                 <a href="javascript:;" class="reduction">－</a>
+                 <span class="none">2</span>
+                 <a  href="javascript:;" class="plus">＋</a>
+            </td>
+            <td style="color:#ff2d5e;">16.00</td>
+            <td style="width:80px;">现金</td>
+            <td><span>16</span>个</td>
+            <td class="delete-button" style="width:80px;">删除</td>
+          </tr>
+          <tr class="table-row">
+            <td class="position-td"><input type="checkbox"></td>
+            <td style="text-align: right;"><img src="images/furniture5.png"></td>
+            <td>粉格加厚加棉防滑女士拖鞋</td>
+            <td>40.00</td>
+            <td class="number">
+                 <a href="javascript:;" class="reduction">－</a>
+                 <span class="none">3</span>
+                 <a  href="javascript:;" class="plus">＋</a>
+            </td>
+            <td style="color:#ff2d5e;">120.00</td>
+            <td style="width:80px;">现金</td>
+            <td><span>120</span>个</td>
+            <td class="delete-button" style="width:80px;">删除</td>
+          </tr>
+        </table>
+
+        <table class="table cash-table" cellspacing="0">
+          <tr class="table-header">
+            <th><input type="checkbox"><span>积分商品</span></th>
+          </tr>
+          <tr class="table-row">
+            <td class="position-td"><input type="checkbox"></td>
+            <td style="text-align: right;"><img src="images/washing.png"></td>
+            <td>干湿一体拖把</td>
+            <td>108.00</td>
+            <td class="number">
+                 <a href="javascript:;" class="reduction">－</a>
+                 <span class="none">1</span>
+                 <a  href="javascript:;" class="plus">＋</a>
+            </td>
+            <td style="color:#ff2d5e;">108.00</td>
+            <td style="width:80px;">积分</td>
+            <td>0个</td>
+            <td class="delete-button" style="width:80px;">删除</td>
+          </tr>
+          <tr class="table-row">
+            <td class="position-td"><input type="checkbox"></td>
+            <td style="text-align: right;"><img src="images/washing.png"></td>
+            <td>干湿一体拖把</td>
+            <td>208.00</td>
+            <td class="number">
+                 <a href="javascript:;" class="reduction">－</a>
+                 <span class="none">1</span>
+                 <a  href="javascript:;" class="plus">＋</a>
+            </td>
+            <td style="color:#ff2d5e;">208.00</td>
+            <td style="width:80px;">积分</td>
+            <td>0个</td>
+            <td class="delete-button" style="width:80px;">删除</td>
+          </tr>
+        </table>
+
+        
+
+
+        <div class="submit-btn">
+          <div class="submit-l">
+             <span>已选商品<i class="selected">0</i>件</span>
+             <span>合计：<i>￥</i><i class="total-price">0.00</i></span>
+          </div>
+          <div class="submit-r">
+            <a class="light" href="">继续购物</a>
+            <a class="jiesuan" href="javascript:;">去结算</a>
+            <a class="jiesuan-n" href="javascript:;">去结算</a>
+         </div>
+        <div class="clear"></div>
+
+       </div><!-- container结束 -->
+   </div><!-- content结束 -->
+   <div class="footer">
+      <div class="link">
+        <ul>
+          <li class="bold"><a href="">会员帮助</a></li>
+          <li><a href="">购物流程</a></li>
+          <li><a href="">积分使用</a></li>
+          <li><a href="">会员特权</a></li>
+          <li><a href="">修炼秘籍</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">服务保障</a></li>
+          <li><a href="">正品保证</a></li>
+          <li><a href="">售后服务</a></li>
+          <li><a href="">支付方式</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">商务合作</a></li>
+          <li><a href="">媒体合作</a></li>
+          <li><a href="">广商合作</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">关于拉链儿</a></li>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">媒体报道</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="">移动拉链儿</a></li>
+          <li><a href="">移动Web</a></li>
+          <li><a href="">微信商城</a></li>
+        </ul>
+        <div class="phone">
+          <img src="images/phone.png">
+          <a href="tel:400">400-8118-330</a>
+          <a href="mailto:service@lalianer.com">service@lalianer.com</a>
+          <p>全国统一客服电话（免费长途）</p>
+          <p>周一到周五 9:00-18:00</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="foot">
+         <p>拉链（北京）科技有限公司 京ICP备15015524号 - 1 COPYright©2014-2015 lalianer.com</p>
+      </div>
+   </div>
+   <div class="overlay">
+   <div class="delete-k shan">
+            <div class="delete-title">
+               <span>删除</span>
+               <a class="shanchu" href="javascript:;"><img src="images/icon98.png"></a>
+            </div>
+            <div class="delete-content">
+               <img src="images/icon99.png"><span>确认删除该商品？</span>
+               <div class="delete-button">
+                   <button class="yes">确定</button><button class="no">取消</button>
+               </div>
+            </div>
+   </div>
+
+   <div class="tishi-k shan">
+            <div class="delete-title">
+               <span>提示</span>
+               <a class="shanchu" href="javascript:;"><img src="images/icon98.png"></a>
+            </div>
+            <div class="delete-content">
+               <img src="images/icon99.png"><span>请至少选择一种商品！</span>
+            </div>
+   </div>
+   </div>
+</body>
+</html>

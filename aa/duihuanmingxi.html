@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>极氪购</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript"  src="js/scroll.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+</head>
+<body>
+<div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href=                                     "javascript:history.back(-1)">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            已回收电子券
+        </a>
+</div>
+<div class="jifentop" style=" margin:0; font-size:1em;">
+    <li style="width:25%;">价格</li>
+    <li style="width:25%;">券号</li>
+    <li style="width:25%;">密码</li>
+    <li style="width:25%;">兑换时间</li>
+</div>
+<div style=" width:100%; overflow:hidden;">
+    <table class="jifenmingxi">
+        <tr>
+            <th style=" width:25%;">
+                ￥<span>1252</span>
+            </th>
+            <th style=" width:25%;">
+            szavd
+            </th>
+            <th style=" width:25%;">
+                ZSVxdbncf
+            </th>
+            <th style=" width:25%;">
+               2015.12.32
+            </th>
+        </tr>
+    </table>
+    <div style=" height:1px; width:95%; background:#f0f0f0; margin-left:5%;"></div>
+</div>
+<div style=" width:100%; overflow:hidden;">
+    <table class="jifenmingxi">
+        <tr>
+            <th style=" width:25%;">
+                ￥<span>1252</span>
+            </th>
+            <th style=" width:25%;">
+            szavd
+            </th>
+            <th style=" width:25%;">
+                ZSVxdbncf
+            </th>
+            <th style=" width:25%;">
+               2015.12.32
+            </th>
+        </tr>
+    </table>
+    <div style=" height:1px; width:95%; background:#f0f0f0; margin-left:5%;"></div>
+</div>
+
+<div class="djqwu" style=" width:100%; overflow:hidden; padding-top:10%;">
+	<img src="image/wodedijinquanmoren.png" style="width:60%; margin-left:20%;">
+</div>
+<script>
+$(function(){
+	$(".djqwu").hide();
+	if($(".jifenmingxi").length<1){
+		$(".djqwu").show();
+		$(".jifenbox,.jifentop").hide();
+		}
+	})
+</script>
+</body>
+</html>

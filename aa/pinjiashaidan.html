@@ -1,0 +1,233 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/input chajian.js"></script>
+<script type="text/javascript" src="js/LocalResizeIMG.js"></script>
+<script type="text/javascript" src="js/mobileBUGFix.mini.js"></script>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+    div.upload-container {
+        width: 100%;
+        float: none;
+    }
+    div.upload-container div {
+        overflow: visible;
+        width: 70%;
+    }
+    .img-item {
+        position: relative;
+    }
+    .img-item a.close {
+        display: inline-block;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        border-radius: 50%;
+        background: url(image/x.png) no-repeat;
+        width: 15px;
+        height: 15px;
+    }
+    a.uploadbtn {
+        float: right;
+        margin-right: 10px;
+        text-align: center;
+        color: #646464;
+        cursor:pointer;
+        font-size: 0.9em;
+    }
+</style>
+<body>
+<div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+    <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+   		评价
+    </a>
+</div>
+<div class="ddlbbxitema">
+                   <div style=" width:100%; border-bottom:solid 1px #cbcbcb;color:#909090; line-height:2.2em; font-size:0.9em;">
+                         <div style=" width:70%; float:left; text-indent:10px;" onClick="javascript:window.location.href='dingdanxiangqing.html'">
+                                    订单编号：<span>2154541587464651</span>
+                         </div>
+                         <div style=" width:30%; color:#646464;  float:left;">
+                                          状态：待评价
+                         </div>
+                     </div>
+
+                     <div class="item">
+                         <div class="pos" style="position:relative; margin:4% 0;">
+                              <span class="ddlbbxitl">
+                                 <img src="image/img01.jpg" width="70%" style=" border:solid 1px #cbcbcb;margin:0% 7%;">
+                              </span>
+                              <span class="ddlbbxitr" style="padding-left:0;">急急急急急你你你你急急急急</span>
+                              <div class="clear"></div>
+                              <span class="ddlbbxitr" style="position:absolute; bottom:0; right:0;padding-bottom: 0; padding-left:0;width:60%;">
+                                   <span style="display:block; color:#f39800; float:left; padding-right:5px;margin-left:-5px;">
+                                              <i style="font-size: 0.8em;display: inline-block;vertical-align: middle;margin-top: -1px;">¥</i><strong style="font-size: 1.1em;letter-spacing: 0px;">188888</strong>
+                                    </span>
+
+
+                                <span style="display:block; text-align:left; float:left; padding-right:3px;">
+                                              数量×<span>2</span>
+                                </span>
+
+                                <span style="display:block;float:right;border:1px solid #8fc31f;color:#8fc31f;padding:0 3px;border-radius:3px; ">评价晒单</span>
+                                <div class="clear"></div>
+                              </span>
+                         </div>
+                         <div style=" height:1px; width:95%; background:#f0f0f0; margin:0 auto;float:none;"></div>
+                     </div>
+
+                     <div class="item">
+                         <div class="pos" style="position:relative; margin:4% 0;">
+                              <span class="ddlbbxitl">
+                                 <img src="image/img01.jpg" width="70%" style=" border:solid 1px #cbcbcb;margin:0% 7%;">
+                              </span>
+                              <span class="ddlbbxitr" style="padding-left:0;">急急急急急你你你你急急急急</span>
+                              <div class="clear"></div>
+                              <span class="ddlbbxitr" style="position:absolute; bottom:0; right:0;padding-bottom: 0; padding-left:0;width:60%;">
+                                   <span style="display:block; color:#f39800; float:left; padding-right:5px;margin-left:-5px;">
+                                              <i style="font-size: 0.8em;display: inline-block;vertical-align: middle;margin-top: -1px;">¥</i><strong style="font-size: 1.1em;letter-spacing: 0px;">188888</strong>
+                                    </span>
+
+
+                                <span style="display:block; text-align:left; float:left; padding-right:3px;">
+                                              数量×<span>2</span>
+                                </span>
+
+                                <span style="display:block;float:right;border:1px solid #8fc31f;color:#8fc31f;padding:0 3px;border-radius:3px; ">评价晒单</span>
+                                <div class="clear"></div>
+                              </span>
+                         </div>
+                         <div style=" height:1px; width:95%; background:#f0f0f0; margin:0 auto;float:none;"></div>
+                     </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $(".img-item a.close").click(function(){
+        var parent = $(this).parent(".img-item");
+        parent.remove();
+    })
+    $("#uploadphoto").localResizeIMG({
+       width: 400,
+       quality: 1,
+       success: function (result) {
+ 		  var submitData={
+ 				base64_string:result.clearBase64,
+ 			};
+            var previewImg = $("div.template div.img-item").clone(true);
+            previewImg.find("img").attr("src", result.base64);
+            $("div.preview-container").append(previewImg);
+ 	// 	$.ajax({
+ 	// 	   type: "POST",
+ 	// 	   url: "upload.php",
+ 	// 	   data: submitData,
+ 	// 	   dataType:"json",
+ 	// 	   success: function(data){
+ 	// 		 if (0 == data.status) {
+ 	// 			alert(data.content);
+ 	// 			return false;
+ 	// 		 }else{
+ 	// 			alert(data.content);
+ 	// 			var attstr= '<img src="'+data.url+'">';
+ 	// 			$(".imglist").append(attstr);
+ 	// 			return false;
+ 	// 		 }
+ 	// 	   },
+ 	// 		complete :function(XMLHttpRequest, textStatus){
+ 	// 		},
+ 	// 		error:function(XMLHttpRequest, textStatus, errorThrown){ //上传失败
+ 	// 		   alert(XMLHttpRequest.status);
+ 	// 		   alert(XMLHttpRequest.readyState);
+ 	// 		   alert(textStatus);
+ 	// 		}
+ 	// 	});
+       }
+   });
+})
+$(function(){
+//点击textarea默认文字消
+// document.getElementById("t1").value="发表评价"
+$("#t1").focus(function(){
+	  $(this).attr("value",null);
+		$(this).css({background:"#fff",textIndent:"5px"})
+ });
+
+$("#t1").blur(function(){
+    var num = $(this).val();
+    if ( num.length == 0){
+      $(this).css({background:"url(image/xiugaia.png) 5px 3px no-repeat"})
+    }else{
+      $(this).attr("value",num);
+      $(this).css({background:"#fff",textIndent:"5px"})
+    }
+ });
+	for(i=0;i<$(".yhpjxx>li").length;i++){
+		$(".yhpjxx>li").eq(i).find("a").click(function(){
+			if($(this).index()<4){
+				$(this).siblings().addClass("yhpjxxa");
+				$(this).addClass("yhpjxxb")
+				$(this).removeClass("yhpjxxb");
+				$(this).nextAll().removeClass("yhpjxxb")
+				$(this).prevAll().addClass("yhpjxxb");
+			}
+			if($(this).index()==4){
+				$(this).prev().prevAll().addClass("yhpjxxb");
+				}
+		});
+	};
+$(".ddpjcenter").find("span").click(function(){
+		$(".ddpjcenter").find("img").attr("src","image/xuanzhong_02.png");
+		for(i=0;i<$(".yhpjxx>li").length;i++){
+			if($(this).attr("class")=="haoping"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+					$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+			}
+			if($(this).attr("class")=="zhonging"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+				$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+				$(".yhpjxx>li").eq(i).find("a").eq(1).prevAll().addClass("yhpjxxb");
+				}
+			if($(this).attr("class")=="chaping"){
+				$(this).find("img").attr("src","image/xuanzhong_01.png")
+				$(".yhpjxx>li").eq(i).find("a").removeClass("yhpjxxb");
+				$(".yhpjxx>li").eq(i).find("a").eq(2).prevAll().addClass("yhpjxxb");
+				}
+		}
+});
+$("#asdf").find("img").click(function(){
+	var src=$(this).attr("src");
+	if(src=="image/xuanzhong_02.png"){
+		$(this).attr("src","image/xuanzhong_01.png");
+		}
+	else{
+		$(this).attr("src","image/xuanzhong_02.png");
+		}
+	})
+})
+</script>
+<script>
+$(function(){
+	var n=0;
+	var t=0;
+	$(".tjpj").click(function(){
+			var xingshu=100-$(".yhpjxx").find(".yhpjxxb").length*2.5;
+			n=parseInt(n)+parseInt(xingshu);
+			t=t+1;
+			alert(n/t);
+		});
+
+	})
+</script>
+</body>
+</html>

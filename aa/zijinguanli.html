@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<script type="text/javascript"  src="js/scroll.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+</head>
+<body>
+    <div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href=                                     "javascript:history.back(-1)">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            资金管理
+        </a>
+    </div>
+    <div style=" width:100%; overflow:hidden;text-align:center;padding-top:10px;background: #fafafa;">
+            	<img src="image/20150423164957_82867.png" style=" display:block; border:solid 2px #a3a3a3; width:60px; border-radius:90px; height:60px; text-align:center;">
+     </div>
+     <div style=" width:100%;text-align:center;color:#8fc31f;font-size:0.9em; font-weight:600; overflow:hidden;background: #fafafa;">
+            <span style="margin-top:15px;display:inline-block;font-size:1.3em;">极氪xx</span><br>
+            <li style="line-height:40px;">
+                <img src="image/grzxdengji.png" width="20" style=" position:relative;top:2px;">
+                <span style="color:#646464;">黑氪会员</span>
+            </li>
+     </div>
+	<div style=" width:100%; text-align:center;color:#646464; font-size:0.8em; border-bottom:solid 1px #f0f0f0; background:#fafafa;margin-bottom:10px;">
+            
+            <div onClick="javascript:window.location.href='wodeqianbao.html'" style=" margin-left:5%; line-height:22px; width:45%; border-top:solid 1px #e1e1e1; float:left;padding:8px 0;">
+                <span style=" line-height:22px;font-size:1.1em;">钱包余额</span><br> 
+                <span style=" color:#f39800; line-height:28px;">
+                    ¥<span style=" font-size:1.5em; font-weight:600;margin:0 3px;">16666</span>
+                </span><br>
+                <span style="line-height:24px; border-radius:4px; background:#8fc31f;color:#fff; display:inline-block;width:80%;margin-bottom:5px;font-size:1em;">
+                    立即充值
+                </span><br>
+                <span>
+                    查看钱包使用明细
+                </span>
+            </div>
+            <div onClick="javascript:window.location.href='wodejifen.html'" style="width:44%;overflow:hidden;  line-height:22px;border-top:solid 1px #e1e1e1;border-left:solid 1px #e1e1e1; float:left;padding:8px 0;">
+                <span style=" line-height:22px;font-size:1.1em;">积分余额</span><br> 
+                <span style=" color:#f39800; line-height:28px;">
+                    <span style=" font-size:1.5em; font-weight:600;margin:0 3px;">16666</span>积分
+                </span><br>
+                <span style="line-height:24px; border-radius:4px; background:#a2a2a2;color:#fff; display:inline-block;width:80%;margin-bottom:5px;font-size:1em;">
+                    暂停充值
+                </span><br>
+                <span>
+                    查看积分使用明细
+                </span>
+            </div>
+    </div>
+</div>
+<div class="vipxq">
+    	<div class="vipxqbox" style="border:none; box-shadow:none;">
+            <div class="vipbright" style="color:#64646; text-indent:35px; background:url(image/zjglxfzj.png) no-repeat; background-position:11px center; background-size:16px 16px; ">
+                消费总计<span style="color:#f39800;">1214542元</span>
+             </div>
+        </div>
+</div>
+<div class="vipxq" style=" margin:0;">
+            <div class="vipxqbox" style="border:none; box-shadow:none; font-size:0.8em; width:50%; float:left;">
+                <div class="vipbright" style="color:#64646; text-indent:35px;">
+                    钱包消费总计
+                 </div>
+                 <div class="vipbright" style="color:#64646; text-indent:35px;">
+                    积分消费总计
+                 </div>
+            </div>
+            <div class="vipxqbox" style="border:none; box-shadow:none;text-align:right; font-size:0.8em; width:40%; float:left;">
+                <div class="vipbright">
+                    <span style="color:#202020;">188888</span>元
+                 </div>
+                 <div class="vipbright">
+                    <span style="color:#202020;">188888</span>积分
+                 </div>
+            </div>
+            <div class="vipxqbox" style="border:none; text-align:center; line-height:50px; width:10%; float:left;">
+                <img src="image/historybackright.png" width="9">
+            </div>
+</div>
+
+
+<script>
+$(function(){
+	$(".bczl > img").click(function(){
+		$(".bczl > img").siblings().attr("src","image/xuanzhong_02.png")
+		$(this).attr("src","image/xuanzhong_01.png");
+		});
+	$("#grzxtxzl").click(function(){
+		$(".gerenzhongxindabox").hide();
+		$("#parent3").show();
+		});
+	$("#dizhihide").click(function(){
+		$(".gerenzhongxindabox").show();
+		$("#parent3").hide();
+		});
+		})
+</script>
+</body>
+</html>

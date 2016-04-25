@@ -1,0 +1,188 @@
+        <meta charset="utf-8">
+    <link rel="stylesheet" href="{skin:css/dulu.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/dulu.css"/>
+<script type='text/javascript' src="{theme:javascript/loginscript.js}"></script>
+{js:jquery}
+{js:form}
+{js:validate}
+{js:dialog}
+{js:artTemplate}
+<script type='text/javascript' src="{theme:javascript/common.js}"></script>
+<script type='text/javascript' src='{theme:javascript/sitescript.js}'></script>
+
+<script type='text/javascript'>
+  $(function(){
+  {set:$callback = IReq::get('callback') ? IFilter::clearUrl(IReq::get('callback')) : IUrl::getRefRoute()}
+  $('input[name="callback"]').val("{$callback}");
+  $(".form_table input").focus(function(){$(this).addClass('current');}).blur(function(){$(this).removeClass('current');})
+
+  //表单回填
+  var formObj = new Form();
+  formObj.init({"phone":"{$this->phone}","username":"{$this->username}"});
+  });
+
+   function yan(){
+      var phone = $("#phonenum").val();
+      var dtyzm =$("[name='dtyzm']").val();
+      $.ajax({
+    url:"{url:simple/yan}",
+    type:'post',
+    dataType:'text',
+    async:false,
+    data:{"phone":phone,"dtyzm":dtyzm},
+    success:function(data){
+      switch(data){
+        case 'yjcz':{alert('手机已经存在，请登录！');return false;}break;
+        case 'dtyzm':{alert('验证码不正确！');return false;}break;
+        case 'hassend':{alert('短信已经发送请稍后重试！');return false;}break;
+        case 'fail':{alert('短信发送失败请重试！');return false;}break;
+        case 'moretry':{alert('动态验证次数过多,请稍后再试！');return false;}break;
+        case 'success':{
+          var repl = new dojiashi();
+          repl.start(60);
+          alert('手机验证码发送成功!');return false;
+          }break;
+      }
+    },
+    error:function(date){
+      alert('发送失败!');
+    }
+  });
+}
+    
+    function biancolor(){ 
+        var phonenum = $("#phonenum").val();
+        phonenum = parseInt(phonenum);
+        var reg_rule = /(^1[3|5|7|8][0-9]{9}$)/;
+        var dtyzm =$("[name='dtyzm']").val();
+        var reg =  new RegExp(reg_rule);
+        if(!reg.test(phonenum) || dtyzm == ""){
+            $("#yanzheng").css("background",'#c6c6c6');
+            $("#yanzheng").unbind("click");
+        }else{
+            
+            $.ajax({
+                      url:"{url:simple/biancolor}",
+                      type:'post',
+                      dataType:'text',
+                      anc:false,
+                      data:{"dtyzm":dtyzm},
+                      success:function(data){
+                            switch(data){
+                                    case 'dtyzm':{alert('验证码结果不正确！');
+                                                    $("#yanzheng").css("background",'#c6c6c6');
+                                                    $("#yanzheng").unbind("click");
+                                                    return false;}break;
+                                    case 'success':{
+                                            $("#yanzheng").css("background",'#8fc31f');
+                                                $("#yanzheng").bind("click",function(){
+                                                     var dtyzm =$("[name='dtyzm']").val();
+                                                     if(dtyzm==''){
+                                                            alert("动态码结果不能为空");
+                                                            return false;
+                                                     }
+                                                    yan();
+                                                });
+                                    }
+                            }
+                    },
+                    error:function(date){
+                            alert('发送失败!');
+                    }
+              });
+  }
+    }
+//added by zbj  
+$('#btn').unbind();
+  var dojiashi = function (){
+    var _self = this;
+    this.handle = {};
+    this.obj = document.getElementById('yanzheng');
+    this.start = function(tim){
+      _self.obj.innerHTML = tim;
+      var tim=parseInt(_self.obj.innerHTML);
+      _self.handle.id=setInterval(function(){_self.replaceHtml(tim);},1000);
+    };
+    this.replaceHtml = function(time){
+      var tim=parseInt(_self.obj.innerHTML);
+      if(tim <= 0){
+        _self.obj.innerHTML = "重新发送";
+        clearInterval(_self.handle.id);
+        $("#yanzheng").bind("click",function(){
+          yan();
+        });
+        return false;
+      }else{
+        $('#yanzheng').unbind();
+        tim -=1;
+        _self.obj.innerHTML = tim;
+        $("#yanzheng").unbind("click");
+        return true;
+      }
+    };
+  }
+
+  function check(){
+    if (document.getElementById("checkboxID").checked) {
+      return true;
+    }else{
+      alert('请勾选同意注册协议！');
+      return false;
+    }
+  }
+
+function phoneycz(){
+  var phone = $("#phonenum").val();
+  var dtyzm =$("[name='dtyzm']").val();
+  $.ajax({
+    url:"{url:simple/yan}",
+    type:'post',
+    dataType:'text',
+    async:false,
+    data:{"phone":phone,"dtyzm":dtyzm},
+    success:function(data){
+      switch(data){
+        case 'yjcz':{
+          $("#phonenum").addClass("error");
+          $("#phonenum").siblings(".tip").addClass("error_tip").text("手机号已存在").show();
+        }break;
+      }
+    },
+  });
+}
+</script>
+<p class="welcome">已有账户，<a href="{url:/simple/login?callback=$callback}">立即登录</a></p>
+<div class="reg">
+
+<div class="registered">
+  
+  <div class="item-left">
+     <form class="item-l item-ll" action='{url:/simple/reg_act_phone?$this->formParams}' method='post' onsubmit="return check();">
+      <input type="hidden" name='callback' />
+       <label><span>手机：</span><input type="text" id="phonenum" onblur="biancolor()" name="phone" placeholder="请使用手机号注册">
+       <span class="tip error_tip" style="display:none;">请输入正确的手机号</span>
+       <span class="sure" style="display:none;"></span>
+       </label><br>
+
+       <label><span>动态验证码：</span><input class="duan" type="text" name="dtyzm" onblur="biancolor()" placeholder="请输入动态验证码"><img src="{url:simple/code}" onclick="this.src='{url:simple/code}?d='+Math.random();"></label><br>
+        <label><span>短信验证码：</span><input class="duan" type="text" name="yzm" id="yzm">
+          <a class="gary" id="yanzheng" href="javascript:;" >获取验证码</a></label><br>
+       <label><span>创建密码：</span><input id="input_password" type="password" name="password" placeholder="请输入密码"></label><br>
+       <label><span>确认密码：</span><input id="input_repassword" type="password" name="repassword" placeholder="请确认密码"><span class="tip error_tip" style="display: none;">两次输入的密码不正确</span></label><br>
+       <label class="tong"><span></span><input type="checkbox" id="checkboxID" checked>我已阅读并同意<a class="xie" href="{url:/simple/agreement}">《G氪购用户注册协议》</a></label><br>
+     <input style="margin: 10px 0 0 80px" type="image" src="{skin:images/login1.png}">
+     </form>
+  </div>
+  <div class="item-right" style="border:none;">
+    <div class="weixin">
+       <img src="{skin:images/reg_weixin.jpg}">
+       <p>扫一扫，请您关注G氪购微信</p>
+     </div>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+</div>
+  

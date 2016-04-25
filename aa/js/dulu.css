@@ -1,0 +1,69 @@
+@charset "utf-8";
+.reg {
+	width: 980px;
+	margin: 0 auto;
+	border: 1px #e2e2e2 solid;
+	background: #FFF;
+	margin-top: 20px;
+}
+.reg_tops {
+	padding: 15px 20px;
+	overflow: hidden;
+	border-bottom: 1px #e2e2e2 solid;
+	font-size: 14px;
+}
+.reg_tops a {
+	color: #0388cd;
+	text-decoration: none;
+}
+.reg_botts {
+	overflow: hidden;
+	padding: 20px 100px;
+}
+.reg_botts_le ul li {
+	padding: 6px 0;
+	color: #5e5e5e;
+}
+.text_s2 {
+	padding: 8px 0;
+	border: 1px #c6c6c6 solid;
+	width: 249px !important;
+	text-indent: 6px;
+	outline: 0;
+}
+.text_s3 {
+	width: 149px;
+	padding: 8px 0;
+	border: 1px #c6c6c6 solid;
+	border-right: 0;
+	margin-left: 60px;
+	outline: 0;
+	text-indent: 6px;
+}
+.btn_2 {
+	background: #d1cfd0;
+	padding: 8px 10px;
+	border: 1px #c6c6c6 solid;
+	border-left: 0;
+	outline: 0;
+}
+.reg_cors {
+	color: #5e5e5e;
+	text-decoration: none;
+}
+.reg_mars {
+	margin-left: 60px;
+}
+.lj_regs {
+	margin-left: 60px;
+	width: 250px;
+	height: 40px;
+	background: #e63955;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+}/* CSS Document */
+

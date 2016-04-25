@@ -1,0 +1,182 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>极氪购</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/input chajian.js"></script>
+
+
+</head>
+<body>
+<!--top-->
+<div style=" width:100%;" class="dengludabox">
+<!--     <div class="backhistory" style=" background:#30bf87;">
+        <a class=" pageleft" href="javascript:history.back(-1)"><img src="image/historyback.png" width="13"></a>
+        <span class="pagerighta" style="color:#fff;">登录服务</span>
+        <span onClick="javascript:window.location.href='zhuce.html'" class="pagerightb" style=" width:25%; color:#ff6699; text-align:right;">注册新用户</span>
+        <span class="pagerightb" style=" width:10%;"><img src="image/zhuce_03.png" width="25"></span>
+    </div> -->
+    <div class="imgg" style="">
+        <img src="image/img01.jpg"> 
+        <span>LOGIN</span>   
+    </div>
+    <form class="denglubox">
+        <!--登录-->
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+<!--                 <div style=" width:15%; height:40px; line-height:40px; text-align:center; border:solid 1px text-align:center; float:left;">
+                <img class="dlsryhmimg" src="image/yonghumingweixuanzhong.png">
+                </div> -->
+                <input class="dlsryhm" placeholder="请输入手机号" style=" width:100%; height:40px;font-size:1em;background:none;">
+        </div>
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px;width:94%;">
+<!--                 <div style=" width:15%; height:40px; line-height:40px; text-align:center; border:solid 1px text-align:center; float:left;">
+                <img class="dlsrmmimg" src="image/mimaweixuanzhong.png">
+                </div> -->
+                <input class="dlsrmm" placeholder="请输入密码" style=" width:100%; height:40px; font-size:1em;background:none;">
+        </div>
+<!--         <div class="yonghuming" style=" border:none;">
+                
+                <div style=" width:64%; height:40px; float:left; margin-right:5%;">
+                <input placeholder="请输入验证码" style=" width:99%; height:38px; font-size:1em; border:solid 1px #e4e4e4;">
+                </div>
+                <div style=" width:30%; height:38px; line-height:40px; text-align:center; border:solid 1px text-align:center; float:left; border:solid 1px #e4e4e4;">
+                
+                </div>
+        </div> -->
+
+        <div id="denglu" onClick="javascript:window.location.href='gerenzhongxin.html'"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:10px; margin-top:20px;">
+            登&nbsp;&nbsp;&nbsp;&nbsp;录
+        </div>
+        <div class="yonghuming" style=" border:none; text-align:center;margin-top:0;">
+                <!-- <div style=" width:50%; float:left; line-height:2.2em;">
+                    <input type="checkbox" style=" width:20%;">
+                    自动登录
+                </div> -->
+                <div style="width:44%;color:#a2a2a2; float:left; line-height:2.2em; text-align:right;">注册</div>
+                <div style="width:10%;color:#a2a2a2; float:left; line-height:2.2em;">|</div>
+                <div id="zhaohuimima" style=" width:45%; color:#a2a2a2; float:left; line-height:2.2em;text-align:left;">忘记密码</div>
+		</div>
+
+        <div class="footer-list">
+            <p style="font-size: 0.7em;">Hi，未登录极<a style="color:#8fc31f;">Geekr</a>，一起交流分享你的极氪之旅吧！</p>
+            <p style="font-size: 0.7em;">Hi~friend，you have not logged in yet. Please log in<a style="color:#8fc31f;"> GEEKR-GO</a><br/>
+            and Share your great journey to geekr！</p>
+            <a class="wangzhi" href="" >www.91geekr.com</a>
+        </div>
+
+    </form>
+</div>
+<script>
+$(function(){
+	$(".dlsryhm").click(function(){
+		$(".dlsryhmimg").attr("src","image/yonghuming.png")
+		});
+});
+$(function(){
+	$(".dlsrmm").click(function(){
+		$(".dlsrmmimg").attr("src","image/mima.png")
+		})	
+	})
+</script>
+<script>
+$(function(){
+	$("#zhaohuimima").click(function(){
+		$(".dengludabox").hide();
+		$(".zhmmdabox").show();
+        $('body').removeClass('body-bg');
+		})
+	});
+$(function(){
+	$("#zhmmdaboxhide").click(function(){
+		if($("#zhmmdaboxhide").attr("id")=="zhmmdaboxhide"){
+				$(".dengludabox").show();
+				$(".zhmmdabox").hide();
+				$(".dlsryhmimg").attr("src","image/yonghumingweixuanzhong.png");
+				$(".dlsrmmimg").attr("src","image/mimaweixuanzhong.png")
+           }
+	   else{
+		   	$(".zhmmbox").show();
+			$("#zhmmboxszmm").hide();
+		    $("#zhmmdaboxhidea").attr("id","zhmmdaboxhide");
+            }
+	})
+})
+// $(function(){
+// 	$("#dlzzmmtjyz").click(function(){
+// 	$(".zhmmbox").hide();
+// 	$("#zhmmboxszmm").show();
+// 	$("#zhmmdaboxhide").attr("id","zhmmdaboxhidea")
+// 	})
+// })
+</script>
+<script>
+// $(document).ready(function(){
+//   $("#dlzh").val(getParameter(text));
+// });
+</script>
+<div style=" width:100%;display:none;" class="zhmmdabox">
+    <div class="backhistory" id="top" style=" background:#f0f0f0; padding:10px 0;" >
+        <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px;  background-position:10px; text-align:center; line-height:30px; color:#000;" href=                                     "javascript:history.back(-1)">
+        </a>
+        <a class=" pageleft" style=" width:50%; color:#646464; font-size:20px; line-height:30px;" href="javascript:history.back(-1)">
+            忘记密码
+        </a>
+    </div>
+    <form class="zhmmbox">
+        <!--登录-->
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入手机号" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:none;background:none;border-radius:15px;width:100%;">
+            <input class="dlsryhm" placeholder="请输入验证码" style=" width:50%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:1em;background:none;padding:0 10px; ">
+            <input type="submit" value="发送验证码" style=" width:40%;border:1px solid #bbb;border-radius:15px; height:35px;font-size:0.9em;display:inline-block;float:right; background:#595959;color:#fff;">
+            <div class="clear"></div>
+        </div>
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="请输入密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div class="yonghuming" style="border:1px solid #bbb;background:none;border-radius:15px;padding:0 10px; width:94%;">
+            <input class="dlsryhm" placeholder="确认密码" style=" width:100%; height:35px;font-size:1em;background:none;">
+        </div>
+
+        <div id="dlzzmmtjyz"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:10px; margin-top:30px;">
+         	确 认 修 改
+        </div>
+    </form>
+
+    <form class="zhmmbox" id="zhmmboxszmm" style=" display:none;">
+        <!--登录-->
+        <div class="zhaohuimima">
+                <div style=" width:25%; height:40px; line-height:40px; text-align:right; background:#c6cde6; text-align:center; float:left; color:#fff; font-size:0.8em;">
+                 		新密码
+                </div>
+                <div style=" width:75%; height:40px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:38px; font-size:1em; border:solid 1px #e4e4e4;">
+                </div>
+        </div>
+                <div class="zhaohuimima">
+                <div style=" width:25%; height:40px; line-height:40px; text-align:right; background:#c6cde6; text-align:center; float:left; color:#fff; font-size:0.8em;">
+                 		再次输入
+                </div>
+                <div style=" width:75%; height:40px; float:left;">
+                <input class="zhmmsrmm" placeholder="请输入密码" style="  width:99%; height:38px; font-size:1em; border:solid 1px #e4e4e4;">
+                </div>
+        </div>
+        <div id="querenxiugai"  style=" width:100%; background:#8fc31f; text-align:center; line-height:2.2em; color:#fff; border-radius:4px; margin-top:30px;">
+         	确认修改
+        </div>
+    </form>
+</div>
+<script>
+   $('body').addClass('body-bg');
+</script>
+</body>
+</html>

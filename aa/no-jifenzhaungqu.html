@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html manifest="/example/html5/demo_html.appcache">
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript"  src="js/scroll.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/ydxLazyLoad.js"></script>
+<script type="text/javascript">
+        $(function(){
+			var hhh=$(".mainleft").width();
+			$(".mainleft").height(hhh);
+			var sw=$(".loading").parent(".mainleft").width();
+			$(".bannertext").height(hhh*0.9);
+			$(".loading").css({width:hhh,height:hhh})
+            $("[lazyLoadSrc]").YdxLazyLoad({
+                onShow: function () {
+                    $(this).parent().next().hide()
+                }
+            });
+        });
+</script>
+<script>
+$(function(){
+	$("#jfzqnavshow").click(function(){
+		$(".jifennav,.jifennava").show().css("top","50px");
+		window.ontouchmove=function(e){
+        e.preventDefault && e.preventDefault();
+        e.returnValue=false;
+        }
+		});
+	$(".jfzqnavhide").click(function(){
+		$(".jifennav,.jifennava").hide();
+		window.ontouchmove=function(e){
+        e.preventDefault && e.preventDefault();
+        e.returnValue=true;
+		}
+		});
+	$(".jifennav,.jifennava").width($("#top").width())
+	var whh=$(window).height()
+	$(".jifennav").css("bottom",whh*0.5);
+	})
+</script>
+</head>
+<body>
+<div class="backhistory" id="top" style=" background:#ff2d5e; padding:10px 0;" >
+    <a class=" pageleft" style=" width:20%; background:url(image/historybackb.png) no-repeat; background-position:center; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class=" pageleft" style=" width:60%; color:#fff; font-size:20px; line-height:30px;">
+   		积分专区
+    </a>
+</div>
+<li class="jifennavo" id="jfzqnavshow" style=" margin-bottom:5px;">全部商品<img src="image/quanxuan.png" style="position:relative;top:4px;"></li>
+<div class="jifennav" style="display:none;">
+	<li class="jifennavo jfzqnavhide">全部商品<img src="image/quanxuan.png" style="position:relative;top:4px;"></li>
+    <li class="jifennavt">0积分——99积分</li>
+    <li class="jifennavt">100——199积分</li>
+    <li class="jifennavt">200——599积分</li>
+    <li class="jifennavt">599积分以上</li>
+ 
+</div>
+<div class="jifennava jfzqnavhide" style="display:none;">
+</div>
+<div style=" width:100%; background:#efefef; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;">市场价&nbsp;￥999</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#ff2d5e;font-weight:600; font-size:1.1em;"><span>￥</span>222222</span>
+                    <span style=" position:absolute; bottom:2.5%; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">赠送<span>222222</span>积分</span>
+                 </li>
+    		</div>
+</div>
+<div style=" width:100%; background:#efefef; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;">市场价&nbsp;￥999</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#ff2d5e;font-weight:600; font-size:1.1em;"><span>￥</span>222222</span>
+                    <span style=" position:absolute; bottom:2.5%; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">赠送<span>222222</span>积分</span>
+                 </li>
+    		</div>
+</div>
+<div style=" width:100%; background:#efefef; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;">市场价&nbsp;￥999</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#ff2d5e;font-weight:600; font-size:1.1em;"><span>￥</span>222222</span>
+                    <span style=" position:absolute; bottom:2.5%; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">赠送<span>222222</span>积分</span>
+                 </li>
+    		</div>
+</div>
+<div style=" width:100%; background:#efefef; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;">市场价&nbsp;￥999</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#ff2d5e;font-weight:600; font-size:1.1em;"><span>￥</span>222222</span>
+                    <span style=" position:absolute; bottom:2.5%; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">赠送<span>222222</span>积分</span>
+                 </li>
+    		</div>
+</div>
+<div style=" width:100%; background:#efefef; border-bottom:solid 1px #e8e8e8;">
+        	<div class="mainleft img" style=" width:30%; padding:2.5% 2.5%; float:left;  position:relative;">
+                    <a>
+                        <img lazyLoadSrc="http://www.lalianer.com/upload/2015/05/25//20150525054548882.jpg"  width="100%">
+                    </a>
+                    <span class="loading" style=" background:url(image/loading24.gif) no-repeat; background-position:center center;" ></span>
+        	</div>
+            <div class="bannertext" style=" position:relative; background:none; width:63%;padding:2.5% 1%;color:#666; position:relative; border:none; float:left;">
+        		<p class="bannertp">
+        			<span class="bannertpl" style=" width:100%; font-size:1em;">牛尾饭30元代金券 可选购应单牛尾饭30元购应单...</span>
+        		</p><br>
+        		<li class="price" style=" position:absolute; bottom:25%;">市场价&nbsp;￥999</li>
+        		<li style=" position:absolute; bottom:2.5%; font-size:0.9em; width:100%;">
+                	<span style="color:#ff2d5e;font-weight:600; font-size:1.1em;"><span>￥</span>222222</span>
+                    <span style=" position:absolute; bottom:2.5%; background:#ff2d5e; right:3%; padding:2px 2px; border-radius:4px; color:#fff;">赠送<span>222222</span>积分</span>
+                 </li>
+    		</div>
+</div> 
+     
+
+</body>
+</html>

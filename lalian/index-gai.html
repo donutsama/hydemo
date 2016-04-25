@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.stickyNavbar.js"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="login">
+           <div class="margin">
+              <p class="hello">您好！欢迎光临极氪网<a class="pink" href="#">[请登录]</a>，新用户？<a class="pink" href="#">免费注册</a></p>
+              <ul>
+                 <li class="li">
+                    <a href="#">微信商城</a>
+                    <div class="qrcode">
+                      <img src="images/weixin.jpg" />
+                    </div>
+                 </li>
+                 <li  class="li1"><a href="#">联系客服</a></li>
+                 <div class="clear"></div>
+              </ul>
+              <div class="clear"></div>
+           </div>
+        </div>
+        <img class="bg" src="images/bg.png">
+        <div class="head">
+           <img class="logo" src="images/logo.png">
+           <div class="nei">
+               
+               <div class="select">
+                   <input type="text" placeholder="搜索">
+                   <a href="#"><img src="images/select.png"></a>
+               </div>
+               <ul>
+                   <li><a href="#">北新枣枣枣</a></li>
+                   <li><a href="#">北新仓香枣</a></li>
+                   <li><a href="#">北新仓枣</a></li>
+                   <li><a href="#">北新仓枣</a></li>
+                   <li><a href="#">北新仓</a></li>
+                   <li><a href="#">北新枣新新枣</a></li>
+                   <div class="clear"></div>
+               </ul>
+           </div>
+           <div class="la">
+               <div class="down">
+                  <a class="name" href="#">我的极氪<img src="images/icon2.png"></a>
+                  <div class="my">
+                    <a class="down-cont" href="">我的订单</a>
+                    <a class="down-cont" href="">我的积分</a>
+                    <a class="down-cont" href="">我的收藏</a>
+                    <a class="down-cont" href="">我的钱包</a>
+                    <a class="down-cont" href="">安全退出</a>
+                  </div> 
+               </div>
+               <a class="shop" href="#">购物车(<span>0</span>)</a>
+               <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+       </div>
+    </div>
+   <div class="content">
+       <div class="home">
+         <ul class="nav">
+           <li class="li1">
+           <a href="#">所有商品分类&nbsp;<img src="images/icon10.png"></a>
+           <div class="position">
+                  <div class="item">
+                      <img class="img" src="images/icon4.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能家居</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon5.png">
+                      <div class="text">
+                          <a class="digital" href="#" >智能数码</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon6.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能健康</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="item">
+                      <img class="img" src="images/icon6.1.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能穿戴</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div> 
+                   <div class="item">
+                      <img class="img" src="images/icon6.2.png">
+                      <div class="text">
+                          <a class="digital" href="#">智能服务</a>
+                      </div>
+                      <div class="clear"></div>
+                  </div> 
+                  <a class="more-l" href="">MORE...</a>
+   
+           </div>
+           </li>
+           <li class="highlight nav-item default-active"><a href="index.html">首页</a></li>
+           <li class="nav-item"><a href="Integral.html">氪币专区</a></li>
+           <li class="nav-item"><a href="activity.html">G氪</a></li>
+           <li class="nav-item"><a href="#">G氪活动</a></li>
+           <div class="clear"></div>
+         </ul>
+       </div>
+       <div class="pic">
+           {set:$queryGoodsList = Api::run('getvouchweb',1,10)}
+           {set:$isnot = 1;}
+           {foreach:item = $queryGoodsList->find() key = $j}
+           {if:$j == 0}
+           {set:$isnot = 2;}
+           <a href='{$item[href]}' target="_blank"><img class="big" src="{url:}{$item['web_img']}" style="display:block;"> </a>
+           {else:}
+           {set:$isnot = 2;}
+           <a href='{$item[href]}' target="_blank"><img class="big" src="{url:}{$item['web_img']}"></a>
+           {/if}
+           {/foreach}
+           <div class="ul1">
+              <ul>       
+              </ul>
+           </div>
+           <input type="hidden" value="{if:$isnot== 1}-1{else:}{$j}{/if}" name="hidpic" id="hidepic">
+       </div>
+       <div class="container">
+          <div class="row">
+
+             <div class="left">
+                  <div class="pic-banner">
+                    {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay#",0)) key=$k item=$daygoods}
+                    {set:$tmpId=$daygood['goods_id']}
+                    {set:$tmpprice=$daygood['pro_price'];}
+                    {foreach:item=Api::run('getGoodsPhotoRelationList',array('#id#',$tmpId),array("#type#",2),1) key=$i item=$dayphoto1}
+                    {if:$i=0}
+                    <div class="pic-item" data-index="{echo:$k+1}">
+                      <input type="hidden" value="{$tmpId}" name="hidtmpId{$k}" id="hidtmpId{$k}">
+                      <input type="hidden" value="{if:$daygoods['store_nums']}{$daygoods['store_nums']}{else:}0{/if}" name="hidtmpstore{$k}" id="hidtmpstore{#k}">
+                      <a href="{url:/site/products/id/$tmpId/type/cu}" id="nowproduct{$k}"><img src="{url:}{$dayphoto1['img']}"></a>
+                    </div>
+                    {/if}
+                    {/foreach}
+                    {/foreach}
+                  </div>
+                  <div class="indicator">
+                    <ul class="">
+                      <li class="highlight" data-index="1"><a href="#"></a></li>
+                      <li data-index="2"><a href="#"></a></li>
+                      <li data-index="3"><a href="#"></a></li>
+                      <div class="clear"></div>
+                    </ul>
+
+                    {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay",0)) key=$i item=$daygoods}
+                    {set:$tmpId=$daygoods['goods_id']}
+                    {set:$tmpprice=$daygoods['pro_price'];}
+
+                    <div class="desc" style="{if:$i != 0} display:none;{/if}" >
+                       <p class="white width-w">
+                        <!--   <span class="yellow"></span> -->
+                       </p>
+                       <div class="pos">
+                       <p class="white pos1">
+                        <span class="normal">¥</span><span class="yellow yellow1">{echo:(Int)$daygoods['pro_price']}<i style="font-size:28px;">.00</i></span>
+                       </p>
+                       </div>
+                       <p class="white guan">赠送<i>{$daygoods['point']}</i>积分</p>
+                    </div>
+                    {/foreach}
+
+                    <div id="time"> <span class="yellow">尖 儿 货 推 荐</span></div>
+
+                  </div>
+
+             </div>
+
+             <div class="right">
+                 <div class="more">
+                     <span class="tomorrow">氪币商品推荐</span>
+                     <a href="{url:site/point}" target="_blank" class="trailer">MORE</a>
+                 </div>
+                 <div class="jump">
+                 {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay#",1)) key=$k item=$tomgoods}
+                 {set:$tmpId=$tomgoods['goods_id'];}
+                 {set:$tmpname=$tomgoods['name'];}
+                 {set:$tmpprice=$tomgoods['pro_price'];}
+                 {foreach:items=Api::run('getGoodsPhotoRelationList',arry('#id#',$tmpId),array("#type#",0),1) key=$i item=$tomphoto1}
+                 {if:$i==0}
+                  <div class="jumping" style="{if:$k==0}{else:}display:none;{/if}" data-index="{echo:$k+1}">
+                     <a href="{url:site/products/id/$tmpId}" title="{$tmpname}"><img src="{url:}{$tomphoto1['img']}"></a>
+                     <div class="jump-cont">
+                        <a href="{url:site/products/id/$tmpId}" title="{$tmpname}">{echo:mb_substr($tmpname,0,16,"utf-8")}</a>
+                        <p><span class="pre bg-price"><i>{echo:(Int)$tomgoods['pro_price']}</i></span> <s class="ori"><s class="small">原价</s>
+                        {echo:(Int)$tomgoods['sell_price']}</s></p>
+                      </div>
+                  </div>
+                  {/if}
+                  {/foreach}
+                  {/foreach}
+                   <div class="button">
+                      <a href="javascript:;" class="button-l"></a>
+                      <a href="javascript:;" class="button-r"></a>
+                   </div>
+                 </div>
+             </div>
+             <div class="clear"></div>
+          </div>
+          <div class="today">
+            {set:$queryGoodsList = Api::run('getvouchweb',2,3)}
+            {foreach:items = $queryGoodsList->find() key = $k}
+            {if:$k == 2}
+             <a style="marging-right:0;" href="{$item['href']}" target="_blank"><img src="{url:}{$item['web_img']}"></a>
+             {else:}
+             <a href="{$item['href']}" target="_blank"><img src="{url:}{$item['web_img']}"></a>
+             {/if}
+             {/foreach}
+             <div class="clear"></div>
+          </div>
+          <div class="hot">
+              <div class="hot-row">
+                 <span class="hot-name">热卖商品</span>
+                 <ul class="hot-nav">
+                   {foreach:items=Api::run('getCategoryListHot') item=$first key=$a}
+                   {if:$a == 0}
+                   <li class="highlight" data-index="{echo:$a+1}"><a href="{url:/site/hot/cat/$first[id]}">{$first['name']}</a></li>
+                   {else:}
+                   <li data-index="{echo:$a+1}"><a href="{url:/site/hot/cat/$first[id]}">{$first['name']}</a></li>
+                   {/if}
+                   {/foreach}
+                   <div class="clear"></div>
+                 </ul>
+                 <div class="clear"></div>
+              </div>
+              {foreach:items=Api::run('getCategoryListHot') item=$firsttop key=$j}
+              {set:$catid = $firsttop['id'];}
+              <div class="hot-content" data-index="{echo:$j+1}" {if:$j ==0}{else:}style="display:none;"{/if}>
+                  <div class="hot-l">
+                      {set:$queryvouchtypeList1 = Api::run('getvouchtypeweb',2,5,$catid)}
+                      {foreach:items = $queryvouchtypeList1->find() key=$k item=$vouch1}
+                      {if:$k == 0}
+                      <a href="{$vouch1['href']}" target="_blank"><img class="camera" src="{url:}{$vouch1['web_img']}" style="display:block;"></a>
+                      {else:}
+                      <a href="{$vouch1['href']}" target="_blank"><img class="camera" src="{url:}{$vouch1['web_img']}"></a>
+                      {/if}
+                      {/foreach}
+                      <div class="ul1">
+                         <ul>
+                         </ul>
+                      </div>
+                      <p class="bg"></p>
+                  </div>
+                  {set:$queryGoodsList1 = Api::run('getcategorygoodsweb',$catid,8)}
+                  {foreach:items = $queryGoodList1->find() key = $k item=$goodsList1}
+                  {set:$tmpId=$goodsList1['goods_id']}
+                  {set:$tmpname=$goodsList1['name'];}
+                  {set:$tmpprice=$goodsList1['sell_price'];}
+                  {set:$costprice = $goodsList1['cost_price']}
+                  {foreach:items=Api::run('getGoodsPhotoRelationList',array('#id#',$tmpId),array("#type#",0),1) key=$i item=$photo1}
+                  {if:$i==0}
+                  <div class="item-today selling">
+                    <a href="{url:/site/products/id/$tmpId}" target="_blank" title="{$tmpname}"><img src="{url:}{$photo1['img']}"></a>
+                    <div class="item-today-cont">
+                       <a href="{url:/site/products/id/$tmpId}" target="_blank"><span class="title" title='{$tmpname}'>{echo:mb_substr($tmpname,0,20,'utf-8')}</span></a>
+                    </div>
+                    <div class="item-today-cont">
+                       <span class="price">¥{$tmpprice}</span>
+                       <s>原价:<i>{echo:(Int)$costprice}</i></s>
+                    </div>
+                     <a class="join" href="{url:/site/products/id/$tmpId}">BUY NOW</a>
+                  </div>
+                  {/if}{/foreach}
+                  {/foreach}
+                  <div class="clear"></div>
+              </div>
+              {/foreach}
+          </div>
+      </div>
+   </div>
+   <div class="footer">
+      <div class="link">
+        <ul>
+          <li class="bold"><a href="javascipt:;">关于Geekr</a></li>
+          <li><a href="javascript:;">关于我们</a></li>
+          <li><a href="javascript:;">媒体报道</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">商务合作</a></li>
+          <li><a href="javascript:;">媒体合作</a></li>
+          <li><a href="javascript:;">广商合作</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">移动Geekr</a></li>
+          <li><a href="javascript:;">移动Web</a></li>
+          <li><a href="javascript:;">微信商城</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">服务保障</a></li>
+          <li><a href="javascript:;">正品保证</a></li>
+          <li><a href="javascript:;">售后服务</a></li>
+          <li><a href="javascript:;">支付方式</a></li>
+        </ul>
+        <ul>
+          <li class="bold"><a href="javascript:;">会员帮助</a></li>
+          <li><a href="javascript:;">购物流程</a></li>
+          <li><a href="javascript:;">积分使用</a></li>
+          <li><a href="javascript:;">会员特权</a></li>
+        </ul>
+        <div class="phone">
+          <img src="images/phone.png">
+          <p class="f-left">全国统一客服电话（免费）
+            <a href="tel:400">400-0000-000</a>
+          </p>
+          <p>工作时间：周一到周五 9:00-18:00</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="foot">
+         <p>禾调（北京）科技有限公司 京ICP备00000000号 - 1 copyright&copy;2016-2017 91geekr.com</p>
+      </div>
+   </div>
+
+   <div class="fixed">
+     <div class="one">
+        <a href="">
+          <img src="images/icon.1.png"><br/>
+          <i>1580...1234</i>
+        </a>
+     </div>
+
+     <div class="one">
+        <a href="">
+          <img src="images/icon.1.png"><br/>
+          <i>余额</i><br/>
+          <i>998</i>
+        </a>
+        <div class="icon icon1">xxxxxxxxx</div>
+     </div>
+
+     <div class="one">
+        <a href="">
+          <img src="images/icon.1.png"><br/>
+          <i>会员期限</i><br/>
+          <i>2016.01.10</i>
+        </a>
+     </div>
+
+     <div class="one">
+        <a href="">
+          <img src="images/icon.1.png"><br/>
+          <i>客服</i>
+        </a>
+     </div>
+
+     <div class="one">
+        <a href="">
+          <img src="images/icon.1.png"><br/>
+          <i>购物车</i><br/>
+          <span>22</span>
+        </a>
+        <div class="icon">xxxxxxx</div>
+     </div>
+
+     <div class="one">
+        <a href="javascript:;">
+          <img src="images/icon.1.png"><br/>
+          <i>回顶部</i>
+        </a>
+        <div class="icon icon2">回顶部</div>
+     </div>
+
+   </div>
+</body>
+</html>

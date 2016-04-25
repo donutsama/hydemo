@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拉链儿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript"  src="js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/middle.css" />
+<script>
+$(function(){
+	  $("#t1").click(function(){
+	    $(this).attr("value",null);
+		$(this).css({background:"none",textIndent:"5px"})
+		 });
+	})
+</script>
+</head>
+<body style=" background:#ffff;">
+<!--top-->
+<div class="backhistory" style=" background:#f0f0f0; padding:10px 0;" >
+    <a class=" pageleft" style=" width:25%; background:url(image/historyback.png) no-repeat; background-size:18px 18px; background-position:10px; text-align:center; line-height:30px; color:#000;" href="javascript:history.back(-1)">
+    </a>
+    <a class=" pageleft" style=" width:45%; color:#646464; font-size:20px; line-height:30px;">
+   		商户中心
+    </a>
+</div>
+<div class="yhpjtext" style=" width:100%; padding:10px 0; background:#fff;">
+       <input type="text" value="添加服务账号" id="t1" style=" margin-left:10%; text-indent:40%; width:80%; line-height:36px; background:url(image/xiugaia.png) no-repeat; background-position:35% center; background-size:14px 14px;color:#646464; font-size:0.8em; border:solid 1px #f0f0f0; border-radius:4px;">
+       <span style=" display:block;margin-left:10%; width:80%; background:#ff2d5e; text-align:center; margin-top:10px;line-height:36px;color:#fff;">确定</span>
+</div>
+<div class="vipxq" style="  font-size:0.9em; background:#fff; padding-bottom:10px;">
+		<div class="vipxqbox"  style="border:none; width:90%; margin-left:10%;">
+            <div class="vipbright" style="color:#64646; text-align:left; width:55%; ">
+                商户中心
+             </div>
+             <div class="vipbright" style="color:#64646;width:35%; ">
+                添加时间
+             </div>
+             <div style=" height:1px; width:100%; background:#f0f0f0;"></div>
+        </div>
+    	<div class="vipxqbox"  style="border:none; width:90%; margin-left:10%;">
+            <div class="vipbright" style="color:#64646; text-align:left; width:55%; ">
+                hvjhblmkn;ln;lk
+             </div>
+             <div class="vipbright" style="color:#64646;width:35%; ">
+                2015.12.32
+             </div>
+            <div class="vipbleft scyc"  style=" width:6%;">
+            	<img src="image/scshimg.png" width="12">
+            </div>
+             <div style=" height:1px; width:100%; background:#f0f0f0;"></div>
+        </div>
+        
+</div>
+<script>
+$(function(){
+	$(".scyc").click(function(){
+		$(this).parent().remove();
+		})
+	})
+</script>
+</body>
+</html>

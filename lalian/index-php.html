@@ -1,0 +1,218 @@
+{set:
+  $site_config=new Config('site_config');
+  $seo_data=array();
+  $seo_data['title']=$site_config->name;
+  $seo_data['title'].=$site_config->index_seo_title;
+  $seo_data['keywords']=$site_config->index_seo_keywords;
+  $seo_data['description']=$site_config->index_seo_description;
+  seo::set($seo_data);
+}
+
+       <div class="pic">
+          {set:$queryGoodsList = Api::run('getvouchweb',1,10)}
+          {set:$isnot = 1;}
+          {foreach:items = $queryGoodsList->find() key = $j}
+          {if:$j == 0}
+          {set:$isnot = 2;}
+          <a href='{$item[href]}' target="_blank"><img class="big" src="{url:}{$item['web_img']}" style="display:block;"></a> 
+          {else:}
+          {set:$isnot = 2;}
+          <a href='{$item[href]}' target="_blank"><img class="big" src="{url:}{$item['web_img']}"></a>
+          {/if}
+          {/foreach}
+           <div class="ul1">
+              <ul>
+                        
+              </ul>
+           </div>
+          <input type='hidden' value="{if:$isnot==1}-1{else:}{$j}{/if}" name='hidpic' id="hidpic">
+       </div>
+       <div class="container">
+          <div class="row">
+
+             <div class="left">
+                  <div class="pic-banner">
+                    {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay#",0)) key=$k item=$daygoods}
+                    {set:$tmpId=$daygoods['goods_id']}
+                    {set:$tmpprice=$daygoods['pro_price'];}
+                    {foreach:items=Api::run('getGoodsPhotoRelationList',array('#id#',$tmpId),array("#type#",2),1) key=$i item=$dayphoto1}{if:$i==0}
+                    <div class="pic-item" data-index="{echo:$k+1}">
+                      <input type='hidden' value='{$tmpId}' name='hidtmpId{$k}' id='hidtmpId{$k}'>
+                      <input type='hidden' value="{if:$daygoods['store_nums']}{$daygoods['store_nums']}{else:}0{/if}" name='hidtmpstore{$k}' id='hidtmpstore{$k}'>
+                      <a href="{url:/site/products/id/$tmpId/type/cu}" id='nowproduct{$k}'><img src="{url:}{$dayphoto1['img']}" /></a>
+                    </div>
+                    {/if} 
+                    {/foreach}
+                    {/foreach}
+                  </div>
+                  <div class="indicator">
+                    <ul class="">
+                      <li class="highlight" data-index="1"><a href="#"></a></li>
+                      <li data-index="2"><a href="#"></a></li>
+                      <li data-index="3"><a href="#"></a></li>
+                      <div class="clear"></div>
+                    </ul>
+                    {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay#",0)) key=$i item=$daygoods}
+                    {set:$tmpId=$daygoods['goods_id']}
+                    {set:$tmpprice=$daygoods['pro_price'];}
+                    <div class="desc" style="{if:$i != 0}display:none;{/if}" >
+                       <p class="white width-w">
+                        <!--   <span class="yellow"></span> -->
+                       </p>
+                       <p class="white">
+                        <span class="normal">¥</span><span class="yellow yellow1">{echo:(Int)$daygoods['pro_price']}<i style="font-size:28px;">.00</i></span>
+                       </p>
+                        <p class="white guan">赠送<i>{$daygoods['point']}</i>氪币</p>
+                    </div>
+                    {/foreach}
+
+                    <div id="time">
+                        <span class="yellow">尖 儿 货 推 荐</span>
+                    </div>
+                  </div>
+             </div>
+
+             <div class="right">
+                 <div class="more">
+                     <span class="tomorrow">氪币商品推荐</span>
+                     <a href="{url:/site/point}" target='_blank' class="trailer">MORE</a>
+                 </div>
+                 <div class="jump">
+                  {foreach:items=Api::run('getTomorrowgoodsweb',array("#pay#",1)) key=$k item=$tomgoods}
+                  {set:$tmpId=$tomgoods['goods_id'];}
+                  {set:$tmpname=$tomgoods['name'];}
+                  {set:$tmpprice=$tomgoods['pro_price'];}
+                  {foreach:items=Api::run('getGoodsPhotoRelationList',array('#id#',$tmpId),array("#type#",0),1) key=$i item=$tomphoto1}{if:$i==0}
+                    <div class="jumping" style="{if:$k==0}{else:}display:none;{/if}" data-index="{echo:$k+1}">
+                      <a href="{url:/site/products/id/$tmpId}" title='{$tmpname}'><img src="{url:}{$tomphoto1['img']}"></a>
+                      <div class="jump-cont">
+                      <a href="{url:/site/products/id/$tmpId}" title='{$tmpname}'>{echo:mb_substr($tmpname,0,16,"utf-8")}</a>
+                      <p><span class="pre bg-price"><i>{echo:(Int)$tomgoods['pro_price']}</i></span> <s class="ori"><s class="small">原价</s>{echo:(Int)$tomgoods['sell_price']}</s></p>
+                      </div>
+                    </div>
+                  {/if} 
+                  {/foreach}
+                  {/foreach}
+                   <div class="button">
+                      <a href="javascript:;" class="button-l"></a>
+                      <a href="javascript:;" class="button-r"></a>
+                   </div>
+                 </div>
+             </div>
+             <div class="clear"></div>
+          </div>
+
+          <div class="today">
+             {set:$queryGoodsList = Api::run('getvouchweb',2,3)}
+             {foreach:items = $queryGoodsList->find() key = $k}
+             {if:$k == 2}
+             <a style="margin-right: 0;" href="{$item['href']}" target='_blank'><img src="{url:}{$item['web_img']}"></a>
+             {else:}
+             <a href="{$item['href']}"  target='_blank'><img src="{url:}{$item['web_img']}"></a>
+             {/if}
+             {/foreach}
+             <div class="clear"></div>
+          </div>
+          <div class="hot">
+              <div class="hot-row">
+                 <span class="hot-name">热卖商品</span>
+                 <ul class="hot-nav">
+                  {foreach:items=Api::run('getCategoryListHot')  item=$first key=$a }
+                   {if:$a == 0}
+                   <li class="highlight" data-index="{echo:$a+1}"><a href="{url:/site/hot/cat/$first[id]}">{$first['name']}</a></li>
+                   {else:}
+                   <li data-index="{echo:$a+1}"><a href="{url:/site/hot/cat/$first[id]}" >{$first['name']}</a></li>
+                   {/if}
+                   {/foreach} 
+                   <div class="clear"></div>
+                 </ul>
+                 <div class="clear"></div>
+              </div>
+              <!--数码电器 1 生活超市 2 吃喝玩乐 3 家居生活 4-->
+              {foreach:items=Api::run('getCategoryListHot')  item=$firsttop key=$j }
+              {set:$catid = $firsttop['id'];}
+              <div class="hot-content" data-index="{echo:$j+1}" {if:$j == 0}{else:}style="display:none;"{/if}>
+                  <div class="hot-l">
+                      {set:$queryvouchtypeList1 = Api::run('getvouchtypeweb',2,5,$catid)}
+                      {foreach:items = $queryvouchtypeList1->find() key = $k item=$vouch1}
+                      {if:$k == 0}
+                      <a href="{$vouch1['href']}" target="_blank"><img class="camera" src="{url:}{$vouch1['web_img']}" style="display:block;"></a>
+                      {else:}
+                      <a href="{$vouch1['href']}" target="_blank"><img class="camera" src="{url:}{$vouch1['web_img']}"></a>
+                      {/if}
+                      {/foreach}
+
+                      <div class="ul1">
+                         <ul>
+                         </ul>
+                      </div>
+                      <p class="bg"></p>
+                  </div>
+                  {set:$queryGoodsList1 = Api::run('getcategorygoodsweb',$catid,8)}
+                  {foreach:items = $queryGoodsList1->find() key = $k item=$goodsList1}
+                  {set:$tmpId=$goodsList1['goods_id']}
+                  {set:$tmpname=$goodsList1['name'];}
+                  {set:$tmpprice=$goodsList1['sell_price'];}
+                  {set:$costprice = $goodsList1['cost_price']}
+                  {foreach:items=Api::run('getGoodsPhotoRelationList',array('#id#',$tmpId),array("#type#",0),1) key=$i item=$photo1}{if:$i==0}
+                  <div class="item-today selling">
+                    <a href="{url:/site/products/id/$tmpId}" target="_blank" title='{$tmpname}'><img src="{url:}{$photo1['img']}"></a>
+                    <div class="item-today-cont">
+                       <a href="{url:/site/products/id/$tmpId}" target="_blank"><span class="title" title='{$tmpname}'>{echo:mb_substr($tmpname,0,20,"utf-8")}</span></a>
+                    </div>
+                    <div class="item-today-cont">
+                       <span class="price">¥{$tmpprice}</span>
+                       <s>原价:<i>{echo:(Int)$costprice}</i></s>
+                    </div>
+                     <!-- <a class="join" href="javascript:buy_now({$tmpId});">BUY NOW</a> -->
+                     <a class="join" href="{url:/site/products/id/$tmpId}">BUY NOW</a>
+                  </div>
+                  {/if}{/foreach}
+                  {/foreach}
+                  <div class="clear"></div>
+              </div>
+              {/foreach} 
+         </div>
+      </div>
+   </div>
+
+
+<script>
+
+$().ready(function(){
+  var hidpic = $("#hidpic").val();
+  if(hidpic < 0){
+    $("#divpic").hide();
+  }
+});
+</script>
+
+<script type="text/javascript">
+
+  
+//立即购买按钮
+function buy_now(id)
+{
+  //设置必要参数
+  var buyNums  = 1;
+  var type = 'goods';
+
+    //当前时间时间戳
+    var timestamp = (new Date()).valueOf(); 
+        
+    var url = '{url:/simple/cart2/id/@id@/num/@buyNums@/type/@type@/rid/@rid@/}';
+    url = url.replace('@id@',id).replace('@buyNums@',buyNums).replace('@type@',type).replace("@rid@",timestamp);
+    
+
+  setCookie(timestamp,id,1);
+  //页面跳转
+  window.location.href = url;
+}
+
+function setCookie(name,value,iDay)
+{
+   var oDate=new Date();   
+     oDate.setDate(oDate.getDate()+iDay);       
+     document.cookie=name+'='+value+';expires='+oDate.toGMTString();
+}
+</script>
