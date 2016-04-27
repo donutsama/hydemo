@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html  style="height: 100%;">
+<head>
+    <meta charset="utf-8">
+    <title>福卡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.1/jquery.js
+"></script>
+    <script defer src="index_js.js"></script>
+    <script src="checkinput.js"></script>    
+    <script type="text/javascript">
+        function mysubmit(thisform)
+        {
+            if(isMobile(thisform.mobile.value)==false){
+                alert("请输入正确的手机号码!");
+                thisform.mobile.focus();
+                return false;
+            }
+            thisform.submit();
+        }
+    </script>
+    <style>
+    	html,body{
+            padding:0; margin:0;
+            font-family: "微软雅黑";
+        }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: #fff0cc;
+          font-size: 0.9em;
+      }
+
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: #fff0cc;
+          font-size: 0.9em;
+      }
+
+      input:-ms-input-placeholder,
+      textarea:-ms-input-placeholder {
+          color: #fff0cc;
+          font-size: 0.9em;
+      }
+
+      input::-webkit-input-placeholder,
+      textarea::-webkit-input-placeholder {
+          color: #fff0cc;
+          font-size: 0.9em;
+      }
+        .position a.btn{
+          font-size: 1.2em;
+        }
+        table.table{
+            width:80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background: none;
+            text-align: center;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 145px;
+        }
+        .position h5{
+          margin: 14px 0;
+        }
+
+        .position p{
+          margin-top: 32%;
+          color: #ed4929;
+        }
+
+       .position a.btn{
+            margin-top: 60px;
+            color: #ed4929;
+        }
+        a.name_pos{
+          font-size: 1.1em;
+        }
+        .table.table tbody{
+          display: block;
+        }
+        #myform{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          bottom: 0;
+          left: 0;
+          background: url(img5/fu1.png) bottom no-repeat;
+          background-size: 100%;
+        }
+      @media (min-width: 320px){
+        
+          .table.table{
+                  bottom: 106px;
+          }
+/*          .position a.btn{
+            margin-top: 130px;
+            color: #ed4929;
+          }*/
+
+        .position p{
+          margin-top: 23%;
+        }
+      }
+      @media (max-width: 320px){
+        
+          .table.table{
+                  bottom: 106px;
+          }
+/*          .position a.btn{
+            margin-top: 130px;
+            color: #ed4929;
+          }*/
+        .position p{
+          margin-top: 23%;
+        }
+
+      }
+      @media (min-width: 375px){
+        
+          .table.table{
+              bottom: 133px;
+          }
+/*          .position a.btn{
+            margin-top: 198px;
+            color: #ed4929;
+          }*/
+
+        .position p{
+          margin-top: 32%;
+        }
+      }
+
+       @media (min-height: 640px){ 
+        
+          .table.table{
+                  bottom: 124px;
+          }
+
+        .position p{
+          margin-top: 23%;
+        }
+      }
+      @media (min-width: 414px){ 
+        
+        .table.table{
+                bottom: 145px;
+        }
+
+        .position p{
+          margin-top: 32%;
+        }
+/*          .position a.btn{
+            margin-top: 200px;
+            color: #ed4929;
+          }*/
+      }
+
+      @media (min-width: 1024){ 
+        
+       .table.table{
+                bottom: 145px;
+        }
+        .position p{
+          margin-top: 32%;
+        }
+      }
+        @media screen and (orientation: landscape) { /*横屏设备尺寸*/
+          /*.header-g{
+            height: 250px;
+          }
+          .content-g{
+            padding-top: 150px;
+          }
+          #myform{
+            height: 540px;
+          }
+          .table.table {
+           bottom: 218px;
+         }*/
+         .header-g{
+          min-height: 120px;
+         }
+         .content-g table.table {
+          bottom: auto !important;
+         }
+         .content-g {
+          min-height: 250px;
+         }
+         .content-g form#myform {
+          background-size: 90% 100%;
+         }
+         @media screen and (min-height: 769px) { /*iPad以上尺寸*/
+            .header-g img{
+              width: 120px !important;
+              height: 120px !important;
+              bottom: auto !important;
+              top: 20px !important;
+            }
+
+            .header-g a{
+              bottom: 50px !important;
+              font-size: 2rem !important;
+            }
+
+            .content-g table.table {
+              bottom: 200px !important;
+            }
+         }
+         @media screen and (max-height: 768px) { /*iPad（含iPad本身）以下尺寸*/
+            .header-g img{
+              bottom: auto !important;
+              top: 20px !important;
+            }
+
+            .header-g a{
+              bottom: auto !important;
+              top: 150px;
+            }
+
+            .content-g table.table {
+              bottom: 200px !important;
+            }
+         }
+         @media screen and (max-height: 414px) { /*iPhone 6plus（含iPhone 6plus本身）以下尺寸*/
+            .header-g img{
+              bottom: 0px !important;
+              top: 5px !important;
+            }
+
+            .header-g a{
+              bottom: 5px !important;
+              top: auto !important;
+            }
+
+            .content-g table.table {
+              top: 100px;
+            }
+         }
+         @media screen and (max-height: 320px) { /*iPhone 5s （含iPhone 5本身）以下尺寸*/
+
+            .content-g table.table {
+              top: 80px;
+            }
+         }
+
+       }
+      
+	</style>
+</head>
+<body  style="background: #ed482a;height: 100%;min-height: 100%;">
+<div style=" background-size: 100% 100%;width: 100%;height: 100%;text-align:center;">
+<div class="header-g" style="margin:0 auto;position: relative;height: 30%;">
+<img style="width: 90px;height: 90px;border-radius: 90px;position: absolute;left: 0;right: 0;bottom: 32px;margin: 0 auto;" src="img5/default.png">
+<a style="width: 90px;position: absolute;left: 0;right: 0;bottom: -5px;margin: 0 auto;display:block;color:#ffac42;font-size: 1.25em;" href="">
+已领完
+</a>
+</div>
+<div class="content-g"  style="width: 100%;height: 70%;position: relative;left: 0;right: 0;background: url(bg.png) no-repeat; background-size:100% 100%;">
+<form id="myform" name="myform" enctype="application/x-www-form-urlencoded" method="post" action="">
+    <table class="table">
+        <tr style="width:85%; display:block;margin:0 auto;">
+            <td style="width:100%; display:block;margin:0 auto;">
+            <input placeholder="输入手机号，领取福卡" type="text" name="mobile" id="mobile" AUTOCOMPLETE="off" value="" style="BACKGROUND-COLOR: transparent;text-align:center;color:#fff0cc;font-size:1.6em;width:100%;height:34px;border-radius:6px;border:1px solid #fff0cc;display:block;    -webkit-box-sizing: border-box;-webkit-appearance: none;box-sizing: border-box;"></td>
+        </tr>
+        <tr style="width:85%; display:block;margin:0 auto;">
+            <td style="width:100%; display:block;margin:0 auto;">
+            <input type="hidden" name="order_id" id="order_id" value="">
+            <img style="margin-top:24px;height:36px;width:100%;display:block;" name="subm" src="img5/btn_get1.png" onClick="mysubmit(document.myform)" />
+
+            </td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+        </tr>
+    </table>
+</form>
+<a href="/h5mn/disclaimer" style="position: fixed;bottom: 0;width: 100%;display: block;text-align: center;left: 0;right: 0;bottom: 10px;color: #efa145;font-size: 1.05em;">*活动最终解释权归零钱彩所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 1em;color: #efa145;text-decoration: underline;">免责声明</span></a>
+</div>
+</div>
+
+  <!-- 状态3 -->
+  <div class="fixed">
+      <div class="position">
+          <img class="img" src="pos-bg1.png"> 
+          <a class="close" href="javascript:;"><img src="img5/close.png"></a>
+          <div class="clear"></div>
+          <h5></h5>
+          <p>手慢了，福卡领完了</p>
+          <a class="btn underline" href="/h5/getfinish?orderid=">查看领取情况</a>
+      </div>
+  </div>
+  <div class="all"></div>
+  <script type="text/javascript">
+    $(function(){
+      if ("<?php echo $this->show ?>"=="1") {
+         $(".all").show();
+         $(".fixed").show();
+         disableScroll();
+      };
+    $(".close").click(function(){
+        $(".fixed").hide();
+        $(".all").hide();
+        enableScroll();
+    });
+    $(".all").click(function(){
+        $(".fixed").hide();
+        $(".all").hide();
+        enableScroll();
+    });
+    $(".fixed").click(function(){
+        $(this).hide();
+        $(".all").hide();
+        enableScroll();
+    });
+    });
+  </script>
+</body>
+</html>
