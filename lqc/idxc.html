@@ -168,6 +168,17 @@
           margin-top: 32%;
         }
       }
+
+      a.submit {
+        border-radius: 5px;
+        background-color: #ffc742;
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
         @media screen and (orientation: landscape) { /*横屏设备尺寸*/
           /*.header-g{
             height: 250px;
@@ -191,7 +202,8 @@
           min-height: 250px;
          }
          .content-g form#myform {
-          background-size: 90% 100%;
+          background: url(bg1.png) bottom no-repeat;
+          background-size: contain;
          }
          @media screen and (min-height: 769px) { /*iPad以上尺寸*/
             .header-g img{
@@ -211,6 +223,9 @@
             }
          }
          @media screen and (max-height: 768px) { /*iPad（含iPad本身）以下尺寸*/
+            .header-g {
+              height: 20% !important;
+            }
             .header-g img{
               bottom: auto !important;
               top: 20px !important;
@@ -219,6 +234,9 @@
             .header-g a{
               bottom: auto !important;
               top: 150px;
+            }
+            .content-g {
+              height: 80% !important;
             }
 
             .content-g table.table {
@@ -269,7 +287,8 @@
         <tr style="width:85%; display:block;margin:0 auto;">
             <td style="width:100%; display:block;margin:0 auto;">
             <input type="hidden" name="order_id" id="order_id" value="">
-            <img style="margin-top:24px;height:36px;width:100%;display:block;" name="subm" src="img5/btn_get1.png" onClick="mysubmit(document.myform)" />
+            <!-- <img style="margin-top:24px;height:36px;width:100%;display:block;" name="subm" src="img5/btn_get1.png" onClick="mysubmit(document.myform)" /> -->
+            <a class="submit" href="javascript:;" onclick="mysubmit(document.myform)" name="subm">领取福卡</a>
 
             </td>
         </tr>
