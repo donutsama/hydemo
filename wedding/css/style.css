@@ -85,9 +85,27 @@ input,button,textarea{
 
 .landing-page .banner {
     height: 90px;
-    background: url('../img/landing-page-banner.png') no-repeat center top;
+    /*background: url('../img/landing-page-banner.png') no-repeat center top;
+    background-size: contain;*/
+    top: 0px;
+}
+.landing-page .banner .banner-ribbon {
+    background: url('../img/landing-page-banner.png') center no-repeat;
     background-size: contain;
-    top: 20px;
+    position: relative;
+    width: 80%;
+    height:80px;
+    margin: 0 auto;
+    top: -80px;
+}
+.landing-page .banner .banner-arrow {
+    background: url('../img/landing-page-banner1.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 80%;
+    height:30px;
+    bottom: 0px;
+    left: -100%;
 }
 .landing-page .car {
     height: 200px;
@@ -224,13 +242,19 @@ img.flower-bg{
 }
 .end > a{
    position: absolute;
-   top: 48%;
+   top: 42%;
    text-align: center;
    left: 0;
    right: 0;
    text-decoration: none;
-   font-size: 1.46em;
+   font-size: 1.55em;
    color: #a3a089;
+}
+.end > a span{
+    font-size: 0.8em;
+    color: #a3a089;
+    line-height: 38px;
+    display: block;
 }
 .end img.bird{
    position: absolute;
@@ -275,30 +299,6 @@ img.flower-bg{
     -moz-animation:myfirst 1s linear 1s infinite alternate;/* Safari and Chrome: */
     -webkit-animation:myfirst 1s linear 1s infinite alternate;/* Opera: */
     -o-animation:myfirst 1s linear 1s infinite alternate;
-}
-
-@keyframes myfirst{
-    0%   {transform:scale(1);}
-    50%  {transform:scale(1.15);}
-    100%  {transform:scale(1.25);}
-}
-
-@-moz-keyframes myfirst {/* Firefox */
-    0%   {transform:scale(1);}
-    50%  {transform:scale(1.15);}
-    100%  {transform:scale(1.25);}
-}
-
-@-webkit-keyframes myfirst {/* Safari and Chrome */
-    0%   {transform:scale(1);}
-    50%  {transform:scale(1.15);}
-    100%  {transform:scale(1.25);}
-}
-
-@-o-keyframes myfirst {/* Opera */
-    0%   {transform:scale(1);}
-    50%  {transform:scale(1.15);}
-    100%  {transform:scale(1.25);}
 }
 
 .end-cont .flower-row{
@@ -403,7 +403,7 @@ div.flower-img{
     -webkit-appearance:none;
     box-sizing: content-box;
 }
-.flower-bg form input[type="submit"]{
+.flower-bg form input[type="button"]{
     text-align: center;
     padding: 0;
     line-height: 40px;
@@ -425,9 +425,9 @@ a.a-bg{
 
 /*5.31*/
 .cover{
-    background: url(../img/bg.png) bottom no-repeat;
+    background: url('../img/cover-page-background.jpg') -80px bottom no-repeat;
     background-color: #f7f1e1;
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 100%
 }
@@ -441,6 +441,10 @@ a.a-bg{
 }
 .cover .cont-bg img.flower-bg1{
     width: 100%;
+    animation-duration: 1000ms;
+    animation-delay: 2700ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 .cont-bg a{
     position: absolute;
@@ -451,6 +455,10 @@ a.a-bg{
     right: 0;
     text-decoration: none;
     font-size: 1.25em;
+    animation-duration: 1000ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 .cont-bg a:nth-child(2){
     top: 34%;
@@ -478,6 +486,10 @@ a.lover img{
     width: 69%;
     display: block;
     margin: 0 auto;
+    animation-duration: 1000ms;
+    animation-delay: 1800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 span.ribbon{
     background: url(../img/ribbon.png) no-repeat;
@@ -488,6 +500,10 @@ span.ribbon{
     right: 0;
     bottom: 0px;
     height: 66px;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-delay: 600ms;
+    animation-fill-mode: both;
 }
 span.love{
     background: url(../img/heart.png) no-repeat;
@@ -502,6 +518,10 @@ span.love{
     -webkit-transform: rotate(-20deg);   /* Safari and Chrome */
     -o-transform: rotate(-20deg);        /* Opera */
     -moz-transform: rotate(-20deg);
+    animation-duration: 2600ms;
+    animation-timing-function: ease;
+    animation-delay: 2700ms;
+    animation-fill-mode: both;
 }
 span.love1{
     background: url(../img/heart.png) no-repeat;
@@ -511,10 +531,10 @@ span.love1{
     top: 31%;
     width: 36px;
     height: 36px;
-    animation:myfirst 1s linear 1s infinite alternate;/* Firefox: */
-    -moz-animation:myfirst 1s linear 1s infinite alternate;/* Safari and Chrome: */
-    -webkit-animation:myfirst 1s linear 1s infinite alternate;/* Opera: */
-    -o-animation:myfirst 1s linear 1s infinite alternate;
+    animation-duration: 3600ms;
+    animation-timing-function: ease;
+    animation-delay: 3500ms;
+    animation-fill-mode: both;
 }
 
 /*地图页面*/
@@ -535,50 +555,24 @@ span.love1{
     width: 46%;
     height: 20%;
     z-index: 2;
-    opacity: 0;
-    animation: mylace 2s;
-    -moz-animation:mylace 2s;
-    -webkit-animation:mylace 2s;
-    -o-animation:mylace 2s;
-    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
-@keyframes mylace
-    {
-    from {opacity: 0;}
-    to {opacity: 1;}
-    }
 
-@-moz-keyframes mylace/* Firefox */
-    {
-    from {opacity: 0;}
-    to {opacity: 1;}
-    }
-
-@-webkit-keyframes mylace /* Safari and Chrome */
-    {
-    from {opacity: 0;}
-    to {opacity: 1;}
-    }
-
-@-o-keyframes mylace /* Opera */
-    {
-    from {opacity: 0;}
-    to {opacity: 1;}
-    }
 .map div.balloon{
     position: absolute;
     background: url(../img/balloon.png) no-repeat;
     background-size: contain;
-    top: 35%;
+    top: 18%;
     left: 0;
     width: 20%;
     height: 20%;
-    opacity: 0;
-    animation:myballoon 2s 2s;
-    -moz-animation:myballoon 2s 2s;
-    -webkit-animation:myballoon 2s 2s;
-    -o-animation:myballoon 2s 2s;
-    animation-fill-mode:forwards;
+    animation-duration: 2500ms;
+    animation-delay: 3400ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 @keyframes myballoon
 {
@@ -608,6 +602,10 @@ span.love1{
     left: 23%;
     width: 16%;
     height: 16%;
+    animation-duration: 3400ms;
+    animation-delay: 5600ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
 }
 .map div.leaves{
     position: absolute;
@@ -617,22 +615,24 @@ span.love1{
     right: 0%;
     width: 90%;
     height: 16%;
+    animation-duration: 1000ms;
+    animation-delay: 1900ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 .map div.car{
     position: absolute;
     background: url(../img/car.png) no-repeat;
     background-size: contain;
-    top: 0%;
-    right: 0%;
+    top: 15%;
+    right: 15%;
     width: 40%;
     height: 17%;
     z-index: 2;
-    opacity: 0;
-    animation:mycar 2s 4s;
-    -moz-animation:mycar 2s 4s; /* Firefox */
-    -webkit-animation:mycar 2s 4s; /* Safari and Chrome */
-    -o-animation:mycar 2s 4s; /* Opera */
-    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-delay: 5600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 @keyframes mycar
     {
@@ -665,48 +665,80 @@ span.love1{
     left: 40%;
     width: 20%;
     height: 10%;
+    animation-duration: 1000ms;
+    animation-delay: 5000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.map div.top-ribbon {
+    position: absolute;
+    background: url(../img/map-page-top-ribbon.png) center no-repeat;
+    background-size: contain;
+    top: -2px;
+    left: 0px;
+    width: 100%;
+    height: 26px;
+    z-index: 99;
+    animation-duration: 1000ms;
+    animation-delay: 1400ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.map div.flower-wrapper {
+    position: absolute;
+    top: 6%;
+    right: 13%;
+    width: 20%;
+    height: 15%;
+    transform: rotate(21deg);
 }
 .map div.flower{
     position: absolute;
     background: url(../img/flower.png) no-repeat;
     background-size: contain;
-    top: 6%;
-    right: 13%;
-    width: 20%;
-    height: 15%;
-    transform: rotate(20deg);
-    -ms-transform: rotate(20deg);       /* IE 9 */
-    -webkit-transform: rotate(20deg);   /* Safari and Chrome */
-    -o-transform: rotate(20deg);        /* Opera */
-    -moz-transform: rotate(20deg);
+    width: 100%;
+    height: 100%;
+    transform: rotate(21deg);
+    animation-duration: 1000ms;
+    animation-delay: 4600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
-.map div.flower1{
+.map div.flower1-wrapper{
     position: absolute;
-    background: url(../img/flower.png) no-repeat;
-    background-size: contain;
     top: 9%;
     right: 20%;
     width: 15%;
     height: 10%;
     transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);       /* IE 9 */
-    -webkit-transform: rotate(-3deg);   /* Safari and Chrome */
-    -o-transform: rotate(-3deg);        /* Opera */
-    -moz-transform: rotate(-3deg);
 }
-.map div.flower2{
-    position: absolute;
+.map div.flower1{
     background: url(../img/flower.png) no-repeat;
     background-size: contain;
+    width: 100%;
+    height: 100%;
+    animation-duration: 1000ms;
+    animation-delay: 4100ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.map div.flower2-wrapper{
     top: 13%;
     right: 7%;
     width: 16%;
     height: 6%;
     transform: rotate(36deg);
-    -ms-transform: rotate(36deg);       /* IE 9 */
-    -webkit-transform: rotate(36deg);   /* Safari and Chrome */
-    -o-transform: rotate(36deg);        /* Opera */
-    -moz-transform: rotate(36deg);
+    position: absolute;
+}
+.map div.flower2{
+    width: 100%;
+    height: 100%;
+    background: url(../img/flower.png) no-repeat;
+    background-size: contain;
+    animation-duration: 1000ms;
+    animation-delay: 5000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 .map div.convertible{
     position: absolute;
@@ -717,12 +749,10 @@ span.love1{
     width: 100%;
     height:40%;
     z-index: 2;
-    opacity: 0;
-    animation:myconvertible 2s 6s;
-    -moz-animation:myconvertible 2s 6s; /* Firefox */
-    -webkit-animation:myconvertible 2s 6s; /* Safari and Chrome */
-    -o-animation:myconvertible 2s 6s; /* Opera */
-    animation-fill-mode:forwards;
+    animation-duration: 1000ms;
+    animation-delay: 2400ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 
 @keyframes myconvertible
@@ -757,6 +787,10 @@ span.love1{
     left: 0%;
     width: 100%;
     height:10%;
+    animation-duration: 1000ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 .map div.love{
     position: absolute;
@@ -766,17 +800,15 @@ span.love1{
     left: 7%;
     width: 15%;
     height: 10%;
-    opacity: 0;
     transform: rotate(-36deg);
     -ms-transform: rotate(-36deg);       /* IE 9 */
     -webkit-transform: rotate(-36deg);   /* Safari and Chrome */
     -o-transform: rotate(-36deg);        /* Opera */
     -moz-transform: rotate(-36deg);
-    animation:mylove 2s 7s;
-    -moz-animation:mylove 2s 7s; /* Firefox */
-    -webkit-animation:mylove 2s 7s; /* Safari and Chrome */
-    -o-animation:mylove 2s 7s; /* Opera */
-    animation-fill-mode: forwards;
+    animation-duration: 3600ms;
+    animation-delay: 5200ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
 }
 @keyframes mylove
     {
@@ -801,6 +833,19 @@ span.love1{
     from {bottom: 21%;left: 21%;opacity: 0;}
     to {bottom: 31%;left: 7%;opacity: 1;}
     }
+
+.map div.map-area {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    top: 30%;
+    height: 30%;
+    animation-duration: 1000ms;
+    animation-delay: 3200ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
 
 /* music */
 @-webkit-keyframes reverseRotataZ{
@@ -846,6 +891,21 @@ span.love1{
     top: 0;
     left: 0;
     z-index: 95;
+}
+
+.arrow {
+    position: fixed;
+    z-index: 999;
+    animation: arrowing 1.5s infinite;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    text-align: center;
+    /*border:1px solid pink;*/
+}
+.arrow img {
+    width: 40px;
 }
 
 @media (min-width: 320px) {

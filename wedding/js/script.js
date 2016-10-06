@@ -1,21 +1,55 @@
+var $coverPage;
 $(function(){
-    $("#fullpage").fullpage({
-        afterLoad: function(anchorLink, index) {
-            console.log("[ section-" + index + " ]: " + anchorLink + " has loaded!")
-            Album["load" + anchorLink]();
-        }
-    });
     $(".loading-text").fadeOut(3000, function(){
         $("#fullpage").removeClass("opacity");
         $("#fullpage").hide();
+
+
         $("#fullpage").fadeIn(600, function(){
             // snowFlake();
         });
+        $("#fullpage").fullpage({
+            afterLoad: function(anchorLink, index) {
+                if (index == 6) {
+                    return;
+                }
+                console.log("load [ section-" + index + " ]: " + anchorLink + "!")
+                Album["load" + anchorLink]();
+            },
+            onLeave: function(index, nextIndex, direction) {
+                if (index == 5) {
+                    return;
+                }
+                var anchorLink = $(this).data("anchor");
+                console.log("leave [ section-" + index + " ]: " + anchorLink + "!")
+                Album["leave" + anchorLink]();
+            }
+        });
     });
 
-    $(".page.page-cover").load('cover.html');
+
+    $(".landing-page .banner-badge").on("animationend", function(e){
+        $(".landing-page .banner-badge .heart").addClass("scale-up-animation");
+    });
+
+    $(".page.page-cover").load('cover.html', function(){
+        $(".page-cover a.lover img").on("animationend", function(){
+            console.log("img animation end");
+        });
+        $(".page-cover span.love1").on("animationend", function(e) {
+            if (e.originalEvent.animationName == 'zoomInDown') {
+                $(this).removeClass("zoomInDown").addClass("scale-up-1-animation");
+            }
+        });
+        $coverPage = $(".page.page-cover").children().clone(true);
+    });
     $(".page.page-content").load('content.html');
-    $(".page.page-map").load('map.html');
+    $(".page.page-map").load('map.html', function(){
+        $(".page-map .map-area").on("animationend", function(e){
+            showMap();
+            console.log("map area animation done!");
+        });
+    });
     $(".page.page-end").load('end.html');
 
     $("#mc_play").click(function(){
@@ -109,24 +143,71 @@ var Album = {
     loadLandingPage: function() { // 首页
         $(".landing-page .bigheart>.heart-loader .heart-loader__heartPath").addClass("svg-stroke-anim");
         $(".landing-page .invite-letter").addClass("fade-in-animation");
-        $(".landing-page .banner-badge").fadeIn("slow", function(){
-            console.log("banner-badge fadeIn done!");
-            $(".landing-page .banner-badge .heart").addClass("scale-up-animation");
+        $(".landing-page .banner-badge").addClass("fade-in-animation");
+        // $(".landing-page .banner .banner-ribbon").css({top: "0px"}).addClass("fade-in-animation-nodelay");
+        $(".landing-page .banner .banner-ribbon").transition({top: "0px"}, 500).addClass("fade-in-animation-nodelay");
+        $(".landing-page .banner .banner-arrow").transition({left: "10%"}, 2000, 'ease-out', function(){
+            $(this).addClass("scale-up-animation-once");
         });
+    },
+    leaveLandingPage: function() {
+
     },
     loadAnimationPage: function() { // 小动画页
 
     },
-    loadCoverPage: function() { // 封面
+    leaveAnimationPage: function() {
 
     },
+    coverPage: {
+        animateElements: [
+            ".page-cover a.lover img", ".page-cover span.ribbon",
+            ".page-cover .cont-bg .flower-bg1", ".page-cover .cont-bg a",
+            ".page-cover span.love1", ".page-cover span.love", ".page-cover img.hr"]
+    },
+    loadCoverPage: function() { // 封面
+        Album.coverPage.animateElements.forEach(function(element){
+            $(element).width();
+            $(element).addClass("animated");
+            $(element).removeClass("paused").addClass("running");
+        });
+    },
+    leaveCoverPage: function() {
+        $("span.love1").removeClass("scale-up-1-animation").addClass("zoomInDown");
+        Album.coverPage.animateElements.forEach(function(element){
+            $(element).removeClass("running").removeClass("paused");
+            $(element).removeClass("animated");
+        });
+    },
+    mapPage: {
+        animateElements: [
+            ".page-map .grass", ".page-map .lace", ".page-map .top-ribbon",
+            ".page-map .balloon", ".page-map .balloon1", ".page-map .leaves",
+            ".page-map .car", ".page-map .flower", ".page-map .flower1",
+            ".page-map .flower2", ".page-map .convertible", ".page-map .bowknot",
+            ".page-map .love", ".page-map .map-area"
+        ]
+    },
     loadMapPage: function() { // 地图页
-
+        Album.mapPage.animateElements.forEach(function(element){
+            $(element).width();
+            $(element).addClass("animated");
+            $(element).removeClass("paused").addClass("running");
+        });
+    },
+    leaveMapPage:function() {
+        Album.mapPage.animateElements.forEach(function(element){
+            $(element).removeClass("running").removeClass("paused");
+            $(element).removeClass("animated");
+        });
     },
     loadContentPage: function() { // 内容页
 
     },
     loadEndPage: function() { // 结尾页
+
+    },
+    leaveEndPage: function() {
 
     }
 }

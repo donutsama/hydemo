@@ -2,13 +2,31 @@
     <div class="flower-pic"></div>
     <div class="flower-img"></div>
     <div class="top">
-         <a href=""><img src="img/donut.jpg"></a>
+         <a href="javascript:;"><img src="img/donut.jpg"></a>
     </div>
-    <form>
-       <input type="text" placeholder="姓名">
-       <input type="text" placeholder="电话">
-       <input type="tel" name="tel" placeholder="参加人数">
-       <textarea placeholder="祝福留言"></textarea>
-       <input type="submit" value="">
+    <form id="guestsForm">
+       <input type="text" placeholder="姓名" name="username">
+       <input type="tel" placeholder="电话" name="tel">
+       <input type="tel" name="count" placeholder="参加人数">
+       <textarea placeholder="祝福留言" name="comment"></textarea>
+       <input type="button" value="" onclick="submitForm();">
     </form>
+    <script type="text/javascript">
+        function submitForm() {
+            var data = {
+                username: $("#guestsForm input[name='username']").val(),
+                tel: $("#guestsForm input[name='tel']").val(),
+                count: $("#guestsForm input[name='count']").val(),
+                comment: $("#guestsForm textarea").val()
+            };
+            console.log("submit form data: ", data);
+            $.ajax({
+                url: "",
+                data: data,
+                success:function(ret){
+
+                }
+            });
+        }
+    </script>
 </div>

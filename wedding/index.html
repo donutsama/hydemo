@@ -8,18 +8,18 @@
         <link rel="stylesheet" href="css/hyanimation.css" media="screen" title="no title" charset="utf-8">
         <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js" charset="utf-8"></script>
         <script src="http://cdn.bootcss.com/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
-        <script src="http://cdn.bootcss.com/jquery.transit/0.9.12/jquery.transit.js
-" charset="utf-8"></script>
+        <script src="http://cdn.bootcss.com/jquery.transit/0.9.12/jquery.transit.js" charset="utf-8"></script>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=h9iQh9NOX41DxvDEcYrkLz8qjeS21Iri" charset="utf-8"></script>
         <title>H&amp;Y</title>
     </head>
     <body>
-        <span id="musicControl">
+        <!-- <span id="musicControl">
             <a id="mc_play" class="on">
-                <!-- <audio id="musicfx" loop="loop" autoplay="autoplay">
+                <audio id="musicfx" loop="loop" autoplay="autoplay">
                     <source src="audio/sunshine.mp3" type="audio/mpeg">
-                </audio> -->
+                </audio>
             </a>
-        </span>
+        </span> -->
         <div class="loading-text absolute">
             爱，值得你的耐心等待。
         </div>
@@ -27,7 +27,12 @@
             <!-- 初次进入页面的，可以作为一个提示性质的过度封面 ~-->
             <div class="section page landing-page" data-anchor="LandingPage">
                 <div class="fullwidth absolute banner">
+                    <div class="banner-ribbon">
 
+                    </div>
+                    <div class="banner-arrow">
+
+                    </div>
                 </div>
                 <div class="bigheart">
                     <svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="18 -1 92 84" version="1.1">
@@ -36,8 +41,8 @@
                         </g>
                     </svg>
                     <img src="img/invite-letter.png" alt="" class="invite-letter" />
-                    <div class="banner-badge hidden">
-                        <span>郝妍</span>
+                    <div class="banner-badge opacity">
+                        <span>袁弋洋</span>
                         <div class="heart">
                             <svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="18 -1 92 84" version="1.1">
                                 <g class="heart-loader__group">
@@ -45,7 +50,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>袁弋洋</span>
+                        <span>郝妍</span>
                     </div>
                 </div>
                 <div class="fullwidth absolute car">
@@ -73,6 +78,11 @@
             <div class="section page page-end" data-anchor="EndPage">
 
             </div>
+
+            <div class="arrow">
+                <img src="img/hint-arrow.png" alt="" />
+            </div>
+
         </div>
         <script src="js/script.js" charset="utf-8"></script>
     </body>

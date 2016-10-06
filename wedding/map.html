@@ -1,15 +1,37 @@
 <div class="map">
-	   <div class="lace"></div>
-	   <div class="balloon"></div>
-	   <div class="balloon1"></div>
-	   <div class="leaves"></div>
-	   <div class="car"></div>
-	   <div class="car"></div>
-	   <div class="grass"></div>
-	   <div class="flower"></div>
-	   <div class="flower1"></div>
-	   <div class="flower2"></div>
-	   <div class="convertible"></div>
-	   <div class="bowknot"></div>
-	   <div class="love"></div>
+    <div class="lace animated fadeInNormal paused"></div>
+    <div class="top-ribbon animated zoomIn paused">
+    </div>
+    <div class="balloon animated fadeInUp paused" style="z-index: 10"></div>
+    <div class="balloon1 animated fadeInUp paused" style="z-index:10"></div>
+    <div class="leaves animated fadeInDown paused"></div>
+    <div class="car animated fadeInRight paused"></div>
+    <div class="grass animated fadeInNormal paused"></div>
+    <div class="flower-wrapper">
+        <div class="flower animated fadeInRight paused"></div>
+    </div>
+    <div class="flower1-wrapper">
+        <div class="flower1 animated fadeInRight paused"></div>
+    </div>
+    <div class="flower2-wrapper">
+        <div class="flower2 animated fadeInUp paused"></div>
+    </div>
+    <div class="convertible animated fadeInUp paused"></div>
+    <div class="bowknot animated fadeInNormal paused"></div>
+    <div class="love animated zoomInDown paused" style="z-index: 9"></div>
+    <!--<div class="map-area animated fadeIn paused" id="mapArea">-->
+    <div class="map-area" id="mapArea">
+
+    </div>
+    <script type="text/javascript">
+        function showMap() {
+            var map = new BMap.Map("mapArea");
+            var point = new BMap.Point(116.413403,40.002359);
+            map.centerAndZoom(point, 17);
+            var marker = new BMap.Marker(point);
+            map.addOverlay(marker);
+            marker.setAnimation(2);
+        }
+        //showMap();
+    </script>
 </div>
